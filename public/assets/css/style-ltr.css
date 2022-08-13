@@ -1,0 +1,60 @@
+[dir="rtl"] .navbar-index .dropdown-item{
+    text-align: right;
+}
+[dir="ltr"] .text-start {
+    text-align: right!important;
+}
+@media (max-width: 576px) { 
+    [dir="ltr"] .linke-footer-left,
+    [dir="rtl"] .linke-footer-left
+    {
+        text-align: center !important;
+    }
+}
+[dir="rtl"] .contact-method a span{
+    text-align: left;
+}
+[dir="rtl"] .tx-icon-new{
+    text-align: left;
+}
+[dir="ltr"] .tx-icon-new{
+    text-align: right;
+}
+[dir="rtl"] .account-link-login{
+    text-align: left;
+}
+[dir="ltr"] .coarousel-new .carousel-control-next, 
+[dir="ltr"] .coarousel-new .carousel-control-prev {
+    transform: rotate(179deg);
+}
+[dir="ltr"] .account-link-login{
+    text-align: right;
+}
+[dir="rtl"] .form-login .form-check{
+    text-align: left;
+}
+[dir="ltr"] .form-login .form-check{
+    text-align: right;
+}
+[dir="ltr"] .form-check .form-check-input {
+    float: right;
+   
+}
+[dir="rtl"] .form-login .form-select{
+    background-position: left 0.75rem center;
+}
+[dir="rtl"] .component-initiatives .accordion-button::after{
+    margin-right: auto;
+    margin-left: 0px;
+}
+[dir="rtl"] .component-initiatives .accordion-header h6{
+    text-align: right;
+}
+@media (min-width:990px) { 
+[dir="rtl"] .col-donation-bank{
+    border-left: 1px solid #00000030;
+}
+[dir="ltr"] .col-donation-bank{
+    border-right: 1px solid #00000030;
+}
+}
