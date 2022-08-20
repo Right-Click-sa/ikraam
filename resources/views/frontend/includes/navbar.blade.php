@@ -3,10 +3,18 @@
    <div class="container pt-2 pb-2">
        <div class="row-nav-top row justify-content-between align-items-center">
            <div class="col-lg  d-flex align-items-center link-nav-top">
-               <a href="#" class="text-white text-capitalize" role="button" title="اللغه">
-                   en
-                   <i class="fa-solid fa-globe"></i>
-               </a>
+               
+               @if(config('boilerplate.locale.status') && count(config('boilerplate.locale.languages')) > 0)
+                  @foreach(collect(config('boilerplate.locale.languages'))->sortBy('name') as $code => $details)
+                      @if($code !== app()->getLocale())
+                        <a class="text-white text-capitalize" href="{{ route('locale.change', $code) }}" role="button" title="اللغه">
+                          {{__(getLocaleName($code))}}
+                          <i class="fa-solid fa-globe"></i>
+                        </a>
+                      @endif
+                  @endforeach
+               @endif
+
                <a href="#" class="button-search text-white"  id="show" type="button"  title="البحث">
                    <i class="fa-solid fa-magnifying-glass"></i>
                </a>
@@ -48,7 +56,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        @lang('About us')
+                        @lang('About Us')
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="{{ route('frontend.about') }}" >@lang('About the enterprise')</a></li>

@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Frontend;;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\About;
+use App\Models\Policy;
+use App\Models\Trustee;
+use App\Models\Committee;
 
 class AboutController extends Controller
 {
@@ -12,7 +16,8 @@ class AboutController extends Controller
      */
     public function about()
     {
-        return view('frontend.about.about')->withTitle(__('About the enterprise'));
+        $about = About::first();
+        return view('frontend.about.about')->withTitle(__('About the enterprise'))->withAbout($about);
     }
 
     /**
@@ -20,7 +25,11 @@ class AboutController extends Controller
      */
     public function enterprise_missions()
     {
-        return view('frontend.about.missions')->withTitle(__('Enterprise missions'));
+        $about = About::first();
+        return view('frontend.about.missions')
+            ->withTitle(__('Enterprise missions'))
+            ->withMission($about->mission_image)
+            ->withWork($about->work_image);
     }
 
     /**
@@ -28,7 +37,8 @@ class AboutController extends Controller
      */
     public function regulations_and_policies()
     {
-        return view('frontend.about.regulations_and_policies')->withTitle(__('Regulations and Policies'));
+        $policies = Policy::all();
+        return view('frontend.about.regulations_and_policies')->withTitle(__('Regulations and Policies'))->withPolicies($policies);
     }
 
     /**
@@ -36,7 +46,8 @@ class AboutController extends Controller
      */
     public function board_of_trustees()
     {
-        return view('frontend.about.board_of_trustees')->withTitle(__('Board of Trustees'));
+        $trustees = Trustee::all();
+        return view('frontend.about.board_of_trustees')->withTitle(__('Board of Trustees'))->withTrustees($trustees);
     }
 
     /**
@@ -44,7 +55,8 @@ class AboutController extends Controller
      */
     public function committees()
     {
-        return view('frontend.about.committees')->withTitle(__('Committees'));
+        $committees = Committee::all();
+        return view('frontend.about.committees')->withTitle(__('Committees'))->withCommittees($committees);
     }
 
     /**
@@ -52,6 +64,7 @@ class AboutController extends Controller
      */
     public function administrative_structure()
     {
-        return view('frontend.about.administrative_structure')->withTitle(__('The administrative structure'));
+        $about = About::first();
+        return view('frontend.about.administrative_structure')->withTitle(__('The administrative structure'))->withStructure($about->structure_image);
     }
 }

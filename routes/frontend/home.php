@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\TermsController;
+use App\Http\Controllers\Backend\ContactUsController;
 use Tabuna\Breadcrumbs\Trail;
 
 /*
@@ -32,3 +33,6 @@ Route::get('/contact-us', [HomeController::class, 'contact_us'])
     ->breadcrumbs(function (Trail $trail) {
         $trail->push(__('Contact Us'), route('frontend.contact-us'));
     });
+
+// store contact us messages
+Route::post('contact-us/store', [ContactUsController::class, 'store'])->name('contact-us.store');

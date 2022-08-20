@@ -11,8 +11,9 @@
                 {{-- <strong class="text-initiatives-head title-login">
                     @lang('Enterprise missions')
                 </strong> --}}
+
                <div class="col-md-10 m-auto img-general-frame-one">
-                 <img src="/assets/img/missions.png" alt="missions">
+                 <img src="/img/backend/about/{{ $mission }}" alt="missions">
                </div>
             </div>
             <div class="mt-5">
@@ -20,7 +21,7 @@
                     @lang('Enterprise work')
                 </strong>
                <div class="col-md-10 m-auto img-general-frame-one">
-                 <img src="/assets/img/Enterprise work.png" alt="work">
+                 <img src="/img/backend/about/{{ $work }}" alt="work">
                </div>
             </div>
         </div>

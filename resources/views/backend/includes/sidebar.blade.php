@@ -18,14 +18,99 @@
                 :text="__('Dashboard')" />
         </li>
 
+        <!-- about us -->
+        <li class="c-sidebar-nav-dropdown {{ activeClass(Route::is('admin.about.*'), 'c-open c-show') }}">
+            <x-utils.link
+                href="#"
+                icon="c-sidebar-nav-icon fas fa-address-card"
+                class="c-sidebar-nav-dropdown-toggle"
+                :text="__('About Us')" />
+
+            <ul class="c-sidebar-nav-dropdown-items">
+
+                <li class="c-sidebar-nav-item">
+                    <x-utils.link
+                        class="c-sidebar-nav-link"
+                        :href="route('admin.about.edit')"
+                        :active="activeClass(Route::is('admin.about.edit'), 'c-active')"
+                        :text="__('About Us')" />
+                </li>
+
+                <li class="c-sidebar-nav-item">
+                    <x-utils.link
+                        class="c-sidebar-nav-link"
+                        :href="route('admin.about.enterprise-missions')"
+                        :active="activeClass(Route::is('admin.about.enterprise-missions'), 'c-active')"
+                        :text="__('Enterprise missions and work')" />
+                </li>
+
+                <li class="c-sidebar-nav-item">
+                    <x-utils.link
+                        class="c-sidebar-nav-link"
+                        :href="route('admin.about.policies')"
+                        :active="activeClass(Route::is('admin.about.policies'), 'c-active')"
+                        :text="__('Regulations and Policies')" />
+                </li>
+
+                <li class="c-sidebar-nav-item">
+                    <x-utils.link
+                        class="c-sidebar-nav-link"
+                        :href="route('admin.about.trustees')"
+                        :active="activeClass(Route::is('admin.about.trustees'), 'c-active')"
+                        :text="__('Board of Trustees')" />
+                </li>
+
+                <li class="c-sidebar-nav-item">
+                    <x-utils.link
+                        class="c-sidebar-nav-link"
+                        :href="route('admin.about.committees')"
+                        :active="activeClass(Route::is('admin.about.committees'), 'c-active')"
+                        :text="__('Committees')" />
+                </li>
+
+                <li class="c-sidebar-nav-item">
+                    <x-utils.link
+                        class="c-sidebar-nav-link"
+                        :href="route('admin.about.structure')"
+                        :active="activeClass(Route::is('admin.about.structure'), 'c-active')"
+                        :text="__('The administrative structure')" />
+                </li>
+
+            </ul>
+        </li>
+
+        {{-- volunteer --}}
+        <li class="c-sidebar-nav-dropdown {{ activeClass(Route::is('admin.volunteer.*'), 'c-open c-show') }}">
+            <x-utils.link
+                href="#"
+                icon="c-sidebar-nav-icon fas fa-address-card"
+                class="c-sidebar-nav-dropdown-toggle"
+                :text="__('Volunteer')" />
+
+            <ul class="c-sidebar-nav-dropdown-items">
+
+                <li class="c-sidebar-nav-item">
+                    <x-utils.link
+                        class="c-sidebar-nav-link"
+                        :href="route('admin.volunteer.fields')"
+                        :active="activeClass(Route::is('admin.volunteer.fields'), 'c-active')"
+                        :text="__('Volunteer Fields')" />
+                </li>
+
+
+            </ul>
+        </li>
+
+
         <li class="c-sidebar-nav-item">
             <x-utils.link
                 class="c-sidebar-nav-link"
-                :href="route('admin.about.edit')"
-                :active="activeClass(Route::is('admin.about.edit'), 'c-active')"
-                icon="c-sidebar-nav-icon cil-speedometer"
-                :text="__('About Us')" />
+                :href="route('admin.contact_us')"
+                :active="activeClass(Route::is('admin.contact_us'), 'c-active')"
+                icon="c-sidebar-nav-icon fas fa-comments"
+                :text="__('Contact Us')" />
         </li>
+
 
         @if (
             $logged_in_user->hasAllAccess() ||

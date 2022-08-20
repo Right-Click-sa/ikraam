@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repositories\Backend\AboutRepository;
 use App\Http\Requests\Backend\About\UpdateAboutRequest;
+use App\Http\Requests\Backend\About\UpdateAboutEnterpriseMissionsRequest;
 use App\Models\About;
 use App\Models\AboutValue;
 
@@ -25,39 +26,6 @@ class AboutController extends Controller
     {
        $this->aboutRepository = $aboutRepository;
     }
-
-    // /**
-    // *
-    // * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-    // */
-    // public function index()
-    // {
-    //   return view('backend.about.about')->withAbouts($this->aboutRepository
-    //         ->orderBy('id')
-    //         ->paginate(10));
-    // }
-
-    // /**
-    // *
-    // * @return mixed
-    // */
-    // public function create()
-    // {
-    //   return view('backend.about.create');
-    // }
-
-   // /**
-   //  * @param UpdateAboutRequest $request
-   //  * @param About              $about
-   //  *
-   //  * @throws \Throwable
-   //  * @return mixed
-   //  */
-   //  public function store(UpdateAboutRequest $request, About $about)
-   //  {
-   //     $this->aboutRepository->store();
-   //     return redirect()->route('admin.about')->withFlashSuccess(__('About Created'));
-   //  }
 
      /**
     * @param About $about
@@ -99,5 +67,55 @@ class AboutController extends Controller
           'app_name'  =>  __('Ikraam')
         ]);
     }
+
+    /**
+   * @param About $about
+   *
+   * @return mixed
+   */
+   public function enterprise_missions()
+   {
+       $about = About::first();
+       return view('backend.about.enterprise_missions')->withAbout($about);
+   }
+
+   /**
+   * @param UpdateAboutRequest $request
+   * @param About              $about
+   *
+   * @throws \App\Exceptions\GeneralException
+   * @throws \Throwable
+   * @return mixed
+   */
+   public function update_enterprise_missions(UpdateAboutEnterpriseMissionsRequest $request, About $about)
+   {
+       $this->aboutRepository->update_enterprise_missions($about, $request);
+       return back()->withFlashSuccess(__('Enterprise Missions And Work Updated Successfully'));
+   }
+
+   /**
+    * @param About $about
+    *
+    * @return mixed
+    */
+    public function administrative_structure()
+    {
+        $about = About::first();
+        return view('backend.about.administrative_structure')->withAbout($about);
+    }
+
+   /**
+   * @param UpdateAboutRequest $request
+   * @param About              $about
+   *
+   * @throws \App\Exceptions\GeneralException
+   * @throws \Throwable
+   * @return mixed
+   */
+   public function update_administrative_structure(UpdateAboutEnterpriseMissionsRequest $request, About $about)
+   {
+       $this->aboutRepository->update_enterprise_missions($about, $request);
+       return back()->withFlashSuccess(__('The Administrative Structure Updated Successfully'));
+   }
 
 }

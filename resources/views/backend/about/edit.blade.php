@@ -1,7 +1,7 @@
 
 @extends('backend.layouts.app')
 
-@section('title', __('Edit About Us'))
+@section('title', __('About Us'))
 
 @section('content')
 
@@ -10,7 +10,7 @@
         @csrf
         <x-backend.card>
             <x-slot name="header">
-                @lang('Edit About Us')
+                @lang('About Us')
             </x-slot>
 
             <x-slot name="body">
@@ -89,9 +89,9 @@
                       </div>
                   </div>
 
-                  <!-- goals image -->
+                  <!-- Enterprise goals image -->
                   <div class="form-group row">
-                    <label for="goals_image" class="col-md-2 col-form-label">@lang('Goals Image')</label>
+                    <label for="goals_image" class="col-md-2 col-form-label">@lang('Enterprise goals image')</label>
 
                     <div class="col-md-10">
                       <div class="col-md-4 offset-md-4 mx-auto">
@@ -131,7 +131,7 @@
 
                   <!-- strategy image -->
                   <div class="form-group row">
-                    <label for="goals_image" class="col-md-2 col-form-label">@lang('Strategy Image')</label>
+                    <label for="strategy_image" class="col-md-2 col-form-label">@lang("The company's strategic directions image")</label>
 
                     <div class="col-md-10">
                       <div class="col-md-4 offset-md-4 mx-auto">
@@ -180,22 +180,22 @@
                                   <label for="title[]" class="col-md-2 col-form-label">@lang('Values')</label>
                                 @endif
                                 <div class="col-md-4">
-                                    <input type="text" name="title:en[]" class="form-control" placeholder="@lang('titleEn')" value="{{  old('title:en') ?? $value->{'title:en'} }}" required >
+                                    <input type="text" name="title:en[]" class="form-control" placeholder="@lang('title:en')" value="{{  old('title:en') ?? $value->{'title:en'} }}" required >
                                 </div><!--col-->
 
                                 <div class="col-md-4">
-                                    <input type="text" name="title:ar[]" class="form-control" placeholder="@lang('titleAr')" value="{{  old('title:ar') ?? $value->{'title:ar'} }}" required >
+                                    <input type="text" name="title:ar[]" class="form-control" placeholder="@lang('title:ar')" value="{{  old('title:ar') ?? $value->{'title:ar'} }}" required >
                                 </div><!--col-->
 
                                 <label for="" class="col-md-2 col-form-label"></label>
                                 <label for="description[]" class="col-md-2 col-form-label"></label>
 
                                 <div class="col-md-4">
-                                    <input type="text" name="description:en[]" class="form-control" style="margin-top:10px;" placeholder="@lang('descriptionEn')" value="{{  old('description:en') ?? $value->{'description:en'} }}" required>
+                                    <input type="text" name="description:en[]" class="form-control" style="margin-top:10px;" placeholder="@lang('description:en')" value="{{  old('description:en') ?? $value->{'description:en'} }}" required>
                                 </div><!--col-->
 
                                 <div class="col-md-4">
-                                    <input type="text" name="description:ar[]" class="form-control" style="margin-top:10px;" placeholder="@lang('descriptionAr')" value="{{  old('description:ar') ?? $value->{'description:ar'} }}" required>
+                                    <input type="text" name="description:ar[]" class="form-control" style="margin-top:10px;" placeholder="@lang('description:ar')" value="{{  old('description:ar') ?? $value->{'description:ar'} }}" required>
                                 </div><!--col-->
 
                                 @if($key > 0)
@@ -222,11 +222,11 @@
                             <label for="title[]" class="col-md-2 col-form-label">@lang('Values')</label>
 
                             <div class="col-md-4">
-                                <input type="text" name="title:en[]" class="form-control" placeholder="@lang('titleEn')" >
+                                <input type="text" name="title:en[]" class="form-control" placeholder="@lang('title:en')" >
                             </div><!--col-->
 
                             <div class="col-md-4">
-                                <input type="text" name="title:ar[]" class="form-control" placeholder="@lang('titleAr')" >
+                                <input type="text" name="title:ar[]" class="form-control" placeholder="@lang('title:ar')" >
                             </div><!--col-->
 
 
@@ -234,11 +234,11 @@
                             <label for="description[]" class="col-md-2 col-form-label"></label>
 
                             <div class="col-md-4">
-                                <input type="text" name="description:en[]" class="form-control" style="margin-top:10px;" placeholder="@lang('descriptionEn')" >
+                                <input type="text" name="description:en[]" class="form-control" style="margin-top:10px;" placeholder="@lang('description:en')" >
                             </div><!--col-->
 
                             <div class="col-md-4">
-                                <input type="text" name="description:ar[]" class="form-control" style="margin-top:10px;" placeholder="@lang('descriptionAr')" >
+                                <input type="text" name="description:ar[]" class="form-control" style="margin-top:10px;" placeholder="@lang('description:ar')" >
                             </div><!--col-->
 
                             <div class="col-md-2 ">
@@ -252,7 +252,7 @@
           </x-slot>
 
             <x-slot name="footer">
-                <button class="btn btn-sm btn-primary {{ app()->getLocale() == 'en' ? 'float-right' : 'float-left' }}" type="submit">@lang('Edit About Us')</button>
+                <button class="btn btn-sm btn-primary {{ app()->getLocale() == 'en' ? 'float-right' : 'float-left' }}" type="submit">@lang('Update About Us')</button>
             </x-slot>
         </x-backend.card>
     </form>
@@ -280,10 +280,10 @@
               '<div class="form-group row value-row-delete" >' +
                   '<label for="title[]" class="col-md-2 form-control-label px-0"></label>' +
                   '<div class="col-md-4">' +
-                      '<input type="text" name="title:en[]" class="form-control " placeholder="@lang("titleEn")" required>' +
+                      '<input type="text" name="title:en[]" class="form-control " placeholder="@lang("title:en")" required>' +
                   '</div>' +
                   '<div class="col-md-4">' +
-                    '<input type="text" name="title:ar[]" class="form-control " placeholder="@lang("titleAr")" required>' +
+                    '<input type="text" name="title:ar[]" class="form-control " placeholder="@lang("title:ar")" required>' +
                   '</div>' +
                   '<div class="col-md-2" >' +
                     '<a name="delete" href="javascript:;" data-method="delete" class="btn btn-danger delete-value ">' +
@@ -292,10 +292,10 @@
                   '</div>' +
                   '<label for="description[]" class="col-md-2 form-control-label px-0"></label>' +
                   '<div class="col-md-4">' +
-                      '<input type="text" name="description:en[]" class="form-control " style="margin-top:10px;" placeholder="@lang("descriptionEn")" required>' +
+                      '<input type="text" name="description:en[]" class="form-control " style="margin-top:10px;" placeholder="@lang("description:en")" required>' +
                   '</div>' +
                   '<div class="col-md-4">' +
-                    '<input type="text" name="description:ar[]" class="form-control " style="margin-top:10px;" placeholder="@lang("descriptionAr")" required>' +
+                    '<input type="text" name="description:ar[]" class="form-control " style="margin-top:10px;" placeholder="@lang("description:ar")" required>' +
                   '</div>' +
               '<div>'
             );

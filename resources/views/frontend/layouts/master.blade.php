@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ htmlLang() }}" @langrtl dir="rtl" @endlangrtl>
+<html lang="{{ htmlLang() }}" @langrtl dir="rtl" @else dir="ltr" @endlangrtl >
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

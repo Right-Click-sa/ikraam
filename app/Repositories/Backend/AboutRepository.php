@@ -102,6 +102,25 @@ class AboutRepository extends BaseRepository
         $about->delete();
     }
 
+    public function update_enterprise_missions($about, $request)
+    {
+        if (count($request->allFiles()) != 0)
+        {
+          foreach ($request->allFiles() as $key => $image) {
+
+            if($about[$key])
+            {
+              $this->deleteImage($about[$key]);
+              $this->saveImage($image, $key, $about);
+            }
+            else
+            {
+              $this->saveImage($image, $key, $about);
+            }
+          }
+        }
+    }
+
     public function saveImage($image, $key, $about)
     {
         if ($key == 'about_image'){
@@ -117,6 +136,21 @@ class AboutRepository extends BaseRepository
         elseif ($key == 'strategy_image'){
           $about->strategy_image  = time() . uniqid().'.'.$image->getClientOriginalExtension();
           $image->move(public_path('/img/backend/about/'),$about->strategy_image );
+          $about->save();
+        }
+        elseif ($key == 'mission_image'){
+          $about->mission_image  = time() . uniqid().'.'.$image->getClientOriginalExtension();
+          $image->move(public_path('/img/backend/about/'),$about->mission_image );
+          $about->save();
+        }
+        elseif ($key == 'work_image'){
+          $about->work_image  = time() . uniqid().'.'.$image->getClientOriginalExtension();
+          $image->move(public_path('/img/backend/about/'),$about->work_image );
+          $about->save();
+        }
+        elseif ($key == 'structure_image'){
+          $about->structure_image  = time() . uniqid().'.'.$image->getClientOriginalExtension();
+          $image->move(public_path('/img/backend/about/'),$about->structure_image );
           $about->save();
         }
     }

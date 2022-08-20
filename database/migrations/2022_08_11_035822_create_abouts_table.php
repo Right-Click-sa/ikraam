@@ -18,6 +18,9 @@ class CreateAboutsTable extends Migration
             $table->string('about_image')->nullable();
             $table->string('goals_image')->nullable();
             $table->string('strategy_image')->nullable();
+            $table->string('mission_image')->nullable();
+            $table->string('work_image')->nullable();
+            $table->string('structure_image')->nullable();
 
             $table->timestamps();
         });

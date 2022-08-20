@@ -6,7 +6,7 @@
 
   <div class="component-structure">
       <div class="container pt-5 pb-5">
-          <img class="structure-chart"src="/assets/img/structure.png" alt="structure">
+          <img class="structure-chart"src="/img/backend/about/{{ $structure }}" alt="structure">
       </div>
   </div>
 

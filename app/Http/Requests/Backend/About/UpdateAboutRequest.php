@@ -40,6 +40,15 @@ class UpdateAboutRequest extends FormRequest
             'goals:ar'    => ['required'],
             'strategy:en'  => ['required'],
             'strategy:ar'  => ['required'],
+
+            'title:en'    =>  ['required'],
+            'title:en.*'  =>  ['max:191'],
+            'title:ar'    =>  ['required'],
+            'title:ar.*'  =>  ['max:191'],
+            'description:en'    =>  ['required'],
+            // 'description:en.*'  =>  ['required'],
+            'description:ar'    =>  ['required'],
+            // 'description:ar.*'  =>  ['required'],
         ];
     }
 }
