@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Frontend;;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\VolunteerField;
+use App\Models\Gender;
+use App\Models\Location;
 
 class ContributeController extends Controller
 {
@@ -44,6 +47,14 @@ class ContributeController extends Controller
      */
     public function volunteer_join()
     {
-        return view('frontend.contribute.volunteer_join')->withTitle(__('Volunteer'));
+        $genders = Gender::all();
+        $locations = Location::all();
+        $fields = VolunteerField::all();
+        
+        return view('frontend.contribute.volunteer_join')
+            ->withTitle(__('Volunteer'))
+            ->withGenders($genders)
+            ->withLocations($locations)
+            ->withFields($fields);
     }
 }

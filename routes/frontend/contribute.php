@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Frontend\ContributeController;
+use App\Http\Controllers\Backend\VolunteerRequestController;
 use Tabuna\Breadcrumbs\Trail;
 
 /*
@@ -37,3 +38,6 @@ Route::get('/contribute/volunteer/join', [ContributeController::class, 'voluntee
     ->breadcrumbs(function (Trail $trail) {
         $trail->push(__('Volunteer'), route('frontend.contribute.volunteer.join'));
     });
+
+// store volunteer request
+Route::post('/volunteer/request/store', [VolunteerRequestController::class, 'store'])->name('volunteer.request.store');

@@ -97,6 +97,14 @@
                         :text="__('Volunteer Fields')" />
                 </li>
 
+                <li class="c-sidebar-nav-item">
+                    <x-utils.link
+                        class="c-sidebar-nav-link"
+                        :href="route('admin.volunteer.requests')"
+                        :active="activeClass(Route::is('admin.volunteer.requests'), 'c-active')"
+                        :text="__('Volunteer Requests')" />
+                </li>
+
 
             </ul>
         </li>

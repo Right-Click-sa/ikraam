@@ -15,7 +15,12 @@ class CreateLocationTranslationsTable extends Migration
     {
         Schema::create('location_translations', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->unsignedBigInteger('location_id');
+            $table->string('locale')->index();
+            $table->tinyText('location');
+
+            $table->unique(['location_id', 'locale']);
+            $table->foreign('location_id')->references('id')->on('locations')->onDelete('cascade');
         });
     }
 

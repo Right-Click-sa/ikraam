@@ -355,5 +355,9 @@
     "field:ar": "مجال التطوع",
     "Field Created Successfully": "تم إنشاء مجال التطوع بنجاح",
     "Field Updated Successfully": "تم تعديل مجال التطوع بنجاح",
-    "Field Deleted Successfully": "تم حذف مجال التطوع بنجاح"
+    "Field Deleted Successfully": "تم حذف مجال التطوع بنجاح",
+    "Volunteer Location": "موقع المتطوع",
+    "Volunteer Requests": "طلبات التطوع",
+    "Volunteer Information Sent Successfully": "تم ارسال بيانات المتطوع بنجاح",
+    "Volunteer Request Deleted Successfully": "تم حذف طلب التطوع بنجاح"
 }
