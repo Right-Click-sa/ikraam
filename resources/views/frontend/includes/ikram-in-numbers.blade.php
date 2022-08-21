@@ -1,7 +1,7 @@
 <section class="component-ikram pt-5 pb-5">
     <div id="over-component-ikram"></div>
     <div class="container text-center content-ikram">
-        <h5>إكرام في ارقام</h5>
+        <h5>@lang('Ikraam In Numbers')</h5>
         <div class="col-md-9 m-auto text-center">
             <div class="row row-cols-lg-3 row-cols-md-3 mx-0 row-cols-1 g-4 mt-4 justify-content-center">
                 <!--number of programs-->
@@ -13,7 +13,7 @@
                         </div>
                         <div class="number-ikram">
                             <h4>8</h4>
-                            <h6>عدد البرامج</h6>
+                            <h6>@lang('Number Of Programs')</h6>
                         </div>
                       </div>
 
@@ -28,7 +28,7 @@
                         </div>
                         <div class="number-ikram">
                             <h4>21</h4>
-                            <h6>عدد الجمعيات</h6>
+                            <h6>@lang('The Number Of Associations')</h6>
                         </div>
                     </div>
 
@@ -43,7 +43,7 @@
                         </div>
                         <div class="number-ikram">
                             <h4>14</h4>
-                            <h6>عدد المبادرات</h6>
+                            <h6>@lang('Number Of Initiatives')</h6>
                         </div>
                     </div>
 
@@ -53,8 +53,8 @@
             </div>
         </div>
         <div class="component-verse text-center mt-5 mb-5">
-            <h6>(وَقُلِ اعْمَلُوا فَسَيَرَى اللَّهُ عَمَلَكُمْ وَرَسُولُهُ وَالْمُؤْمِنُونَ)
-                <span>صدق الله العظيم </span>
+            <h6>(@lang('And say Work Soon will Allah observe your work, and His Messenger, and the Believers'))
+                <span>@lang('God Almighty has spoken the truth') </span>
             </h6>
         </div>
     </div>

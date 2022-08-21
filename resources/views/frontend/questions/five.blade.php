@@ -8,14 +8,14 @@
         <div class="container">
             <div class="text-center">
                 <strong class="m-auto  text-initiatives-head title-login">
-                    ما هي أحدث البرامج والمبادرات الحالية ؟
+                    @lang('What are the latest current programs and initiatives')
                 </strong>
             </div>
             <ul class="ul-latest mt-4">
-              <li class="mb-3">إعداد الأبحاث والدراسات في قطاع إكرام الموتى</li>
-              <li class="mb-3">تفعيل مبادرة الرصد والا عتناء بالمقابر</li>
-              <li class="mb-3">نموذج المغسلة الحديثة</li>
-              <li class="mb-3">إنشاء دليل موحد للتغسيل وتكفين المتوفى والصالة عليه</li>
+              <li class="mb-3">@lang('Preparing research and studies in the honoring of the dead sector')</li>
+              <li class="mb-3">@lang('Activating the initiative to monitor and take care of cemeteries')</li>
+              <li class="mb-3">@lang('Modern washbasin model')</li>
+              <li class="mb-3">@lang('Create a unified guide for washing and shrouding the deceased and praying for him')</li>
             </ul>
         </div>
     </section>

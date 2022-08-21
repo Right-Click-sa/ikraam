@@ -16,19 +16,15 @@
                             <div class="carousel-captio mt-4">
                             <div class="row justify-content-between align-items-start">
                                 <h5 class="col-md-5  text-capitalize">
-                                    ورش العمل لمناقشة التحديات وتطوير قطاع إكرام الموتى
+                                    @lang('Workshops to discuss challenges and develop the honoring sector for the dead')
                                 </h5>
                                 <div class="col tx-icon-new fs-5">
-
-                                    يناير 2022
+                                    @lang('January 2022')
                                 <i class="far fa-clock "></i>
                                 </div>
                             </div>
                             <pre class="pre-video col-md-12 fs-5 fw-semibold">
-
-                                من منطلق المساهمة في تطوير قطاع إكرام الموتى بالتعاون مع الوحدة الإشرافية تم عقد ورشة عمل  متخصصه في إكرام الموتى على مستوى قطاعات وزارة الشؤون البلدية والقروية  لمناقشة تحديات قطاع إكرام
-                                الموتى وانتهت ورشة العمل بعدد من المبادرات النوعية لتطوير قطاع إكرام الموتى .
-
+                                @lang('In order to contribute to the development of the honoring of the dead sector, in cooperation with the supervisory unit, a workshop was held specialized in honoring the dead at the level of the sectors of the Ministry of Municipal and Rural Affairs to discuss the challenges of the honoring of the dead sector. The workshop ended with a number of qualitative initiatives to develop the sector of honoring the dead.')
                             </pre>
                             </div>
                         </div>
@@ -37,17 +33,15 @@
                             <div class="carousel-captio mt-4">
                             <div class="row justify-content-between align-items-start">
                                     <h5 class="col-md-5  text-capitalize">
-                                        زيارة أمانة الأحساء لعرض نموذج المقبرة النموذجية
+                                        @lang('Visit Al-Ahsa Municipality to view the model cemetery model')
                                     </h5>
                                     <div class="col tx-icon-new fs-5">
-
-                                        يناير 2022
+                                        @lang('January 2022')
                                     <i class="far fa-clock "></i>
                                     </div>
                                 </div>
                             <pre class="pre-video fs-5 fw-semibold">
-                                استكمالاً لدور مؤسسة إكرام الأهلية في المساهمة في رفع مستوى خدمات  قطاع إكرام الموتى فقد تم الاتفاق مع أمانة الأحساء لعمل نموذج لمقبرة ومغسلة نموذجية
-                                ، ولقد قامت أمانة الأحساء مشكورة بتوفير قطعة أرض بمساحة 2 كم لإقامة المشروع
+                                @lang('To complement the role of the Ikram National Foundation in contributing to raising the level of services for the honoring of the dead, an agreement was reached with the Al-Ahsa Municipality to make a model for a cemetery and a model laundry.')
                             </pre>
                             </div>
                         </div>
@@ -56,37 +50,34 @@
                             <div class="carousel-captio mt-4">
                             <div class=" row justify-content-between align-items-start">
                                     <h5 class="col-md-5  text-capitalize">
-                                        التعاون مع إدارة الوحدة الإشرافية لرصد التشوه البصري حول المقابر
+                                        @lang('Cooperation with the management of the supervisory unit to monitor visual distortion around graves')
                                     </h5>
                                     <div class="col tx-icon-new fs-5">
-
-                                        يناير 2022
+                                      @lang('January 2022')
                                     <i class="far fa-clock "></i>
                                     </div>
                             </div>
                             <pre class="pre-video fs-5 fw-semibold">
-                                استكمالاً لجهود مؤسسة إكرام الموتى الأهلية في تنظيم وتطوير قطاع إكرام الموتى
-                                الأهلية تم إطلاق مبادرة إزالة التشوه البصري بالتعاون مع إدارة التطوع التابعة للوحدة الاشرافية بوزارة الشؤون البلدية والقروية والإسكان من خلال العمل مع مجموعة من المتطوعين ، حيث تم رصد التشوه البصري حول المقابر في ثلاث مناطق من مناطق المملكة.
+                                @lang('To complement the efforts of the National Honoring the Dead Foundation in organizing and developing the civil honoring the dead sector, the initiative to remove visual distortion was launched in cooperation with the Volunteer Department of the Supervisory Unit of the Ministry of Municipal and Rural Affairs and Housing by working with a group of volunteers, where visual distortion was monitored around cemeteries in three areas of Kingdom regions.')
                             </pre>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="/assets/img/new-5.jpg" class="img-new-boject d-block w-100" alt="new-poject">
                             <div class="carousel-captio mt-4">
-                            <div class=" row justify-content-between align-items-start">
-                                    <h5 class="col-md-5  text-capitalize">
-                                        زيارة مدينة الملك سعود الطبية
-                                    </h5>
-                                    <div class="col tx-icon-new fs-5">
+                              <div class=" row justify-content-between align-items-start">
+                                      <h5 class="col-md-5  text-capitalize">
+                                          @lang('Visit King Saud Medical City')
+                                      </h5>
+                                      <div class="col tx-icon-new fs-5">
 
-                                        يناير 2022
-                                    <i class="far fa-clock "></i>
-                                    </div>
-                            </div>
-                            <pre class="pre-video fs-5 fw-semibold">
-                                تم زيارة إدارة شؤون الموتى في مدينة الملك سعود الطبية والنظر للممارسات القائمة وبحث سبل التكامل بين المدينة الطبية والمؤسسة
-
-                            </pre>
+                                          @lang('January 2022')
+                                      <i class="far fa-clock "></i>
+                                      </div>
+                              </div>
+                              <pre class="pre-video fs-5 fw-semibold">
+                                  @lang('A visit was made to the Department of Death Affairs in King Saud Medical City, and the existing practices were examined and ways of integration between the Medical City and the institution were discussed')
+                              </pre>
                             </div>
                         </div>
                     </div>
@@ -110,11 +101,11 @@
                             <div class="card-new-new">
                                 <img src="/assets/img/naw-2.jpeg" alt="new">
                                 <h6 class="fs-4 fw-bold mt-2">
-                                    زيارة أمانة الأحساء لعرض نموذج المقبرة النموذجية
+                                    @lang('Visit Al-Ahsa Municipality to view the model cemetery model')
                                   </h6>
                                 <p class="fs-7  mt-2">
-                                        يناير 2022
-                                        <i class="far fa-clock "></i>
+                                    @lang('January 2022')
+                                    <i class="far fa-clock "></i>
                                 </p>
 
                             </div>
@@ -125,10 +116,10 @@
                             <img src="/assets/img/new-4.PNG" alt="new">
 
                             <h6 class="fs-4 fw-bold mt-2">
-                                 التعاون مع إدارة الوحدة الإشرافية لرصد التشوه البصري حول المقابر
+                                 @lang('Cooperation with the management of the supervisory unit to monitor visual distortion around graves')
                             </h6>
-                            <p class="fs-7  mt-2"> يناير
-                                2022
+                            <p class="fs-7  mt-2">
+                                @lang('January 2022')
                                 <i class="far fa-clock "></i>
                             </p>
                             </div>
@@ -139,11 +130,11 @@
                             <div class="card-new-new">
                             <img src="/assets/img/new-5.jpg" alt="new">
                             <h6 class="fs-4 fw-bold mt-2">
-                                زيارة مدينة الملك سعود الطبية
+                                @lang('Visit King Saud Medical City')
                             </h6>
                             <p class="fs-7  mt-2">
-                                    يناير2022
-                                    <i class="far fa-clock "></i>
+                                @lang('January 2022')
+                                <i class="far fa-clock "></i>
                             </p>
                             </div>
                         </div>

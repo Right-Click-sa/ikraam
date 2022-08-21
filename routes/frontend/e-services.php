@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Frontend\E_ServiceController;
+use App\Http\Controllers\Backend\AssociationRequestController;
 use Tabuna\Breadcrumbs\Trail;
 
 /*
@@ -37,3 +38,6 @@ Route::get('/e-services/recruitment/apply', [E_ServiceController::class, 'apply'
     ->breadcrumbs(function (Trail $trail) {
         $trail->push(__('Apply'), route('frontend.e-services.recruitment.apply'));
     });
+
+// store association create account request
+Route::post('/association/request/store', [AssociationRequestController::class, 'store'])->name('association.request.store');

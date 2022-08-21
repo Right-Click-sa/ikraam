@@ -18,7 +18,7 @@
                         </div>
                         <div class="card-body-video">
                             <div>
-                                <h6 class="text-center">من نحن</h6>
+                                <h6 class="text-center">@lang('About Us')</h6>
                                 <span class="d-bloke ">2022-02</span>
                             </div>
                         </div>

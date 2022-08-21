@@ -25,7 +25,7 @@
 
                             <h6>
                               <span class="span-initives">1-</span>
-                              إعداد الأبحاث الدراسات
+                              @lang('Preparing research studies')
                              </h6>
                           </button>
                         </h2>
@@ -34,23 +34,20 @@
                               <div class="row col-md-11 m-auto">
                                   <div class="col-md-6 col-box mx-3">
                                       <div class="box-title">
-                                          <h6 class="title-accordion">المبادرة </h6>
-                                          <p>عداد الأبحاث والدراسات فيما يتعلق باحتياج قطاع إكرام الموتى
-                                              وبحث التحديات القائمة والمتوقعة والممارسات العالمية المتجددة
-                                              التي يمكن تطويعها وفق البيئة المحلية
+                                          <h6 class="title-accordion">@lang('The initiative') </h6>
+                                          <p>
+                                            @lang('Preparing research and studies regarding the needs of the honoring of the dead sector and examining the existing and expected challenges and global renewable practices that can be adapted according to the local environment')
                                           </p>
                                       </div>
 
                                   </div>
                                   <div class="col-md-4 col-box mx-3">
                                       <div class="box-title">
-                                          <h6 class="title-accordion">المخرجات </h6>
+                                          <h6 class="title-accordion">@lang('output') </h6>
                                           <ul>
-                                              <li>دراسة وضع الجمعيات القائمة</li>
-                                              <li> دراسة احتياج القطاع من المنظمات والموارد</li>
-                                              <li>البحث عن أفضل الممارسات العالمية التي تقدم
-                                                  للمستفيد مباشرة
-                                              </li>
+                                              <li>@lang('Study the status of existing associations')</li>
+                                              <li> @lang("Study the sector's need for organizations and resources")</li>
+                                              <li>@lang('Searching for global best practices that are provided to the beneficiary directly')</li>
                                           </ul>
                                       </div>
 
@@ -66,7 +63,7 @@
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                               <h6>
                                   <span class="span-initives">2-</span>
-                                  المساهمة في زيادة عدد الجمعيات
+                                  @lang('Contribute to increasing the number of associations')
                               </h6>
                           </button>
                         </h2>
@@ -74,28 +71,22 @@
                           <div class="accordion-body">
                             <div class="row col-md-11 m-auto">
                               <div class="col-md-6 col-box mx-3">
-                                  <div class="box-title">
-                                      <h6 class="title-accordion">المبادرة </h6>
-                                      <p>
-                                        المساهمة في زيادة عدد الجمعيات العاملة في قطاع إكرام الموتى، وذلك عن طريق حصر الجمعيات والفرق التطوعية
-                                        العاملة في المجال حاليا، ومن ثم تحديد الاحتياج على مستوى المدن والمناطق، وبعد ذلك التنسيق مع المهتمين في
-                                        المناطق ذات الاحتياج والمساهمة في تأسيس الجمعيات ودعمها
-
-                                      </p>
-                                  </div>
-
+                                <div class="box-title">
+                                    <h6 class="title-accordion">@lang('The initiative') </h6>
+                                    <p>
+                                      @lang('Contribute to increasing the number of associations operating in the honoring of the dead sector, by listing the associations and voluntary teams currently working in the field, and then identifying the need at the level of cities and regions, and then coordinating with those interested in areas of need and contributing to the establishment and support of associations')
+                                    </p>
+                                </div>
                               </div>
                               <div class="col-md-4 col-box mx-3">
                                   <div class="box-title">
-                                      <h6 class="title-accordion">المخرجات </h6>
+                                      <h6 class="title-accordion">@lang('output') </h6>
                                       <ul>
-                                          <li>ا حصر الجمعيات والعاملين في القطاع حاليا</li>
-                                          <li>حملة لتسويق فكرة إنشاء جمعيات متخصصة</li>
-                                          <li>ربط المهتمين بالوحدة الإشرافية في الوزارة
-                                          </li>
+                                          <li>@lang('Inventory of associations and workers in the sector currently')</li>
+                                          <li>@lang('A campaign to market the idea of establishing specialized associations')</li>
+                                          <li>@lang('Connecting those interested to the supervisory unit in the ministry')</li>
                                       </ul>
                                   </div>
-
                               </div>
                             </div>
                           </div>
@@ -107,7 +98,7 @@
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                               <h6>
                                   <span class="span-initives">3-</span>
-                                  . تكوين شراكات فاعلة
+                                  @lang('Forming effective partnerships')
                               </h6>
                           </button>
                         </h2>
@@ -116,23 +107,20 @@
                             <div class="row col-md-11 m-auto">
                               <div class="col-md-6 col-box mx-3">
                                   <div class="box-title">
-                                      <h6 class="title-accordion">المبادرة </h6>
+                                      <h6 class="title-accordion">@lang('The initiative') </h6>
                                       <p>
-                                              تحديد المؤثرين المختلفين في قضية المؤسسة وأدوارهم وطرق إشراكهم فيها وآليات التعامل والتواصل معهم بهدف
-                                          زيادة مستوى مشاركتهم وتفاعلهم
-
+                                          @lang('Determining the different influencers on the issue of the institution, their roles, ways to involve them in it, and the mechanisms of dealing and communicating with them in order to increase the level of their participation and interaction.')
                                       </p>
                                   </div>
 
                               </div>
                               <div class="col-md-4 col-box mx-3">
                                   <div class="box-title">
-                                      <h6 class="title-accordion">المخرجات </h6>
+                                      <h6 class="title-accordion">@lang('output') </h6>
                                       <ul>
-                                          <li>. تحديد المؤثرين الآخرين في قضية المؤسسة.</li>
-                                          <li>, وضع آليات التعامل والتحفيز والإشراك لجميع المؤثرين.</li>
-                                          <li>توقيع الشراكات مع الجهات الفاعلة والمهتمة بالقضية
-                                          </li>
+                                          <li>@lang('Identification of other influencers on an enterprise cause')</li>
+                                          <li>@lang('Establishing mechanisms for dealing, motivating and engaging all influencers')</li>
+                                          <li>@lang('Signing partnerships with actors and those interested in the cause')</li>
                                       </ul>
                                   </div>
 
@@ -149,7 +137,7 @@
 
                               <h6>
                                 <span class="span-initives">4-</span>
-                                تفعيل المشاركة المجتمعية
+                                @lang('Activate community participation')
                                </h6>
                             </button>
                           </h2>
@@ -159,24 +147,21 @@
                               <div class="row col-md-11 m-auto">
                                 <div class="col-md-6 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المبادرة </h6>
+                                        <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
-                                          تحديد صور المشاركة المجتمعية المختلفة والفئات المستهدفة بها، والمستفيدين منها، وتصميم تلك
-                                          الفرص مع ذوي العلاقة من متطوعين وجمعيات وجهات شريكة ومستفيدين
-
+                                          @lang('Determining the different forms of community participation, its target groups, and its beneficiaries, and designing those opportunities with stakeholders, including volunteers, associations, partner agencies, and beneficiaries.')
                                         </p>
                                     </div>
 
                                 </div>
                                 <div class="col-md-4 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المخرجات </h6>
+                                        <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
-                                            <li>تحديد شرائح المتطوعين وتفضيلاتهم ومقدراتهم.</li>
-                                            <li> مع تحديد الاحتياجات التطوعية وتصميم الفرص</li>
-                                            <li>حصر عدد المتطوعين في المجال
-                                            </li>
-                                            <li>زيادة عدد المتطوعين</li>
+                                            <li>@lang('Determining the segments of volunteers, their preferences and abilities')</li>
+                                            <li> @lang('Identifying volunteer needs and designing opportunities')</li>
+                                            <li>@lang('Limit the number of volunteers in the field')</li>
+                                            <li>@lang('Increase the number of volunteers')</li>
                                         </ul>
                                     </div>
 
@@ -192,7 +177,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo-2" aria-expanded="false" aria-controls="collapseTwo">
                                 <h6>
                                     <span class="span-initives">5-</span>
-                                    تعزيز البيئة التنظيمية
+                                    @lang('Strengthening the regulatory environment')
                                 </h6>
                             </button>
                           </h2>
@@ -201,21 +186,19 @@
                               <div class="row col-md-11 m-auto">
                                 <div class="col-md-6 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المبادرة </h6>
+                                        <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
-                                          تسعى هذه المبادرة إلى خلق حلقة وصل تربط جميع الجهات المعنية من خلال توضيح العمليات البيئية
-                                          والمهام التي يمكن العمل بها كي لا يتداخل عمل كل جهة مع الأخرى.
-
+                                          @lang('This initiative seeks to create a link that connects all stakeholders by clarifying environmental processes and tasks that can be worked on so that the work of each entity does not overlap with the other.')
                                         </p>
                                     </div>
 
                                 </div>
                                 <div class="col-md-4 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المخرجات </h6>
+                                        <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
-                                            <li>	وضع اللوائح والأنظمة مع الجهات ذات العلاقة</li>
-                                            <li> دليل إجرائي في كيفية التعامل مع الجثمان بجميع أحواله</li>
+                                            <li> @lang('Laying down bylaws and regulations with the relevant authorities') </li>
+                                            <li> @lang('A procedural guide on how to deal with the corpse in all its cases') </li>
 
                                         </ul>
                                     </div>
@@ -231,7 +214,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree-2" aria-expanded="false" aria-controls="collapseThree">
                                 <h6>
                                     <span class="span-initives">6-</span>
-                                   تطوير نموذج الاستدامة المالية للمؤسسة
+                                   @lang('Develop a financial sustainability model for the organization')
                                </h6>
                             </button>
                           </h2>
@@ -240,25 +223,22 @@
                               <div class="row col-md-11 m-auto">
                                 <div class="col-md-6 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المبادرة </h6>
+                                        <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
-                                          تهدف هذه المبادرة إلى المحافظة على الاستقرار المالي وتطوير موارد وأصول المؤسسة ورسم معالم
-                                          احتياج المؤسسة وكيفية إدارتها ضمن أطر حديثة تسهم في الازدهار المستقبلي المادي
-
+                                          @lang('This initiative aims to maintain financial stability, develop the institution’s resources and assets, and outline the institution’s needs and how to manage it within modern frameworks that contribute to future material prosperity.')
                                         </p>
                                     </div>
 
                                 </div>
                                 <div class="col-md-4 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المخرجات </h6>
+                                        <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
-                                            <li>	اللوائح المالية الحاكمة.</li>
-                                            <li> 	تحديد مصادر الدخل المختلفة.</li>
-                                            <li>•	نماذج زيادة الدخل من مختلف المصادر</li>
+                                            <li> @lang('Governing Financial Regulations') </li>
+                                            <li> @lang('Determine different sources of income') </li>
+                                            <li> @lang('Models to increase income from various sources') </li>
                                         </ul>
                                     </div>
-
                                 </div>
                               </div>
                             </div>
@@ -270,7 +250,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree-7" aria-expanded="false" aria-controls="collapseThree">
                                 <h6>
                                     <span class="span-initives">7-</span>
-                                    تصميم برامج للتأهيل والتدريب
+                                    @lang('Designing training and training programs')
                                 </h6>
                             </button>
                           </h2>
@@ -279,20 +259,20 @@
                               <div class="row col-md-11 m-auto">
                                 <div class="col-md-6 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المبادرة </h6>
+                                        <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
-                                          تصميم برامج تأهيل وتدريب العاملين في مجال قطاع إكرام الموتى وتقديمها بالتعاون مع الجمعيات
+                                          @lang('Designing rehabilitation and training programs for workers in the honoring of the dead sector and presenting them in cooperation with associations')
                                         </p>
                                     </div>
 
                                 </div>
                                 <div class="col-md-4 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المخرجات </h6>
+                                        <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
-                                            <li>		تسجيل عدد من المتطوعين والمحتسبين.</li>
-                                            <li> 		إقامة الدورات والورش.</li>
-                                            <li>	إصدار شهادات اعتماد أو تراخيص</li>
+                                            <li> @lang('Registering a number of volunteers and recruiters') </li>
+                                            <li> @lang('Holding courses and workshops')	</li>
+                                            <li> @lang('Issuance of accreditation certificates or licenses') </li>
                                         </ul>
                                     </div>
 
@@ -307,7 +287,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree-8" aria-expanded="false" aria-controls="collapseThree">
                                 <h6>
                                     <span class="span-initives">8-</span>
-                                    العمل على تصميم الحلول الرقمية مع الجهات ذات العلاقة
+                                    @lang('Work on designing digital solutions with the relevant authorities')
                                 </h6>
                             </button>
                           </h2>
@@ -316,24 +296,23 @@
                               <div class="row col-md-11 m-auto">
                                 <div class="col-md-6 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المبادرة </h6>
+                                        <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
-                                          تصميم خدمات رقمية تسهل الإجراءات على ذوي المتوفى بالشراكة مع الجهات
-                                          المعنية، وخدمات تحسن من مستوى عمل الجمعيات
-                                                                                    </p>
+                                          @lang('Designing digital services that facilitate procedures for the families of the deceased, in partnership with the concerned authorities, and services that improve the level of work of associations')
+                                        </p>
                                     </div>
 
                                 </div>
                                 <div class="col-md-4 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المخرجات </h6>
+                                        <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
-                                            <li>		حصر جميع الجهات المعنية مع دور كل واحد منها</li>
-                                            <li> 		إصدار دليل إجرائي يوضح فيه مهام كل جهة</li>
-                                            <li>	تشكيل لجنة من المتخصصين في علوم الحاسب لتصميم خدمة بتطبيـق أبـشـر تيسـر انهـاء</li>
-                                            <li>	إجراءات المتوفى</li>
-                                            <li>	ربط الوثائق واللوائح بتطبيق أبشر و إكرام</li>
-                                            <li>خدمة الكترونية تقوم برصد المغاسل والمستشفيات الشاغرة</li>
+                                            <li> @lang('List all stakeholders with the role of each one') </li>
+                                            <li> @lang('Issuing a procedural guide explaining the tasks of each party') </li>
+                                            <li> @lang('Formation of a committee of specialists in computer sciences to design a service using the Absher application that facilitates completion') </li>
+                                            <li> @lang('Deceased procedures') </li>
+                                            <li> @lang('Linking documents and regulations to the application of Absher and Ikram') </li>
+                                            <li>@lang('An electronic service that monitors vacant laundries and hospitals')</li>
                                           </ul>
                                     </div>
 
@@ -348,7 +327,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree-9" aria-expanded="false" aria-controls="collapseThree">
                                 <h6>
                                     <span class="span-initives">9-</span>
-                                    .تأسيس الصندوق الوقفي لدعم قطاع إكرام الموتى
+                                    @lang('Establishment of the endowment fund to support the honoring of the dead sector')
                                </h6>
                             </button>
                           </h2>
@@ -357,22 +336,20 @@
                               <div class="row col-md-11 m-auto">
                                 <div class="col-md-6 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المبادرة </h6>
+                                        <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
-                                          تأسيس صندوق وقفي مهمته الأساسية تحقيق الاستدامة المالية للمؤسسة، ويسهم أيضا في دعم
-                                          المنظمات غير الربحية في مجال إكرام الموتى
-
+                                          @lang('Establishing an endowment fund whose main mission is to achieve the financial sustainability of the institution, and also contribute to supporting non-profit organizations in the field of honoring the dead')
                                         </p>
                                     </div>
 
                                 </div>
                                 <div class="col-md-4 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المخرجات </h6>
+                                        <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
-                                            <li>	منتجات تمويلية للجمعيات.</li>
-                                            <li> 		مشاريع استثمار اجتماعي</li>
-                                            <li>عوائد مالية للمؤسسة</li>
+                                            <li>@lang('Financing products for associations')</li>
+                                            <li>@lang('social investment projects')</li>
+                                            <li>@lang('Financial returns to the organization')</li>
 
                                           </ul>
                                     </div>
@@ -388,7 +365,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree-10" aria-expanded="false" aria-controls="collapseThree">
                                 <h6>
                                     <span class="span-initives">10-</span>
-                                    التكوين لجنة الرصد والاعتناء بالمقابر
+                                    @lang('Formation of the monitoring committee and the care of cemeteries')
                                 </h6>
                             </button>
                           </h2>
@@ -397,24 +374,20 @@
                               <div class="row col-md-11 m-auto">
                                 <div class="col-md-6 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المبادرة </h6>
+                                        <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
-                                          تكوين لجنة الرصد والاعتناء بالمقابر
+                                          @lang('Formation of the monitoring committee and the care of cemeteries')
                                         </p>
                                     </div>
 
                                 </div>
                                 <div class="col-md-4 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المخرجات </h6>
+                                        <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
-                                            <li>	تكوين قاعدة بيانات للمقابر بالمملكة</li>
-                                            <li> 	خارطة حرارية للطاقة الاستيعابية للمقابر بأنحاء المملكة.
-                                              ۱۰,۳ لائحة العقوبات والمخالفات بالتعاون مع الشؤون البلدية والقروية
-                                              والإسكان
-                                              </li>
-
-
+                                            <li>@lang('Creating a database of cemeteries in the Kingdom')</li>
+                                            <li>@lang('A heat map of the carrying capacity of cemeteries across the Kingdom')</li>
+                                            <li>@lang('The list of penalties and violations in cooperation with the Municipal and Rural Affairs and Housing')</li>
                                           </ul>
                                     </div>
 
@@ -429,7 +402,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree-11" aria-expanded="false" aria-controls="collapseThree">
                                 <h6>
                                     <span class="span-initives">11-</span>
-                                    نموذج المغسلة الحديثة
+                                    @lang('Modern washbasin model')
                                  </h6>
                           </button>
                           </h2>
@@ -438,26 +411,22 @@
                               <div class="row col-md-11 m-auto">
                                 <div class="col-md-6 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المبادرة </h6>
+                                        <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
-                                          وضع نموذج مثالي للمغسلة الحديثة بناء على أبرز التجارب المحلية، ليصبح النموذج معيار لأي
-                                          مانح أو جهة ترغب باستحداث مغسلة أموات
+                                          @lang('Develop an ideal model for the modern laundry based on the most prominent local experiences, so that the model becomes a standard for any donor or entity wishing to develop a mortuary laundry')
                                       </p>
                                     </div>
 
                                 </div>
                                 <div class="col-md-4 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المخرجات </h6>
+                                        <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
-                                            <li>رصد أفضل التجارب المحلية للمغاسل وأبرز مميزاتها</li>
-                                            <li> 	معيار المغسلة الحديثة.
-                                              </li>
-                                            <li>, نموذج تقييم المغاسل القائمة لتحديد الاحتياج</li>
-
+                                            <li>@lang('Monitoring the best local experiences of laundries and their most prominent features')</li>
+                                            <li>@lang('Modern Laundry Standard')</li>
+                                            <li>@lang('Existing Laundry Evaluation Form to Determine Need')</li>
                                           </ul>
                                     </div>
-
                                 </div>
                               </div>
                             </div>
@@ -469,7 +438,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree-12" aria-expanded="false" aria-controls="collapseThree">
                                 <h6>
                                     <span class="span-initives">12-</span>
-                                    . تعزيز التواصل بين المؤثرين في قطاع اكرام الموتى
+                                    @lang('Strengthening communication between influencers in the honoring of the dead sector')
                                   </h6>
                             </button>
                           </h2>
@@ -478,27 +447,18 @@
                               <div class="row col-md-11 m-auto">
                                 <div class="col-md-6 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المبادرة </h6>
+                                        <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
-                                          خلق بيئة تتيح التواصل وتبادل المعلومات عن الفرص والتحديات بين القطاعات المعنية والمؤثرة
-                                          (الحكومي والخاص وغير الربحي).
-
-
-                                      </p>
+                                          @lang('Create an environment that allows communication and exchange of information on opportunities and challenges between the relevant and influential sectors (government, private and non-profit)')
+                                        </p>
                                     </div>
-
                                 </div>
                                 <div class="col-md-4 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المخرجات </h6>
+                                        <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
-                                            <li>
-                                              لقاء سنوي يجمع ممثلين مـن كـافـة أصحاب المصلحة
-                                              بقطاع اكرام الموتى
-                                              </li>
-                                            <li> 	تقرير سنوي عن واقع قطاع إكرام الموتى
-                                              </li>
-
+                                            <li>@lang('An annual meeting that brings together representatives from all stakeholders in the honoring of the dead sector')</li>
+                                            <li>@lang('Annual report on the reality of honoring the dead sector')</li>
                                           </ul>
                                     </div>
 
@@ -513,7 +473,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree-13" aria-expanded="false" aria-controls="collapseThree">
                                 <h6>
                                     <span class="span-initives">13-</span>
-                                    .إطلاق مسار إكرام الموتى بمنصة جود للإسكان
+                                    @lang('Launching the path of honoring the dead at the Joud housing platform')
                                   </h6>
 
                                   </button>
@@ -523,31 +483,19 @@
                               <div class="row col-md-11 m-auto">
                                 <div class="col-md-6 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المبادرة </h6>
+                                        <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
-                                          إطلاق مسار إكرام الموتى بمنصة جود للإسكان تحت مسمى "مسار إكرام الموتى" لحشد الدعم
-                                          والموارد لمبادرات جمعيات قطاع إكرام الموتى
-
-
-                                      </p>
+                                            @lang("Launching the Path of Honoring the Dead on the Jude Housing Platform under the name of 'The Path of Honoring the Dead' to mobilize support and resources for the initiatives of the Associations of Honoring the Dead")
+                                        </p>
                                     </div>
-
                                 </div>
                                 <div class="col-md-4 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المخرجات </h6>
+                                        <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
-                                            <li>
-                                                                نافـذة حشـد مـوارد لـدعم مشاريع جمعيـات اكـرام
-                                                                                    الموتى الأهلية والجهات العاملة بالمجـال: مثل مغاسل
-                                                                                    الموتى
-
-                                              </li>
-
-
-                                          </ul>
+                                            <li>@lang('A window to mobilize resources to support the projects of the civil associations honoring the dead and those working in the field: such as the laundries of the dead')</li>
+                                        </ul>
                                     </div>
-
                                 </div>
                               </div>
                             </div>
@@ -559,7 +507,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree-14" aria-expanded="false" aria-controls="collapseThree">
                                 <h6>
                                     <span class="span-initives">14-</span>
-                                    . إطلاق القناة المرئية التوعوية
+                                    @lang('Launching the Awareness Visual Channel')
                                 </h6>
                             </button>
                           </h2>
@@ -568,26 +516,20 @@
                               <div class="row col-md-11 m-auto">
                                 <div class="col-md-6 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المبادرة </h6>
+                                        <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
-                                          إطلاق قناة مرئية توعوية على اليوتيوب، لتثقيف المجتمع بالقضايا التي تخص إكرام الموتى ، سواء من
-                                          الناحية الفقهية الشرعية، أو من ناحية معالجة التحديات التي تواجه المستفيدين بمجال إكرام الموتى
-
-
-                                      </p>
+                                          @lang('Launching an awareness video channel on YouTube, to educate the community on issues related to honoring the dead, both from a legal jurisprudence point of view, or in terms of addressing the challenges facing beneficiaries in the field of honoring the dead')
+                                        </p>
                                     </div>
 
                                 </div>
                                 <div class="col-md-4 col-box mx-3">
                                     <div class="box-title">
-                                        <h6 class="title-accordion">المخرجات </h6>
+                                        <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
-                                            <li>
-                                             قناة مرئية توعوية لعرض محتوى يساهم في التثقيف والتوعية بقضايا إكرام الموتى
-                                            </li>
-                                            <li>	إعـداد محتـوى يكـون قـابـل للـعـرض والنشـر ، سـواء فـي القنـاة المرئيـة التوعويـة للمؤسسـة، أو نشـرها بمختلـف منصات التواصل الاجتماعي</li>
-
-                                          </ul>
+                                            <li>@lang('An educational video channel to display content that contributes to education and awareness of issues of honoring the dead')</li>
+                                            <li>@lang('Preparing content that is subject to display and dissemination, either in the educational awareness video channel of the institution, or disseminated on various social media platforms')</li>
+                                        </ul>
                                     </div>
 
                                 </div>

@@ -1,7 +1,7 @@
 <section class="component-what pt-5">
     <div class="container">
         <div class="text-center mb-3">
-            <strong class="title-what-video"> ماذانفعل </strong>
+            <strong class="title-what-video"> @lang('What do we do') </strong>
         </div>
         <div class="row m-auto">
             <div class="col-md-8 m-auto">

@@ -8,9 +8,9 @@
     <section class="component-questions pt-5  pb-5">
         <div class="container">
             <strong class=" text-initiatives-head title-login">
-                هل المؤسسة مصرح بها ؟
+                @lang('Is the company authorized')
             </strong>
-            <p class="mt-3 p-questions">نعم مصرح بها ومرفق أد ناه شهادة تسجيل المؤسسة</p>
+            <p class="mt-3 p-questions">@lang("Yes, authorized, attached below is the institution's registration certificate")</p>
            <div class="col-md-8 m-auto img-general-frame">
              <img src="/assets/img/authorized.png" alt="authorized">
            </div>

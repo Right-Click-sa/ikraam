@@ -10,12 +10,12 @@
                     <img src="/assets/img/upload-index.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption row">
                         <div class="caption-buttom mb-5">
-                            <strong class="title-new-view">رؤية جديدة</strong>
+                            <strong class="title-new-view">@lang('New Vision')</strong>
                             <h6 class="title-caption-index fw-bold text-capitalize">
-                              رفع وتحسين مستوى خدمات المتوفى
+                              @lang('Raising and improving the level of services for the deceased')
                             </h6>
                             <p class="p-caption-carousel">
-                              تعني المؤسسة بتعزيز دور القطاع الغير ربحي عن طريق دعم وتمكين الجمعيات المعنية وتفعيل العمل الخيري التطوعي ورفع كفاءة وجودة الخدمات المقدمة لخدمة المواطنين بأفضل الممارسات.
+                              @lang('The Foundation is concerned with enhancing the role of the non-profit sector by supporting and empowering the concerned associations, activating voluntary charitable work, and raising the efficiency and quality of services provided to serve citizens with best practices.')
                             </p>
                         </div>
                     </div>
@@ -24,12 +24,12 @@
                     <img src="/assets/img/contribute.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption row">
                         <div class="caption-buttom">
-                            <strong class="title-new-view">رؤية جديدة</strong>
+                            <strong class="title-new-view">@lang('New Vision')</strong>
                             <h6 class="title-caption-index fw-bold text-capitalize">
-                                المساهمة المجتمعية وتنظيم التبرع لقطاع خدمة إكرام الموتى
+                                @lang('Community contribution and organization of donation to the service sector honoring the dead')
                             </h6>
                             <p class="p-caption-carousel">
-                                تعني المؤسسة بتعزيز دور القطاع الغير ربحي عن طريق دعم وتمكين الجمعيات المعنية وتفعيل العمل الخيري التطوعي ورفع كفاءة وجودة الخدمات المقدمة لخدمة المواطنين بأفضل الممارسات.
+                              @lang('The Foundation is concerned with enhancing the role of the non-profit sector by supporting and empowering the concerned associations, activating voluntary charitable work, and raising the efficiency and quality of services provided to serve citizens with best practices.')
                             </p>
                         </div>
                     </div>
@@ -38,12 +38,12 @@
                     <img src="/assets/img/support.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption row">
                         <div class="caption-buttom">
-                            <strong class="title-new-view">رؤية جديدة</strong>
+                            <strong class="title-new-view">@lang('New Vision')</strong>
                             <h6 class="title-caption-index fw-bold text-capitalize">
-                                تقديم الدعم لذوي المتوفى
+                              @lang('Providing support to the families of the deceased')
                             </h6>
                             <p class=" p-caption-carousel">
-                                تعني المؤسسة بتعزيز دور القطاع الغير ربحي عن طريق دعم وتمكين الجمعيات المعنية وتفعيل العمل الخيري التطوعي ورفع كفاءة وجودة الخدمات المقدمة لخدمة المواطنين بأفضل الممارسات.
+                                @lang('The Foundation is concerned with enhancing the role of the non-profit sector by supporting and empowering the concerned associations, activating voluntary charitable work, and raising the efficiency and quality of services provided to serve citizens with best practices.')
                             </p>
                         </div>
                     </div>

@@ -80,7 +80,7 @@
                     <label for="goal:en" class="col-md-2 col-form-label">@lang('goal:en')</label>
 
                     <div class="col-md-10">
-                        <input type="text" name="goal:en" class="form-control" placeholder="@lang('goal:en')" dir="ltr" value="{{ old('goal:ar') ?? $committee->{'goal:ar'} }}" required>
+                        <input type="text" name="goal:en" class="form-control" placeholder="@lang('goal:en')" dir="ltr" value="{{ old('goal:en') ?? $committee->{'goal:en'} }}" required>
                     </div><!--col-->
                   </div><!--form-group-->
 

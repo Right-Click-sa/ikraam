@@ -8,13 +8,13 @@
     <section class="component-questions pt-5  pb-5">
         <div class="container">
             <strong class="text-initiatives-head title-login">
-                ماهي طريقة تقديم مقترح أو أفكار ومبادرات تطويرية لقطاع إكرام الموتى ؟
+                @lang('What is the method of submitting a proposal or development ideas and initiatives for the honoring of the dead sector')
             </strong>
             <div class="mt-4 component-communicate">
                 <pre>
-                    عبر البريد الاكتروني<a href="info@ikraam.org.sa" class="link-questions" target="_blank">(info@ikraam.org.sa)</a>
+                    @lang('By email')<a href="mailto:info@ikraam.org.sa" target="_newEmail" class="link-questions">(info@ikraam.org.sa)</a>
 
-                    مع إرفاق معلومات يخص الموضوع وبيانات التواصل الخاصة بصاحب المقترح أو المبادرة
+                    @lang('Attaching information on the subject and the contact information of the owner of the proposal or initiative')
                </pre>
             </div>
         </div>

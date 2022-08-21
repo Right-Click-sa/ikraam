@@ -20,7 +20,7 @@ class VolunteerRequestController extends Controller
 
     public function store(Request $request)
     {
-        // 'name', 'email', 'message'
+        // 'name', 'email', 'phone', 'age', 'field_id', 'location_id', 'gender_id'
         $validatedData = \Validator::make($request->all(),[
             'field_id'   => 'required',
             'location_id'   => 'required',

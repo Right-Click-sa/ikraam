@@ -9,27 +9,29 @@
         <div class="container">
             <div class="text-center ">
                 <strong class="m-auto text-initiatives-head title-login">
-                    كيف أساهم مع المؤسسة
+                    @lang('How do I contribute to the Foundation')
                 </strong>
             </div>
 
             <ul class="ul-latest mt-4">
-              <li class="mb-3">التطوع</li>
-              <li class="mb-3">عقد شراكة مجتمعية</li>
-              <li class="mb-3">التبرع</li>
-              <li class="mb-3">سفير</li>
-              <li class="mb-3">المشاركة في تنفيذ المبادرات الخاصة بالمؤسسة</li>
-              <li class="mb-3">المشاركة مع فريق البحث والحصر والا بتكار</li>
-              <li class="mb-3">تقديم الا ستشارات للجمعيات التي تشرف عليها المؤسسة</li>
-              <li class="mb-3">تقديم خدمات التدريب والتطوير للجمعيات التي تشرف عليها المؤسسة</li>
-              <li class="mb-3">دعم المؤسسة من خالل نشر برامجها ومبادراتها عبر وسائل التواصل الا جتماعي</li>
+              <li class="mb-3">@lang('Volunteer')</li>
+              <li class="mb-3">@lang('community partnership contract')</li>
+              <li class="mb-3">@lang('Donation')</li>
+              <li class="mb-3">@lang('Ambassador')</li>
+              <li class="mb-3">@lang("Participation in the implementation of the organization's initiatives")</li>
+              <li class="mb-3">@lang('Participation with the research, inventory and innovation team')</li>
+              <li class="mb-3">@lang('Providing advice to the associations supervised by the institution')</li>
+              <li class="mb-3">@lang('Providing training and development services to associations supervised by the institution')</li>
+              <li class="mb-3">@lang('Supporting the Foundation by publishing its programs and initiatives through social media')</li>
             </ul>
-            <p class="p-questions col-md-6 m-auto text-center">وللمزيد الذهاب إلى خانة النماذج إلا كترونية وتعبئة النموذج وسيتم التواصل بأقرب وقت
-                بإذن هللا ، ولمتابعة إجراءات الطلب يمكن التواصل عبر البريد الاكتروني )
-                 (<a class="link-questions"href="sa.org.ikraam@info">sa.org.ikraam@info </a>) وعبر وآتس أب المؤسسة
+            <p class="p-questions col-md-6 m-auto text-center">
+              @lang('For more, go to the electronic forms box and fill out the form and we will communicate as soon as possible, God willing, and to follow up on the application procedures, you can communicate via e-mail')
+              <a class="link-questions" href="mailto:sa.org.ikraam@info">( sa.org.ikraam@info ) </a>
+               @lang('And via Foundation WhatsApp')
             </p>
+
             <div class="mt-4 text-center">
-                <a class="mt-4 link-questions"href="( https://iwtsp.com/966534399110 )">( https://iwtsp.com/966534399110 )</a>
+                <a class="mt-4 link-questions" href="https://wa.me/966534399110" target="_newEmail">( 966534399110 )</a>
             </div>
         </div>
     </section>

@@ -17,7 +17,7 @@
                     <div class="mt-2 d-flex justify-content-between">
                         <div>
                             <h6 class="title-jop">(@lang('Job'))</h6>
-                            <h5 class="title-jop-defintion">اخصائي تقنية معلومات خبرة 3 سنوات وأكثر </h5>
+                            <h5 class="title-jop-defintion">أخصائي تقنية معلومات خبرة 3 سنوات وأكثر </h5>
                         </div>
                        <div class="img-close">
                            <a href="{{ route('frontend.e-services.recruitment') }}"><img src="/assets/img/close.png" alt="close"></a>
