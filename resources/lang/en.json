@@ -32,5 +32,7 @@
     "field:en": "Volunteer Field",
     "field:ar": "مجال التطوع",
     "job:en": "Job",
-    "job:ar": "الوظيفة"
+    "job:ar": "الوظيفة",
+    "type:en": "Membership Type",
+    "type:ar": "نوع العضوية"
 }

@@ -135,6 +135,34 @@
             </ul>
         </li>
 
+        {{-- membership --}}
+        <li class="c-sidebar-nav-dropdown {{ activeClass(Route::is('admin.memberships.*'), 'c-open c-show') }}">
+            <x-utils.link
+                href="#"
+                icon="c-sidebar-nav-icon fas fa-address-card"
+                class="c-sidebar-nav-dropdown-toggle"
+                :text="__('Memberships')" />
+
+            <ul class="c-sidebar-nav-dropdown-items">
+
+                <li class="c-sidebar-nav-item">
+                    <x-utils.link
+                        class="c-sidebar-nav-link"
+                        :href="route('admin.memberships')"
+                        :active="activeClass(Route::is('admin.memberships'), 'c-active')"
+                        :text="__('Membership Types')" />
+                </li>
+
+                <li class="c-sidebar-nav-item">
+                    <x-utils.link
+                        class="c-sidebar-nav-link"
+                        :href="route('admin.memberships.requests')"
+                        :active="activeClass(Route::is('admin.memberships.requests'), 'c-active')"
+                        :text="__('Membership Requests')" />
+                </li>
+            </ul>
+        </li>
+
 
         <li class="c-sidebar-nav-item">
             <x-utils.link

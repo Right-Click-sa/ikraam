@@ -8,15 +8,15 @@ use App\Models\MembershipRequest;
 
 class MembershipRequestController extends Controller
 {
-    // /**
-    //  *
-    //  * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-    //  */
-    // public function index()
-    // {
-    //     $requests = MembershipRequest::paginate(10);
-    //     return view('backend.volunteer.requests')->withRequests($requests);
-    // }
+    /**
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index()
+    {
+        $requests = MembershipRequest::paginate(10);
+        return view('backend.membership_requests.requests')->withRequests($requests);
+    }
 
     public function store(Request $request)
     {
@@ -48,15 +48,15 @@ class MembershipRequestController extends Controller
         }
     }
 
-    // /**
-    //  * @param MembershipRequest $request
-    //  *
-    //  * @throws \Exception
-    //  * @return mixed
-    //  */
-    // public function destroy(MembershipRequest $request)
-    // {
-    //    $request->delete();
-    //    return back()->withFlashSuccess(__('Volunteer Request Deleted Successfully'));
-    // }
+    /**
+     * @param MembershipRequest $membership
+     *
+     * @throws \Exception
+     * @return mixed
+     */
+    public function destroy(MembershipRequest $membership)
+    {
+       $membership->delete();
+       return back()->withFlashSuccess(__('Membership Request Deleted Successfully'));
+    }
 }
