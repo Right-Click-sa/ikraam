@@ -46,7 +46,15 @@ class AssociationRequestController extends Controller
         }
         else {
             // store voluntee request
-            $request = AssociationRequest::create(request(['name', 'email', 'number', 'chairman', 'founding', 'license', 'executive_director', 'location', 'objective', 'city', 'administrative_officer', 'administrative_officer_number', 'file']));
+            $request = AssociationRequest::create(request(['name', 'email', 'number', 'chairman', 'founding', 'license', 'executive_director', 'location', 'objective', 'city', 'administrative_officer', 'administrative_officer_number']));
+
+            if($file = request('file'))
+            {
+                $request->file  = time().'.'.$file->getClientOriginalExtension();
+                $file->move(public_path('/img/backend/associations/requests/'),$request->file );
+
+                $request->save();
+            }
 
             return response()->json([
               'success'   =>  __('Association Create Account Request Sent Successfully'),

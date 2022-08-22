@@ -27,7 +27,7 @@ class CreateAssociationRequestsTable extends Migration
             $table->tinyText('city');
             $table->tinyText('administrative_officer');
             $table->bigInteger('administrative_officer_number');
-            $table->tinyText('file');
+            $table->tinyText('file')->nullable();
 
             $table->timestamps();
         });

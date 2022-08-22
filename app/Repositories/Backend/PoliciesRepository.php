@@ -24,7 +24,6 @@ class PoliciesRepository extends BaseRepository
      */
     public function store()
     {
-      // dd(request());
         $policy = Policy::create(request(['policy:en', 'policy:ar', 'content:en', 'content:ar']));
 
         if($file = request('file'))

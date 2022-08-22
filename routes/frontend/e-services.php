@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Frontend\E_ServiceController;
 use App\Http\Controllers\Backend\AssociationRequestController;
+use App\Http\Controllers\Backend\MembershipRequestController;
+use App\Http\Controllers\Backend\JobRequestController;
 use Tabuna\Breadcrumbs\Trail;
 
 /*
@@ -33,7 +35,7 @@ Route::get('/e-services/recruitment', [E_ServiceController::class, 'recruitment'
         $trail->push(__('Recruitment'), route('frontend.e-services.recruitment'));
     });
 
-Route::get('/e-services/recruitment/apply', [E_ServiceController::class, 'apply'])
+Route::get('/e-services/recruitment/{job}/apply', [E_ServiceController::class, 'apply'])
     ->name('e-services.recruitment.apply')
     ->breadcrumbs(function (Trail $trail) {
         $trail->push(__('Apply'), route('frontend.e-services.recruitment.apply'));
@@ -41,3 +43,9 @@ Route::get('/e-services/recruitment/apply', [E_ServiceController::class, 'apply'
 
 // store association create account request
 Route::post('/association/request/store', [AssociationRequestController::class, 'store'])->name('association.request.store');
+
+// store membership request
+Route::post('/membership/request/store', [MembershipRequestController::class, 'store'])->name('membership.request.store');
+
+// store job request
+Route::post('/job/{job}/request/store', [JobRequestController::class, 'store'])->name('job.request.store');

@@ -17,7 +17,7 @@
                     <div class="mt-2 d-flex justify-content-between">
                         <div>
                             <h6 class="title-jop">(@lang('Job'))</h6>
-                            <h5 class="title-jop-defintion">أخصائي تقنية معلومات خبرة 3 سنوات وأكثر </h5>
+                            <h5 class="title-jop-defintion">{{ $job->job }} </h5>
                         </div>
                        <div class="img-close">
                            <a href="{{ route('frontend.e-services.recruitment') }}"><img src="/assets/img/close.png" alt="close"></a>
@@ -26,52 +26,56 @@
                     <div class="col-md-10 mt-4">
                         <h6  class="title-jop">(@lang('Information'))</h6>
                         <pre class="pre-jobs mt-3">
-                            الحاجة الى مختص تقني لدية خبرة في الدعم الفني والشبكات
+                            {{ $job->description }}
                         </pre>
                     </div>
-                    <form class="form-content form-login mt-3 row g-3 needs-validation justify-content-center" novalidate="">
+
+                    <form class="form-content form-login mt-3 row g-3 needs-validation justify-content-center" novalidate="" id="job-request-form" action="{{ route('frontend.job.request.store', $job) }}" method="POST">
+                        @csrf
                         <div class="col-md-6 mb-2">
-                            <input type="text" class="form-control form-control-lg" placeholder=" @lang('Name') " id="validationemail" required="">
+                            <input type="text" class="form-control form-control-lg request-form" name="name" placeholder=" @lang('Name') " id="validationemail" required="">
                             <div class="invalid-feedback">
                             Please provide a valid name.
                             </div>
                         </div>
                         <div class="col-md-6 mb-2">
-                            <input type="text" placeholder="@lang('Phone')" class="form-control form-control-lg" id="validationCustom05" required="">
+                            <input type="number" placeholder="@lang('Phone')" name="phone" class="form-control form-control-lg request-form" id="validationCustom05" required="">
                             <div class="invalid-feedback">
                                 Please provide a valid number.
                             </div>
                         </div>
                         <div class="col-md-6 mb-2">
-                            <input type="text" placeholder="@lang('Age')" class="form-control form-control-lg" id="validationCustom05" required="">
+                            <input type="number" placeholder="@lang('Age')" name="age" class="form-control form-control-lg request-form" id="validationCustom05" required="">
                             <div class="invalid-feedback">
                                 Please provide a valid number.
                             </div>
                         </div>
                         <div class="col-md-6 mb-2">
-                            <input type="text" placeholder="@lang('Identification Number')" class="form-control form-control-lg" id="validationCustom05" required="">
+                            <input type="number" placeholder="@lang('Identification Number')" name="identification_number" class="form-control form-control-lg request-form" id="validationCustom05" required="">
                             <div class="invalid-feedback">
                                 Please provide a valid number.
                             </div>
                         </div>
                         <div class="col-md-6 mb-2">
-                            <input type="text" placeholder="@lang('Specialization')" class="form-control form-control-lg" id="validationCustom05" required="">
+                            <input type="text" placeholder="@lang('Specialization')" name="specialization" class="form-control form-control-lg request-form" id="validationCustom05" required="">
                             <div class="invalid-feedback">
                                 Please provide a valid number.
                             </div>
                         </div>
                         <div class="col-md-6 mb-2">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected="">@lang('Gender')</option>
-                                <option value="1">ذكر</option>
-                                <option value="2">انثى</option>
-                            </select>
+                          <select name="gender_id" class="form-select request-form" aria-label="Default select example" required>
+                              <option value="">@lang('Gender')</option>
+                              @foreach ($genders as $key => $gender)
+                                <option value="{{ $gender->id }}">{{ $gender->gender }}</option>
+                              @endforeach
+                          </select>
                         </div>
+
                         <div class ="col-md-12 mb-2">
                             <div class="d-flex form-control custom-file justify-content-between">
                                 <span>@lang('CV')</span>
                                 <div class="">
-                                    <input type="file" class="custom-file-input" id="file" multiple="" onchange="javascript:updateList()">
+                                    <input type="file" class="custom-file-input" id="file" name="file" accept=".pdf,docx,doc" required>
                                     <label class="text-white custom-file-label" for="file">
                                         @lang('Upload file')
                                         <img class="download" src="/assets/img/Icon awesome-download.png" alt="download">
@@ -90,3 +94,81 @@
     <!--end-request-->
 
 @endsection
+
+@push('after-scripts')
+  {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> --}}
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.8.1/sweetalert2.all.min.js"></script>
+
+  <script type="text/javascript">
+
+  $(document).on('submit', '#job-request-form',function(e) {
+          e.preventDefault();
+
+          var url = $(this).attr('action'),
+              formData = new FormData($('#job-request-form')[0]);
+
+          $.ajaxSetup({
+              headers: {
+                  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              }
+          });
+
+          $.ajax({
+              url : url,
+              type: 'POST',  // http method
+              data: formData,  // data to submit
+              processData: false,
+              contentType: false,
+              success: function (data, status, xhr) {
+
+                  if(data.errors) {
+                      Swal.fire({
+                        title: data.app_name,
+                        text: data.errors,
+                        icon: 'error',
+                        timer: 3000,
+                        timerProgressBar: true,
+                        showClass: {
+                          popup: 'animate__animated animate__fadeInDown',
+                          backdrop: 'swal2-backdrop-show',
+                          icon: 'swal2-icon-show'
+                        },
+                        hideClass: {
+                          popup: 'animate__animated animate__fadeOutUp',
+                          backdrop: 'swal2-backdrop-show',
+                          icon: 'swal2-icon-show'
+                        }
+                      })
+                  }
+                  else {
+                    $('#job-request-form .request-form .custom-file-input').val('');
+                    $('#job-request-form').removeClass('was-validated');
+
+                    Swal.fire({
+                      title: data.app_name,
+                      text: data.success,
+                      icon: 'success',
+                      timer: 3000,
+                      timerProgressBar: true,
+                      showClass: {
+                        popup: 'animate__animated animate__fadeInDown',
+                        backdrop: 'swal2-backdrop-show',
+                        icon: 'swal2-icon-show'
+                      },
+                      hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp',
+                        backdrop: 'swal2-backdrop-show',
+                        icon: 'swal2-icon-show'
+                      }
+                    });
+                  }
+              },
+              error: function (jqXhr, textStatus, errorMessage) {
+                  // console.log(errorMessage);
+                  // console.log(jqXhr);
+              }
+          });
+      });
+  </script>
+@endpush

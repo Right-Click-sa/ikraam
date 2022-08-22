@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Frontend;;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\MembershipType;
+use App\Models\Gender;
+use App\Models\Job;
 
 class E_ServiceController extends Controller
 {
@@ -28,7 +31,12 @@ class E_ServiceController extends Controller
      */
     public function memberships()
     {
-        return view('frontend.e-services.memberships')->withTitle(__('Memberships'));
+        $genders = Gender::all();
+        $types = MembershipType::all();
+        return view('frontend.e-services.memberships')
+            ->withTitle(__('Memberships'))
+            ->withGenders($genders)
+            ->withTypes($types);
     }
 
     /**
@@ -36,14 +44,21 @@ class E_ServiceController extends Controller
      */
     public function recruitment()
     {
-        return view('frontend.e-services.recruitment')->withTitle(__('Recruitment'));
+        $jobs = Job::all();
+        return view('frontend.e-services.recruitment')
+            ->withTitle(__('Recruitment'))
+            ->withJobs($jobs);
     }
 
     /**
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function apply()
+    public function apply(Job $job)
     {
-        return view('frontend.e-services.apply')->withTitle(__('Recruitment'));
+        $genders = Gender::all();
+        return view('frontend.e-services.apply')
+            ->withTitle(__('Recruitment'))
+            ->withGenders($genders)
+            ->withJob($job);
     }
 }
