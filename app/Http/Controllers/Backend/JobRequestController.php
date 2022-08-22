@@ -9,20 +9,18 @@ use App\Models\Job;
 
 class JobRequestController extends Controller
 {
-    // /**
-    //  *
-    //  * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-    //  */
-    // public function index()
-    // {
-    //     $requests = JobRequest::paginate(10);
-    //     return view('backend.volunteer.requests')->withRequests($requests);
-    // }
+    /**
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index()
+    {
+        $requests = JobRequest::paginate(10);
+        return view('backend.jobs_requests.requests')->withRequests($requests);
+    }
 
     public function store(Request $request, Job $job)
     {
-        // array_merge($request->all(), ['job_id'  =>  $job->id]);
-
         // 'gender_id', 'job_id', 'identification_number', 'name', 'age', 'phone', 'specialization', 'file'
         $validatedData = \Validator::make($request->all(),[
             'gender_id'   => 'required',
@@ -62,15 +60,22 @@ class JobRequestController extends Controller
         }
     }
 
-    // /**
-    //  * @param JobRequest $request
-    //  *
-    //  * @throws \Exception
-    //  * @return mixed
-    //  */
-    // public function destroy(JobRequest $request)
-    // {
-    //    $request->delete();
-    //    return back()->withFlashSuccess(__('Volunteer Request Deleted Successfully'));
-    // }
+    /**
+     * @param JobRequest $request
+     *
+     * @throws \Exception
+     * @return mixed
+     */
+    public function destroy(JobRequest $job)
+    {
+        if($job->file)
+        {
+          $file_path = public_path('/img/backend/jobs/requests/').$job->file;
+          unlink($file_path);
+        }
+
+        $job->delete();
+
+        return back()->withFlashSuccess(__('Job Request Deleted Successfully'));
+    }
 }

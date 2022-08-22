@@ -104,8 +104,34 @@
                         :active="activeClass(Route::is('admin.volunteer.requests'), 'c-active')"
                         :text="__('Volunteer Requests')" />
                 </li>
+            </ul>
+        </li>
 
+        {{-- jobs --}}
+        <li class="c-sidebar-nav-dropdown {{ activeClass(Route::is('admin.job.*'), 'c-open c-show') }}">
+            <x-utils.link
+                href="#"
+                icon="c-sidebar-nav-icon fas fa-address-card"
+                class="c-sidebar-nav-dropdown-toggle"
+                :text="__('Jobs')" />
 
+            <ul class="c-sidebar-nav-dropdown-items">
+
+                <li class="c-sidebar-nav-item">
+                    <x-utils.link
+                        class="c-sidebar-nav-link"
+                        :href="route('admin.jobs')"
+                        :active="activeClass(Route::is('admin.jobs'), 'c-active')"
+                        :text="__('Available Jobs')" />
+                </li>
+
+                <li class="c-sidebar-nav-item">
+                    <x-utils.link
+                        class="c-sidebar-nav-link"
+                        :href="route('admin.job.requests')"
+                        :active="activeClass(Route::is('admin.job.requests'), 'c-active')"
+                        :text="__('Jobs Requests')" />
+                </li>
             </ul>
         </li>
 

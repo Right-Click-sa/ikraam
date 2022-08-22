@@ -30,5 +30,7 @@
     "task:en": "Task",
     "task:ar": "المهمة",
     "field:en": "Volunteer Field",
-    "field:ar": "مجال التطوع"
+    "field:ar": "مجال التطوع",
+    "job:en": "Job",
+    "job:ar": "الوظيفة"
 }
