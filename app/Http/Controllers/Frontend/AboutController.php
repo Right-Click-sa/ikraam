@@ -8,6 +8,7 @@ use App\Models\About;
 use App\Models\Policy;
 use App\Models\Trustee;
 use App\Models\Committee;
+use App\Models\Setting;
 
 class AboutController extends Controller
 {
@@ -17,7 +18,11 @@ class AboutController extends Controller
     public function about()
     {
         $about = About::first();
-        return view('frontend.about.about')->withTitle(__('About the enterprise'))->withAbout($about);
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.about.about')
+            ->withTitle(__('About the enterprise'))
+            ->withSettings($settings)
+            ->withAbout($about);
     }
 
     /**
@@ -26,10 +31,12 @@ class AboutController extends Controller
     public function enterprise_missions()
     {
         $about = About::first();
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
         return view('frontend.about.missions')
             ->withTitle(__('Enterprise missions'))
             ->withMission($about->mission_image)
-            ->withWork($about->work_image);
+            ->withWork($about->work_image)
+            ->withSettings($settings);
     }
 
     /**
@@ -38,7 +45,11 @@ class AboutController extends Controller
     public function regulations_and_policies()
     {
         $policies = Policy::all();
-        return view('frontend.about.regulations_and_policies')->withTitle(__('Regulations and Policies'))->withPolicies($policies);
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.about.regulations_and_policies')
+            ->withTitle(__('Regulations and Policies'))
+            ->withPolicies($policies)
+            ->withSettings($settings);
     }
 
     /**
@@ -47,7 +58,11 @@ class AboutController extends Controller
     public function board_of_trustees()
     {
         $trustees = Trustee::all();
-        return view('frontend.about.board_of_trustees')->withTitle(__('Board of Trustees'))->withTrustees($trustees);
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.about.board_of_trustees')
+            ->withTitle(__('Board of Trustees'))
+            ->withTrustees($trustees)
+            ->withSettings($settings);
     }
 
     /**
@@ -56,7 +71,11 @@ class AboutController extends Controller
     public function committees()
     {
         $committees = Committee::all();
-        return view('frontend.about.committees')->withTitle(__('Committees'))->withCommittees($committees);
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.about.committees')
+            ->withTitle(__('Committees'))
+            ->withCommittees($committees)
+            ->withSettings($settings);
     }
 
     /**
@@ -65,6 +84,10 @@ class AboutController extends Controller
     public function administrative_structure()
     {
         $about = About::first();
-        return view('frontend.about.administrative_structure')->withTitle(__('The administrative structure'))->withStructure($about->structure_image);
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.about.administrative_structure')
+            ->withTitle(__('The administrative structure'))
+            ->withStructure($about->structure_image)
+            ->withSettings($settings);
     }
 }

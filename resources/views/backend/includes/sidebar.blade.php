@@ -18,6 +18,16 @@
                 :text="__('Dashboard')" />
         </li>
 
+        {{-- main page --}}
+        <li class="c-sidebar-nav-item">
+            <x-utils.link
+                class="c-sidebar-nav-link"
+                :href="route('admin.mainPage.edit')"
+                :active="activeClass(Route::is('admin.mainPage.edit'), 'c-active')"
+                icon="c-sidebar-nav-icon cil-speedometer"
+                :text="__('Main page')" />
+        </li>
+
         <!-- about us -->
         <li class="c-sidebar-nav-dropdown {{ activeClass(Route::is('admin.about.*'), 'c-open c-show') }}">
             <x-utils.link
@@ -163,7 +173,7 @@
             </ul>
         </li>
 
-
+        {{-- contact us messages --}}
         <li class="c-sidebar-nav-item">
             <x-utils.link
                 class="c-sidebar-nav-link"
@@ -171,6 +181,15 @@
                 :active="activeClass(Route::is('admin.contact_us'), 'c-active')"
                 icon="c-sidebar-nav-icon fas fa-comments"
                 :text="__('Contact Us')" />
+        </li>
+
+        <li class="c-sidebar-nav-item">
+            <x-utils.link
+                class="c-sidebar-nav-link"
+                :href="route('admin.settings')"
+                :active="activeClass(Route::is('admin.settings'), 'c-active')"
+                icon="c-sidebar-nav-icon fas fa-user-cog"
+                :text="__('Settings')" />
         </li>
 
 

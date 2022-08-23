@@ -9,12 +9,12 @@
              <div class="row">
                  <!---->
                 <div class="contact-method col-12 col-lg-6 col-md-12 d-flex align-items-center justify-content-end">
-                    <a class="block-reset" href="mailto:info@ikraam.org.sa" target="_newEmail"> info@ikraam.org.sa </a>
+                    <a class="block-reset" href="mailto:{{ $settings['email'] }}" target="_newEmail"> {{ $settings['email'] }} </a>
                     <i class="btn btn-sm me-3 fas fa-envelope"></i>
                 </div>
                 <!----->
                 <div class="contact-method col-12 col-lg-6 col-md-12 d-flex align-items-center justify-content-end">
-                    <a href="tel:+966534399110" class="block-reset"> +966534399110 </a>
+                    <a href="tel:{{ $settings['phone'] }}" class="block-reset"> {{ $settings['phone'] }} </a>
                     <i class="btn btn-sm  me-3 fa-solid fa-phone"></i>
 
                 </div>

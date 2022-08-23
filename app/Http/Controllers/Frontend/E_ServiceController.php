@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\MembershipType;
 use App\Models\Gender;
 use App\Models\Job;
+use App\Models\Setting;
 
 class E_ServiceController extends Controller
 {
@@ -15,7 +16,10 @@ class E_ServiceController extends Controller
      */
     public function partnerships()
     {
-        return view('frontend.e-services.partnerships')->withTitle(__('Partnerships'));
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.e-services.partnerships')
+            ->withTitle(__('Partnerships'))
+            ->withSettings($settings);
     }
 
     /**
@@ -23,7 +27,10 @@ class E_ServiceController extends Controller
      */
     public function associations()
     {
-        return view('frontend.e-services.associations')->withTitle(__('Associations'));
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.e-services.associations')
+            ->withTitle(__('Associations'))
+            ->withSettings($settings);
     }
 
     /**
@@ -33,10 +40,13 @@ class E_ServiceController extends Controller
     {
         $genders = Gender::all();
         $types = MembershipType::all();
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+
         return view('frontend.e-services.memberships')
             ->withTitle(__('Memberships'))
             ->withGenders($genders)
-            ->withTypes($types);
+            ->withTypes($types)
+            ->withSettings($settings);
     }
 
     /**
@@ -45,9 +55,12 @@ class E_ServiceController extends Controller
     public function recruitment()
     {
         $jobs = Job::all();
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+
         return view('frontend.e-services.recruitment')
             ->withTitle(__('Recruitment'))
-            ->withJobs($jobs);
+            ->withJobs($jobs)
+            ->withSettings($settings);
     }
 
     /**
@@ -56,9 +69,12 @@ class E_ServiceController extends Controller
     public function apply(Job $job)
     {
         $genders = Gender::all();
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+
         return view('frontend.e-services.apply')
             ->withTitle(__('Recruitment'))
             ->withGenders($genders)
-            ->withJob($job);
+            ->withJob($job)
+            ->withSettings($settings);
     }
 }

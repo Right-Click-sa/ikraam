@@ -10,11 +10,11 @@
                 <!--social-->
                 <div class="social">
                     <span class="text-white fs-6">@lang('Follow us')</span>
-                    <a href="https://https://www.facebook.com/profile.php?id=100080023215689" class="text-white fs-6  fab fa-facebook" target="_blank" ></a>
-                    <a href="https://instagram.com/i.kraam.sa?r=nametag" class="text-white fs-6  fab fa-instagram" target="_blank" ></a>
-                    <a href="http://www.linkedin.com/in/ikraamfoundation" class="text-white fs-6 fab fa-linkedin" target="_blank" ></a>
-                    <a href="https://vt.tiktok.com/ZSdHUeo82" class="text-white fs-6 fab fa-tiktok" target="_blank"></a>
-                    <a href="https://twitter.com/ikraam_sa?s=11&amp;t=FfNzV9TBuF7H-BQTs8OX8Q" class="text-white fs-6 fab fa-twitter" target="_blank" ></a>
+                    <a href="{{ $settings['facebook'] }}" class="text-white fs-6  fab fa-facebook" target="_blank" ></a>
+                    <a href="{{ $settings['instagram'] }}" class="text-white fs-6  fab fa-instagram" target="_blank" ></a>
+                    <a href="{{ $settings['linkedin'] }}" class="text-white fs-6 fab fa-linkedin" target="_blank" ></a>
+                    <a href="{{ $settings['tiktok'] }}" class="text-white fs-6 fab fa-tiktok" target="_blank"></a>
+                    <a href="{{ $settings['twitter'] }}" class="text-white fs-6 fab fa-twitter" target="_blank" ></a>
                 </div>
                 <!--social-->
             </div>
@@ -27,6 +27,14 @@
     </div>
 </footer>
 <!--end-footer-->
+
 <!-- Copyrights -->
-<div class="copyrights text-center pt-3 pb-3 text-white fs-5 text-capitalize">ThemeREX © 2022. All Rights </div>
+<div class="copyrights text-center pt-3 pb-3 text-white fs-5 text-capitalize">
+  @lang('All Rights Reserved')
+  <strong>
+      <a href="https://rightclick.sa/" target="_blank">Right Click</a>
+      &copy; {{ date('Y') }}
+  </strong>
+
+</div>
 <!--end-Copyrights-->

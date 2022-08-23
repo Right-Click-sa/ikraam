@@ -11,12 +11,11 @@
                             <button id="myBtn" ></button>
                         </div>
                         <video loop="" id="myVideo" poster="/assets/img/video-how.png" style="object-fit:cover;">
-                            <source src="/assets/img/video/index.mp4" type="video/mp4">
+                            <source src="{{ $mainPage->video_link }}" type="video/mp4">
                         </video>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </section>

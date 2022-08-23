@@ -12,7 +12,7 @@
                             <img src="/assets/img/lightbulb.png" alt="lightbulb">
                         </div>
                         <div class="number-ikram">
-                            <h4>8</h4>
+                            <h4>{{ $mainPage->programs_number }}</h4>
                             <h6>@lang('Number Of Programs')</h6>
                         </div>
                       </div>
@@ -27,7 +27,7 @@
                             <img src="/assets/img/group.png" alt="group">
                         </div>
                         <div class="number-ikram">
-                            <h4>21</h4>
+                            <h4>{{ $mainPage->associations_number }}</h4>
                             <h6>@lang('The Number Of Associations')</h6>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                             <img src="/assets/img/united.png" alt="united">
                         </div>
                         <div class="number-ikram">
-                            <h4>14</h4>
+                            <h4>{{ $mainPage->initiatives_number }}</h4>
                             <h6>@lang('Number Of Initiatives')</h6>
                         </div>
                     </div>

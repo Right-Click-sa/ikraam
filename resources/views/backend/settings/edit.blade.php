@@ -81,6 +81,14 @@
                   </div><!--form-group-->
 
                   <div class="form-group row">
+                    <label for="tiktok" class="col-md-2 col-form-label">@lang('Tiktok')</label>
+
+                    <div class="col-md-10">
+                        <input type="text" name="tiktok" class="form-control" placeholder="@lang('Tiktok')"  value="{{ $settings['tiktok'] }}">
+                    </div><!--col-->
+                  </div><!--form-group-->
+
+                  <div class="form-group row">
                     <label for="map" class="col-md-2 col-form-label">@lang('Map')</label>
 
                     <div class="col-md-10">

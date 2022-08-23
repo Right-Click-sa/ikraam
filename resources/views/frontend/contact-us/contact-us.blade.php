@@ -16,13 +16,13 @@
                <div class="row">
                    <!---->
                   <div class="contact-method col-12 col-lg-6 col-md-12 d-flex align-items-center justify-content-end">
-                      <a class="block-reset" href="mailto:info@ikraam.org.sa" target="_newEmail">info@ikraam.org.sa</a>
+                      <a class="block-reset" href="mailto:{{ $settings['email'] }}" target="_newEmail">{{ $settings['email'] }}</a>
                       <i class="btn btn-sm me-3 fas fa-envelope"></i>
 
                   </div>
                   <!----->
                   <div class="contact-method col-12 col-lg-6 col-md-12 d-flex align-items-center justify-content-end">
-                      <a href="tel:+966534399110" class="block-reset">+966534399110
+                      <a href="tel:{{ $settings['phone'] }}" class="block-reset">{{ $settings['phone'] }}
                       </a>
                       <i class="btn btn-sm  me-3 fa-solid fa-phone"></i>
 
@@ -76,10 +76,10 @@
              <div class="div-group  mb-3">
                  <span class="" id="basic-addon2"><i class="fa-solid fa-location-dot"></i></span>
 
-                 <h2 class="">@lang('Al Yasmeen, Riyadh, Saudi Arabia')</h2>
+                 <h2 class="">{{ $settings['address'.ucfirst(app()->getLocale())] }}</h2>
              </div>
 
-             <iframe class="mt-4"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.495287330034!2d46.670223185683874!3d24.675495258724407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f1cad80c0f04b%3A0x1dc565fe39132323!2z2LLYp9mB2LHYp9mG!5e0!3m2!1sar!2seg!4v1653998937029!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             <iframe class="mt-4"src="{{ $settings['map'] }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <!--maps-->
      </div>

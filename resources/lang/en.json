@@ -1,4 +1,5 @@
 {
+    "App Name": "Ikraam",
     "about:en": "About Us",
     "about:ar": "من نحن",
     "vision:en": "Vision",
@@ -34,5 +35,7 @@
     "job:en": "Job",
     "job:ar": "الوظيفة",
     "type:en": "Membership Type",
-    "type:ar": "نوع العضوية"
+    "type:ar": "نوع العضوية",
+    "addressEn": "Address",
+    "addressAr": "العنوان"
 }

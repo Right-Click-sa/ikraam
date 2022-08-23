@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Http\Request;
 use LangleyFoxall\LaravelNISTPasswordRules\PasswordRules;
+use App\Models\Setting;
 
 /**
  * Class LoginController.
@@ -44,7 +45,10 @@ class LoginController
      */
     public function showLoginForm()
     {
-        return view('frontend.auth.login')->withTitle(__('Login'));
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.auth.login')
+            ->withTitle(__('Login'))
+            ->withSettings($settings);
     }
 
     /**

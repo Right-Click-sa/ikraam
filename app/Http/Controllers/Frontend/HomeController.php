@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Frontend;
+use App\Models\MainPage;
+use App\Models\Setting;
 
 /**
  * Class HomeController.
@@ -12,7 +14,12 @@ class HomeController
      */
     public function index()
     {
-        return view('frontend.index')->withTitle(__('Main page'));
+        $mainPage = MainPage::first();
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.index')
+            ->withTitle(__('Main page'))
+            ->withSettings($settings)
+            ->withMainPage($mainPage);
     }
 
     /**
@@ -20,7 +27,10 @@ class HomeController
      */
     public function create_account()
     {
-        return view('frontend.create_account.create_account')->withTitle(__('Register'));
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.create_account.create_account')
+            ->withTitle(__('Register'))
+            ->withSettings($settings);
     }
 
     /**
@@ -28,6 +38,9 @@ class HomeController
      */
     public function contact_us()
     {
-        return view('frontend.contact-us.contact-us')->withTitle(__('Contact Us'));
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.contact-us.contact-us')
+            ->withTitle(__('Contact Us'))
+            ->withSettings($settings);
     }
 }

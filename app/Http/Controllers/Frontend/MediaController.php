@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Setting;
 
 class MediaController extends Controller
 {
@@ -12,7 +13,10 @@ class MediaController extends Controller
      */
     public function news()
     {
-        return view('frontend.media.news')->withTitle(__('News'));
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.media.news')
+            ->withTitle(__('News'))
+            ->withSettings($settings);
     }
 
     /**
@@ -20,7 +24,10 @@ class MediaController extends Controller
      */
     public function gallery()
     {
-        return view('frontend.media.gallery')->withTitle(__('Gallery'));
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.media.gallery')
+            ->withTitle(__('Gallery'))
+            ->withSettings($settings);
     }
 
     /**
@@ -28,6 +35,9 @@ class MediaController extends Controller
      */
     public function videos()
     {
-        return view('frontend.media.videos')->withTitle(__('Videos'));
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.media.videos')
+            ->withTitle(__('Videos'))
+            ->withSettings($settings);
     }
 }

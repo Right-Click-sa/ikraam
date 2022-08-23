@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Setting;
 
 class QuestionController extends Controller
 {
@@ -12,7 +13,10 @@ class QuestionController extends Controller
      */
       public function questions()
       {
-          return view('frontend.questions.questions')->withTitle(__('Support'));
+          $settings   = Setting::all()->pluck('value', 'key')->toArray();
+          return view('frontend.questions.questions')
+              ->withTitle(__('Support'))
+              ->withSettings($settings);
       }
 
       /**
@@ -20,51 +24,81 @@ class QuestionController extends Controller
        */
         public function one()
         {
-            return view('frontend.questions.one')->withTitle(__('Support'));
+            $settings   = Setting::all()->pluck('value', 'key')->toArray();
+            return view('frontend.questions.one')
+                ->withTitle(__('Support'))
+                ->withSettings($settings);
         }
 
         public function two()
         {
-            return view('frontend.questions.two')->withTitle(__('Support'));
+            $settings   = Setting::all()->pluck('value', 'key')->toArray();
+            return view('frontend.questions.two')
+                ->withTitle(__('Support'))
+                ->withSettings($settings);
         }
 
         public function three()
         {
-            return view('frontend.questions.three')->withTitle(__('Support'));
+            $settings   = Setting::all()->pluck('value', 'key')->toArray();
+            return view('frontend.questions.three')
+                ->withTitle(__('Support'))
+                ->withSettings($settings);
         }
 
         public function four()
         {
-            return view('frontend.questions.four')->withTitle(__('Support'));
+            $settings   = Setting::all()->pluck('value', 'key')->toArray();
+            return view('frontend.questions.four')
+                ->withTitle(__('Support'))
+                ->withSettings($settings);
         }
 
         public function five()
         {
-            return view('frontend.questions.five')->withTitle(__('Support'));
+            $settings   = Setting::all()->pluck('value', 'key')->toArray();
+            return view('frontend.questions.five')
+                ->withTitle(__('Support'))
+                ->withSettings($settings);
         }
 
         public function six()
         {
-            return view('frontend.questions.six')->withTitle(__('Support'));
+            $settings   = Setting::all()->pluck('value', 'key')->toArray();
+            return view('frontend.questions.six')
+                ->withTitle(__('Support'))
+                ->withSettings($settings);
         }
 
         public function seven()
         {
-            return view('frontend.questions.seven')->withTitle(__('Support'));
+            $settings   = Setting::all()->pluck('value', 'key')->toArray();
+            return view('frontend.questions.seven')
+                ->withTitle(__('Support'))
+                ->withSettings($settings);
         }
 
         public function eight()
         {
-            return view('frontend.questions.eight')->withTitle(__('Support'));
+            $settings   = Setting::all()->pluck('value', 'key')->toArray();
+            return view('frontend.questions.eight')
+                ->withTitle(__('Support'))
+                ->withSettings($settings);
         }
 
         public function nine()
         {
-            return view('frontend.questions.nine')->withTitle(__('Support'));
+            $settings   = Setting::all()->pluck('value', 'key')->toArray();
+            return view('frontend.questions.nine')
+                ->withTitle(__('Support'))
+                ->withSettings($settings);
         }
 
         public function ten()
         {
-            return view('frontend.questions.ten')->withTitle(__('Support'));
+            $settings   = Setting::all()->pluck('value', 'key')->toArray();
+            return view('frontend.questions.ten')
+                ->withTitle(__('Support'))
+                ->withSettings($settings);
         }
 }

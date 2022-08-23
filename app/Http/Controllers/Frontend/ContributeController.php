@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\VolunteerField;
 use App\Models\Gender;
 use App\Models\Location;
+use App\Models\Setting;
 
 class ContributeController extends Controller
 {
@@ -15,7 +16,10 @@ class ContributeController extends Controller
    */
     public function contribute()
     {
-        return view('frontend.contribute.contribute')->withTitle(__('Contribute with us'));
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.contribute.contribute')
+            ->withTitle(__('Contribute with us'))
+            ->withSettings($settings);
     }
 
     /**
@@ -23,7 +27,10 @@ class ContributeController extends Controller
      */
     public function donate()
     {
-        return view('frontend.contribute.donate')->withTitle(__('Donate'));
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.contribute.donate')
+            ->withTitle(__('Donate'))
+            ->withSettings($settings);
     }
 
     /**
@@ -31,7 +38,10 @@ class ContributeController extends Controller
      */
     public function donate_in_kind()
     {
-        return view('frontend.contribute.donate_in-kind')->withTitle(__('In-kind donation'));
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.contribute.donate_in-kind')
+            ->withTitle(__('In-kind donation'))
+            ->withSettings($settings);
     }
 
     /**
@@ -39,7 +49,10 @@ class ContributeController extends Controller
      */
     public function volunteer()
     {
-        return view('frontend.contribute.volunteer')->withTitle(__('Volunteer'));
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.contribute.volunteer')
+            ->withTitle(__('Volunteer'))
+            ->withSettings($settings);
     }
 
     /**
@@ -50,11 +63,13 @@ class ContributeController extends Controller
         $genders = Gender::all();
         $locations = Location::all();
         $fields = VolunteerField::all();
-        
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+
         return view('frontend.contribute.volunteer_join')
             ->withTitle(__('Volunteer'))
             ->withGenders($genders)
             ->withLocations($locations)
-            ->withFields($fields);
+            ->withFields($fields)
+            ->withSettings($settings);
     }
 }
