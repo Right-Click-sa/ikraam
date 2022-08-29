@@ -20,6 +20,7 @@ use Illuminate\Notifications\Notifiable;
 use Lab404\Impersonate\Models\Impersonate;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
+use App\Models\Association;
 
 /**
  * Class User.
@@ -41,6 +42,7 @@ class User extends Authenticatable implements MustVerifyEmail, TwoFactorAuthenti
 
     public const TYPE_ADMIN = 'admin';
     public const TYPE_USER = 'user';
+    public const TYPE_Association = 'association';
 
     /**
      * The attributes that are mass assignable.
@@ -158,5 +160,10 @@ class User extends Authenticatable implements MustVerifyEmail, TwoFactorAuthenti
     protected static function newFactory()
     {
         return UserFactory::new();
+    }
+
+    public function association()
+    {
+        return $this->hasOne(Association::class);
     }
 }

@@ -36,6 +36,14 @@ trait UserMethod
     /**
      * @return mixed
      */
+    public function isAssociation(): bool
+    {
+        return $this->type === self::TYPE_Association;
+    }
+
+    /**
+     * @return mixed
+     */
     public function hasAllAccess(): bool
     {
         return $this->isAdmin() && $this->hasRole(config('boilerplate.access.role.admin'));

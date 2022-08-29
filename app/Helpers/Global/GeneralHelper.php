@@ -45,6 +45,10 @@ if (! function_exists('homeRoute')) {
             if (auth()->user()->isUser()) {
                 return 'frontend.user.dashboard';
             }
+
+            if (auth()->user()->isAssociation()) {
+                return 'frontend.user.dashboard';
+            }
         }
 
         return 'frontend.index';

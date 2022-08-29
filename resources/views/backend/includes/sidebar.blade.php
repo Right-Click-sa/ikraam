@@ -1,11 +1,11 @@
 <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
     <div class="c-sidebar-brand d-lg-down-none">
-        <svg class="c-sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
+        {{-- <svg class="c-sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
             <use xlink:href="{{ asset('img/brand/coreui.svg#full') }}"></use>
         </svg>
         <svg class="c-sidebar-brand-minimized" width="46" height="46" alt="CoreUI Logo">
             <use xlink:href="{{ asset('img/brand/coreui.svg#signet') }}"></use>
-        </svg>
+        </svg> --}}
     </div><!--c-sidebar-brand-->
 
     <ul class="c-sidebar-nav">
@@ -173,6 +173,36 @@
             </ul>
         </li>
 
+        {{-- associations --}}
+        <li class="c-sidebar-nav-dropdown {{ activeClass(Route::is('admin.associations.*'), 'c-open c-show') }}">
+            <x-utils.link
+                href="#"
+                icon="c-sidebar-nav-icon fas fa-address-card"
+                class="c-sidebar-nav-dropdown-toggle"
+                :text="__('Associations')" />
+
+            <ul class="c-sidebar-nav-dropdown-items">
+
+                <li class="c-sidebar-nav-item">
+                    <x-utils.link
+                        class="c-sidebar-nav-link"
+                        :href="route('admin.associations')"
+                        :active="activeClass(Route::is('admin.associations'), 'c-active')"
+                        :text="__('Associations')" />
+                </li>
+
+                {{-- associations requests --}}
+                <li class="c-sidebar-nav-item">
+                  <x-utils.link
+                  class="c-sidebar-nav-link"
+                  :href="route('admin.associations.requests')"
+                  :active="activeClass(Route::is('admin.associations.requests'), 'c-active')"
+                  :text="__('Associations Requests')" />
+                </li>
+
+            </ul>
+        </li>
+
         {{-- contact us messages --}}
         <li class="c-sidebar-nav-item">
             <x-utils.link
@@ -248,7 +278,7 @@
         @endif
 
         @if ($logged_in_user->hasAllAccess())
-            <li class="c-sidebar-nav-dropdown">
+            {{-- <li class="c-sidebar-nav-dropdown">
                 <x-utils.link
                     href="#"
                     icon="c-sidebar-nav-icon cil-list"
@@ -269,7 +299,7 @@
                             :text="__('Logs')" />
                     </li>
                 </ul>
-            </li>
+            </li> --}}
         @endif
     </ul>
 

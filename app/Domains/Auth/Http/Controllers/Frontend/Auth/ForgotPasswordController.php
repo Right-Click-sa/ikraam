@@ -3,6 +3,7 @@
 namespace App\Domains\Auth\Http\Controllers\Frontend\Auth;
 
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
+use App\Models\Setting;
 
 /**
  * Class ForgotPasswordController.
@@ -29,6 +30,9 @@ class ForgotPasswordController
      */
     public function showLinkRequestForm()
     {
-        return view('frontend.auth.passwords.email')->withTitle(__('Reset Password'));
+        $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        return view('frontend.auth.passwords.email')
+            ->withTitle(__('Reset Password'))
+            ->withSettings($settings);
     }
 }

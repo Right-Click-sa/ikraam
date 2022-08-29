@@ -8,15 +8,15 @@ use App\Models\AssociationRequest;
 
 class AssociationRequestController extends Controller
 {
-    // /**
-    //  *
-    //  * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-    //  */
-    // public function index()
-    // {
-    //     $requests = AssociationRequest::paginate(10);
-    //     return view('backend.volunteer.requests')->withRequests($requests);
-    // }
+    /**
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index()
+    {
+        $requests = AssociationRequest::paginate(10);
+        return view('backend.associations_requests.requests')->withRequests($requests);
+    }
 
     public function store(Request $request)
     {
@@ -63,15 +63,22 @@ class AssociationRequestController extends Controller
         }
     }
 
-    // /**
-    //  * @param AssociationRequest $request
-    //  *
-    //  * @throws \Exception
-    //  * @return mixed
-    //  */
-    // public function destroy(AssociationRequest $request)
-    // {
-    //    $request->delete();
-    //    return back()->withFlashSuccess(__('Volunteer Request Deleted Successfully'));
-    // }
+    /**
+     * @param AssociationRequest $request
+     *
+     * @throws \Exception
+     * @return mixed
+     */
+    public function destroy(AssociationRequest $association)
+    {
+        $file_path = public_path('/img/backend/associations/requests/').$association->file;
+
+        if (file_exists($file_path) ) {
+          unlink($file_path);
+        }
+
+       $association->delete();
+
+       return back()->withFlashSuccess(__('Association Request Deleted Successfully'));
+    }
 }

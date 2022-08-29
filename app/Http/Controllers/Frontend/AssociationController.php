@@ -4,19 +4,18 @@ namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\About;
-use App\Models\Policy;
-use App\Models\Trustee;
-use App\Models\Committee;
+use App\Models\Association;
 use App\Models\Setting;
+use App\Models\About;
 
-class AboutController extends Controller
+class AssociationController extends Controller
 {
     /**
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function about()
+    public function association(Association $association)
     {
+      dd('here');
         $about = About::first();
         $settings   = Setting::all()->pluck('value', 'key')->toArray();
         return view('frontend.about.about')

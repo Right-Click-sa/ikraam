@@ -11,5 +11,9 @@
         <div x-show="userType === '{{ $model::TYPE_USER}}'">
             @include('backend.auth.includes.partials.permission-type', ['type' => $model::TYPE_USER])
         </div>
+
+        <div x-show="userType === '{{ $model::TYPE_Association}}'">
+            @include('backend.auth.includes.partials.permission-type', ['type' => $model::TYPE_Association])
+        </div>
     </div>
 </div><!--form-group-->
