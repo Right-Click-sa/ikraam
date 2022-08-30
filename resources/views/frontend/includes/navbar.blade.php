@@ -3,7 +3,7 @@
    <div class="container pt-2 pb-2">
        <div class="row-nav-top row justify-content-between align-items-center">
            <div class="col-lg  d-flex align-items-center link-nav-top">
-               
+
                @if(config('boilerplate.locale.status') && count(config('boilerplate.locale.languages')) > 0)
                   @foreach(collect(config('boilerplate.locale.languages'))->sortBy('name') as $code => $details)
                       @if($code !== app()->getLocale())
@@ -105,25 +105,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('frontend.contact-us') }}" >@lang('Call Us')</a>
                 </li>
-
-                {{-- <li class="nav-item">
-                    <a class="nav-link"   href="https://ncnp.gov.sa/ar">
-                        <img class="img-nav-link"src="/assets/img/download copy.png" style="height:100px; width:150px"  alt="Center-National-Development">
-
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"   href="https://hrsd.gov.sa/">
-                        <img class="img-nav-link" src="/assets/img/ministry-1.png" height="100" alt="Ministry of Human Resources">
-
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"   href="https://www.momrah.gov.sa/ar">
-                        <img class="img-nav-link" src="/assets/img/ministry.png" alt="Ministry of Municipal Affairs">
-
-                    </a>
-                </li> --}}
             </ul>
 
             </div>
@@ -137,14 +118,18 @@
     <div class="container">
         <div class="row row-login-title justify-content-between align-items-center">
             <h6 class="col-md-6 title-page-top"> {{ $title }}</h6>
-            {{-- @if( Route::currentRouteName() == 'frontend.initiatives' ||  Route::currentRouteName() == 'frontend.contribute.volunteer') --}}
               <div class="col-md-6 account-link-login">
                     <a class="create-account"href="{{ route('frontend.create_account') }}" title=" @lang('Register')">@lang('Register') </a>
-
-                    <a class="link-Login" href="{{ route('frontend.auth.login') }}" title="@lang('Login') ">@lang('Login') </a>
+                    @if (Auth::user())
+                      @if( $logged_in_user->isAdmin())
+                        <a class="link-Login" href="{{ route('admin.dashboard') }}" title="@lang('Login') ">@lang('Dashboard') </a>
+                      @elseif( $logged_in_user->isAssociation())
+                        <a class="link-Login" href="{{ route('frontend.user.account') }}" title="@lang('Login') ">@lang('My Account') </a>
+                      @endif    
+                    @else
+                      <a class="link-Login" href="{{ route('frontend.auth.login') }}" title="@lang('Login') ">@lang('Login') </a>
+                    @endif
                 </div>
-            {{-- @endif --}}
-            {{-- <h6 class="col-md-2 title-page-left account-link-login"> نسخة تجريبية</h6> --}}
         </div>
     </div>
 </div>

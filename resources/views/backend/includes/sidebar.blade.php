@@ -203,6 +203,36 @@
             </ul>
         </li>
 
+        {{-- media center --}}
+        <li class="c-sidebar-nav-dropdown {{ activeClass(Route::is('admin.media.*'), 'c-open c-show') }}">
+            <x-utils.link
+                href="#"
+                icon="c-sidebar-nav-icon fas fa-address-card"
+                class="c-sidebar-nav-dropdown-toggle"
+                :text="__('Media Center')" />
+
+            <ul class="c-sidebar-nav-dropdown-items">
+
+                <li class="c-sidebar-nav-item">
+                    <x-utils.link
+                        class="c-sidebar-nav-link"
+                        :href="route('admin.media.news')"
+                        :active="activeClass(Route::is('admin.media.news'), 'c-active')"
+                        :text="__('News')" />
+                </li>
+
+                {{-- gallery --}}
+                <li class="c-sidebar-nav-item">
+                  <x-utils.link
+                  class="c-sidebar-nav-link"
+                  :href="route('admin.media.gallery.edit')"
+                  :active="activeClass(Route::is('admin.media.gallery.edit'), 'c-active')"
+                  :text="__('Gallery')" />
+                </li>
+
+            </ul>
+        </li>
+
         {{-- contact us messages --}}
         <li class="c-sidebar-nav-item">
             <x-utils.link
@@ -277,8 +307,8 @@
             </li>
         @endif
 
-        @if ($logged_in_user->hasAllAccess())
-            {{-- <li class="c-sidebar-nav-dropdown">
+        {{-- @if ($logged_in_user->hasAllAccess())
+            <li class="c-sidebar-nav-dropdown">
                 <x-utils.link
                     href="#"
                     icon="c-sidebar-nav-icon cil-list"
@@ -299,8 +329,8 @@
                             :text="__('Logs')" />
                     </li>
                 </ul>
-            </li> --}}
-        @endif
+            </li>
+        @endif --}}
     </ul>
 
     <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-minimized"></button>
