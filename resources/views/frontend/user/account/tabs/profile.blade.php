@@ -1,45 +1,226 @@
-<div class="table-responsive">
-    <table class="table table-striped table-hover table-bordered mb-0">
-        <tr>
-            <th>@lang('Type')</th>
-            <td>@include('backend.auth.user.includes.type', ['user' => $logged_in_user])</td>
-        </tr>
+<form action="{{ route('frontend.auth.associations.update', $logged_in_user->association->id) }}" method="POST" enctype="multipart/form-data">
+    @method('patch')
+    @csrf
 
-        <tr>
-            <th>@lang('Avatar')</th>
-            <td><img src="{{ $logged_in_user->avatar }}" class="user-profile-image" /></td>
-        </tr>
+    <!-- The Association Image -->
+    <div class="form-group row">
+        <label for="image" class="col-md-3 col-form-label text-md-right">@lang('Association Image')</label>
 
-        <tr>
-            <th>@lang('Name')</th>
-            <td>{{ $logged_in_user->name }}</td>
-        </tr>
+        <div class="col-md-9">
+          <div class="col-md-4 offset-md-4 mx-auto">
+            <div class="image-upload row">
+              <label for="file-input1">
+                  @if($logged_in_user->association->image)
+                      <img src="/img/backend/associations/img/{{ $logged_in_user->association->image }}" style="cursor:pointer; vertical-align: middle; margin-left: auto; margin-right: auto; width: 100%;" name="image" id="image" />
+                  @else
+                    <div class="d-flex trips-uploaded-images flex-wrap justify-content-center align-content-center">
+                      <img src="/img/backend/upload-2.png" style="cursor:pointer; vertical-align: middle; margin-left: auto; margin-right: auto; width:300px; height: 200px;max-width: 100%;margin:0 auto; object-fit:contain;" name="image" id="image" />
+                    </div>
+                  @endif
+              </label>
 
-        <tr>
-            <th>@lang('E-mail Address')</th>
-            <td>{{ $logged_in_user->email }}</td>
-        </tr>
+              <input id="file-input1" type="file" accept="image/*" onchange="readURL(this);" hidden name="image" />
+            </div>
+          </div>
+        </div>
+      </div>
 
-        @if ($logged_in_user->isSocial())
-            <tr>
-                <th>@lang('Social Provider')</th>
-                <td>{{ ucfirst($logged_in_user->provider) }}</td>
-            </tr>
-        @endif
+    <!-- Association name -->
+    <div class="form-group row">
+      <label for="name:en" class="col-md-3 col-form-label text-md-right">@lang('association_name:en')</label>
 
-        <tr>
-            <th>@lang('Timezone')</th>
-            <td>{{ $logged_in_user->timezone ? str_replace('_', ' ', $logged_in_user->timezone) : __('N/A') }}</td>
-        </tr>
+      <div class="col-md-9">
+        <input type="text" name="name:en" class="form-control" placeholder="@lang('association_name:en')" dir="ltr" required autofocus value="{{ old('name:en') ?? $logged_in_user->association->{'name:en'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
 
-        <tr>
-            <th>@lang('Account Created')</th>
-            <td>@displayDate($logged_in_user->created_at) ({{ $logged_in_user->created_at->diffForHumans() }})</td>
-        </tr>
+    <div class="form-group row">
+      <label for="name:ar" class="col-md-3 col-form-label text-md-right">@lang('association_name:ar')</label>
 
-        <tr>
-            <th>@lang('Last Updated')</th>
-            <td>@displayDate($logged_in_user->updated_at) ({{ $logged_in_user->updated_at->diffForHumans() }})</td>
-        </tr>
-    </table>
-</div><!--table-responsive-->
+      <div class="col-md-9">
+        <input type="text" name="name:ar" class="form-control" placeholder="@lang('association_name:ar')" dir="rtl" required value="{{ old('name:ar') ?? $logged_in_user->association->{'name:ar'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    <!-- chairman -->
+    <div class="form-group row">
+      <label for="chairman:en" class="col-md-3 col-form-label text-md-right">@lang('association_chairman:en')</label>
+
+      <div class="col-md-9">
+        <input type="text" name="chairman:en" class="form-control" placeholder="@lang('association_chairman:en')" dir="ltr" required value="{{ old('chairman:en') ?? $logged_in_user->association->{'chairman:en'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    <div class="form-group row">
+      <label for="chairman:ar" class="col-md-3 col-form-label text-md-right">@lang('association_chairman:ar')</label>
+
+      <div class="col-md-9">
+        <input type="text" name="chairman:ar" class="form-control" placeholder="@lang('association_chairman:ar')" dir="rtl" required value="{{ old('chairman:ar') ?? $logged_in_user->association->{'chairman:ar'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    {{-- objective --}}
+    <div class="form-group row">
+      <label for="objective:en" class="col-md-3 col-form-label text-md-right">@lang('objective:en')</label>
+
+      <div class="col-md-9">
+          <input type="text" name="objective:en" class="form-control" placeholder="@lang('objective:en')" dir="ltr" required value="{{ old('objective:en') ?? $logged_in_user->association->{'objective:en'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    <div class="form-group row">
+      <label for="objective:ar" class="col-md-3 col-form-label text-md-right">@lang('objective:ar')</label>
+
+      <div class="col-md-9">
+          <input type="text" name="objective:ar" class="form-control" placeholder="@lang('objective:ar')" dir="rtl" required value="{{ old('objective:ar') ?? $logged_in_user->association->{'objective:ar'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    <!-- city -->
+    <div class="form-group row">
+      <label for="city:en" class="col-md-3 col-form-label text-md-right">@lang('city:en')</label>
+
+      <div class="col-md-9">
+        <input type="text" name="city:en" class="form-control" placeholder="@lang('city:en')" dir="ltr" required value="{{ old('city:en') ?? $logged_in_user->association->{'city:en'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    <div class="form-group row">
+      <label for="city:ar" class="col-md-3 col-form-label text-md-right">@lang('city:ar')</label>
+
+      <div class="col-md-9">
+        <input type="text" name="city:ar" class="form-control" placeholder="@lang('city:ar')" dir="rtl" required value="{{ old('city:ar') ?? $logged_in_user->association->{'city:ar'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    <!-- location -->
+    <div class="form-group row">
+      <label for="location:en" class="col-md-3 col-form-label text-md-right">@lang('location:en')</label>
+
+      <div class="col-md-9">
+        <input type="text" name="location:en" class="form-control" placeholder="@lang('location:en')" dir="ltr" required value="{{ old('location:en') ?? $logged_in_user->association->{'location:en'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    <div class="form-group row">
+      <label for="location:ar" class="col-md-3 col-form-label text-md-right">@lang('location:ar')</label>
+
+      <div class="col-md-9">
+        <input type="text" name="location:ar" class="form-control" placeholder="@lang('location:ar')" dir="rtl" required value="{{ old('location:ar') ?? $logged_in_user->association->{'location:ar'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    <!-- executive_director -->
+    <div class="form-group row">
+      <label for="executive_director:en" class="col-md-3 col-form-label text-md-right">@lang('executive_director:en')</label>
+
+      <div class="col-md-9">
+        <input type="text" name="executive_director:en" class="form-control" placeholder="@lang('executive_director:en')" dir="ltr" required value="{{ old('executive_director:en') ?? $logged_in_user->association->{'executive_director:en'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    <div class="form-group row">
+      <label for="executive_director:ar" class="col-md-3 col-form-label text-md-right">@lang('executive_director:ar')</label>
+
+      <div class="col-md-9">
+        <input type="text" name="executive_director:ar" class="form-control" placeholder="@lang('executive_director:ar')" dir="rtl" required value="{{ old('executive_director:ar') ?? $logged_in_user->association->{'executive_director:ar'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    <!-- administrative_officer -->
+    <div class="form-group row">
+      <label for="administrative_officer:en" class="col-md-3 col-form-label text-md-right">@lang('administrative_officer:en')</label>
+
+      <div class="col-md-9">
+        <input type="text" name="administrative_officer:en" class="form-control" placeholder="@lang('administrative_officer:en')" dir="ltr" required value="{{ old('administrative_officer:en') ?? $logged_in_user->association->{'administrative_officer:en'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    <div class="form-group row">
+      <label for="administrative_officer:ar" class="col-md-3 col-form-label text-md-right">@lang('administrative_officer:ar')</label>
+
+      <div class="col-md-9">
+        <input type="text" name="administrative_officer:ar" class="form-control" placeholder="@lang('administrative_officer:ar')" dir="rtl" required value="{{ old('administrative_officer:ar') ?? $logged_in_user->association->{'administrative_officer:ar'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    <!-- email -->
+    <div class="form-group row">
+      <label for="email" class="col-md-3 col-form-label text-md-right">@lang('Email')</label>
+
+      <div class="col-md-9">
+        <input type="email" name="email" class="form-control" placeholder="@lang('Email')"  required value="{{ old('email') ?? $logged_in_user->association->{'email'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    <!-- phone -->
+    <div class="form-group row">
+      <label for="number" class="col-md-3 col-form-label text-md-right">@lang('Phone')</label>
+
+      <div class="col-md-9">
+        <input type="number" name="number" class="form-control" placeholder="@lang('Phone')"  required value="{{ old('number') ?? $logged_in_user->association->{'number'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    <!-- founding -->
+    <div class="form-group row">
+      <label for="founding" class="col-md-3 col-form-label text-md-right">@lang('Founding')</label>
+
+      <div class="col-md-9">
+        <input type="number" name="founding" class="form-control" placeholder="@lang('Founding')" required value="{{ old('founding') ?? $logged_in_user->association->{'founding'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    <!-- license -->
+    <div class="form-group row">
+      <label for="license" class="col-md-3 col-form-label text-md-right">@lang('License')</label>
+
+      <div class="col-md-9">
+        <input type="text" name="license" class="form-control" placeholder="@lang('License')"  required value="{{ old('license') ?? $logged_in_user->association->{'license'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    <!-- administrative_officer_number -->
+    <div class="form-group row">
+      <label for="administrative_officer_number" class="col-md-3 col-form-label text-md-right">@lang("Administrative officer's number")</label>
+
+      <div class="col-md-9">
+        <input type="number" name="administrative_officer_number" class="form-control" placeholder="@lang("Administrative officer's number")" required value="{{ old('administrative_officer_number') ?? $logged_in_user->association->{'administrative_officer_number'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+
+    <!-- file -->
+    <div class="form-group row mb-3">
+      <label for="file" class="col-md-3 col-form-label text-md-right">@lang('Upload the association certificate')</label>
+
+      <div class="col-md-9">
+          <input class="form-control " id="file" type="file" name="file" accept=".pdf,docx,doc" value="{{ $logged_in_user->association->file }}">
+      </div>
+    </div>
+
+    <div class="form-group row mb-0">
+        <div class="col-md-12 text-right">
+            <button class="btn btn-sm btn-primary float-right" type="submit">@lang('Edit Association')</button>
+        </div>
+    </div><!--form-group-->
+</form>
+
+@push('after-scripts')
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<script type="text/javascript">
+	    function readURL(input)
+	    {
+	        if (input.files && input.files[0]) {
+	            var reader = new FileReader();
+
+	            reader.onload = function (e)
+	            {
+	                $('#'+ input.name).attr('src', e.target.result);
+	            }
+
+	            reader.readAsDataURL(input.files[0]);
+	        }
+	    }
+	</script>
+@endpush

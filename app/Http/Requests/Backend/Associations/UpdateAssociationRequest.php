@@ -16,7 +16,12 @@ class UpdateAssociationRequest extends FormRequest
      */
     public function authorize()
     {
-        return $this->user()->isAdmin();
+        if ($this->user()->isAdmin()) {
+          return $this->user()->isAdmin();
+        }
+        elseif ($this->user()->isAssociation()) {
+          return $this->user()->isAssociation();
+        }
     }
 
     /**

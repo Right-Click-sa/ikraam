@@ -14,15 +14,17 @@
                     <x-slot name="body">
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <x-utils.link
-                                    :text="__('My Profile')"
-                                    class="nav-link active"
-                                    id="my-profile-tab"
-                                    data-toggle="pill"
-                                    href="#my-profile"
-                                    role="tab"
-                                    aria-controls="my-profile"
-                                    aria-selected="true" />
+                              @if ($logged_in_user->association)
+                                  <x-utils.link
+                                      :text="__('My Profile')"
+                                      class="nav-link active"
+                                      id="my-profile-tab"
+                                      data-toggle="pill"
+                                      href="#my-profile"
+                                      role="tab"
+                                      aria-controls="my-profile"
+                                      aria-selected="true" />
+                              @endif
 
                                 <x-utils.link
                                     :text="__('Edit Information')"
@@ -59,11 +61,13 @@
                         </nav>
 
                         <div class="tab-content" id="my-profile-tabsContent">
-                            <div class="tab-pane fade pt-3 show active" id="my-profile" role="tabpanel" aria-labelledby="my-profile-tab">
-                                @include('frontend.user.account.tabs.profile')
-                            </div><!--tab-profile-->
+                            @if ($logged_in_user->association)
+                              <div class="tab-pane fade pt-3 show active" id="my-profile" role="tabpanel" aria-labelledby="my-profile-tab">
+                                  @include('frontend.user.account.tabs.profile')
+                              </div><!--tab-profile-->
+                            @endif
 
-                            <div class="tab-pane fade pt-3" id="information" role="tabpanel" aria-labelledby="information-tab">
+                            <div class="tab-pane fade pt-3 {{ !$logged_in_user->association ? 'show active' : '' }}" id="information" role="tabpanel" aria-labelledby="information-tab">
                                 @include('frontend.user.account.tabs.information')
                             </div><!--tab-information-->
 

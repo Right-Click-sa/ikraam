@@ -14,12 +14,20 @@
                             <img src="/assets/img/Subtraction.png" alt="Subtraction">
                         </div>
                         <div class="row justify-content-center gy-4">
-                                <div class="text-center">
-                                    <a class="create-account-ass" href="{{ route('frontend.auth.login') }}" title="  @lang('Login') ">@lang('Login') </a>
-                                </div>
-                                <div class="text-center">
-                                     <a class="col-5 link-Login-ass" href="{{ route('frontend.create_account') }}" title="@lang('Register')">@lang('Register') </a>
-                                </div>
+
+
+                            <div class="text-center">
+                              @if (Auth::user())
+                                @if( $logged_in_user->isAssociation())
+                                  <a class="create-account-ass" href="{{ route('frontend.user.account') }}" title="  @lang('My Account') ">@lang('My Account') </a>
+                                @endif
+                              @else
+                                <a class="create-account-ass" href="{{ route('frontend.auth.login') }}" title="  @lang('Login') ">@lang('Login') </a>
+                              @endif
+                            </div>
+                            <div class="text-center">
+                                 <a class="col-5 link-Login-ass" href="{{ route('frontend.create_account') }}" title="@lang('Register')">@lang('Register') </a>
+                            </div>
                         </div>
                         <div class="img-ass-login d-flex justify-content-start">
                             <img src="/assets/img/Subtraction 27.png" alt="Subtraction">

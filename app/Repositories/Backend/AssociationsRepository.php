@@ -49,7 +49,7 @@ class AssociationsRepository extends BaseRepository
      */
     public function update($association)
     {
-        $association->update(request(['name:en', 'name:ar', 'location:en', 'location:ar', 'city:en', 'city:ar', 'objective:en', 'objective:ar', 'executive_director:en', 'executive_director:ar', 'administrative_officer:en', 'administrative_officer:ar', 'chairman:en', 'chairman:ar', 'email', 'number', 'founding', 'license', 'administrative_officer_number']));
+        $association->update(request(['user_id', 'name:en', 'name:ar', 'location:en', 'location:ar', 'city:en', 'city:ar', 'objective:en', 'objective:ar', 'executive_director:en', 'executive_director:ar', 'administrative_officer:en', 'administrative_officer:ar', 'chairman:en', 'chairman:ar', 'email', 'number', 'founding', 'license', 'administrative_officer_number']));
 
         if (request('file')) {
             // remove old file

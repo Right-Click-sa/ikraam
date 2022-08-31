@@ -11,6 +11,7 @@ use App\Domains\Auth\Http\Controllers\Frontend\Auth\SocialController;
 use App\Domains\Auth\Http\Controllers\Frontend\Auth\TwoFactorAuthenticationController;
 use App\Domains\Auth\Http\Controllers\Frontend\Auth\UpdatePasswordController;
 use App\Domains\Auth\Http\Controllers\Frontend\Auth\VerificationController;
+use App\Http\Controllers\Backend\AssociationController;
 use Tabuna\Breadcrumbs\Trail;
 
 /*
@@ -44,6 +45,8 @@ Route::group(['as' => 'auth.'], function () {
                 Route::post('password/confirm', [ConfirmPasswordController::class, 'confirm']);
 
                 Route::patch('password/update', [UpdatePasswordController::class, 'update'])->name('password.change');
+
+                Route::patch('{association}/update', [AssociationController::class, 'updateProfile'])->name('associations.update');
 
                 // Two-factor Authentication
                 Route::group(['prefix' => 'account/2fa', 'as' => 'account.2fa.'], function () {

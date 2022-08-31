@@ -100,4 +100,18 @@ class AssociationController extends Controller
         return back()->withFlashSuccess(__('Association Deleted Successfully'));
     }
 
+    /**
+    * @param UpdateAssociationRequest $request
+    * @param Association              $association
+    *
+    * @throws \App\Exceptions\GeneralException
+    * @throws \Throwable
+    * @return mixed
+    */
+    public function updateProfile(UpdateAssociationRequest $request, Association $association)
+    {
+        $this->associationsRepository->update($association);
+        return back()->withFlashSuccess(__('Association Updated Successfully'));
+    }
+
 }

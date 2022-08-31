@@ -7,7 +7,7 @@
 @endif
 
 @if(session()->get('flash_success'))
-    <x-utils.alert type="success" class="header-message">
+    <x-utils.alert type="success" class="header-message" style="text-align:center;">
         {{ session()->get('flash_success') }}
     </x-utils.alert>
 @endif

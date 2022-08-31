@@ -10535,6 +10535,12 @@ input[type=button].btn-block {
   color: #6c757d;
   content: "/";
 }
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before{
+    float: right;
+    padding-left: 0.5rem;
+    color: #6c757d;
+    content: "/";
+}
 .breadcrumb-item + .breadcrumb-item:hover::before {
   text-decoration: underline;
 }

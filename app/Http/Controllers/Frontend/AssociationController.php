@@ -15,7 +15,6 @@ class AssociationController extends Controller
      */
     public function association(Association $association)
     {
-      dd('here');
         $about = About::first();
         $settings   = Setting::all()->pluck('value', 'key')->toArray();
         return view('frontend.about.about')

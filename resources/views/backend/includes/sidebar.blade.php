@@ -24,7 +24,7 @@
                 class="c-sidebar-nav-link"
                 :href="route('admin.mainPage.edit')"
                 :active="activeClass(Route::is('admin.mainPage.edit'), 'c-active')"
-                icon="c-sidebar-nav-icon cil-speedometer"
+                icon="c-sidebar-nav-icon fas fa-address-card"
                 :text="__('Main page')" />
         </li>
 
