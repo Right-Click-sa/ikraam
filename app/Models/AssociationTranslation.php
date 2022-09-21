@@ -10,5 +10,5 @@ class AssociationTranslation extends Model
     use HasFactory;
 
     public $timestamps = false;
-    protected $fillable = ['name', 'location', 'city', 'objective', 'executive_director', 'administrative_officer', 'chairman'];
+    protected $fillable = ['name', 'city', 'activity', 'executive_director', 'administrative_officer', 'chairman'];
 }

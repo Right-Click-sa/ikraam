@@ -29,7 +29,7 @@ class HomeController
     {
         $settings   = Setting::all()->pluck('value', 'key')->toArray();
         return view('frontend.create_account.create_account')
-            ->withTitle(__('Register'))
+            ->withTitle(__('Join request form'))
             ->withSettings($settings);
     }
 

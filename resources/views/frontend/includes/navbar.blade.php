@@ -119,15 +119,15 @@
         <div class="row row-login-title justify-content-between align-items-center">
             <h6 class="col-md-6 title-page-top"> {{ $title }}</h6>
               <div class="col-md-6 account-link-login">
-                    <a class="create-account"href="{{ route('frontend.create_account') }}" title=" @lang('Register')">@lang('Register') </a>
+                    {{-- <a class="create-account"href="{{ route('frontend.create_account') }}" title=" @lang('Register')">@lang('Register') </a> --}}
                     @if (Auth::user())
                       @if( $logged_in_user->isAdmin())
                         <a class="link-Login" href="{{ route('admin.dashboard') }}" title="@lang('Login') ">@lang('Dashboard') </a>
                       @elseif( $logged_in_user->isAssociation())
                         <a class="link-Login" href="{{ route('frontend.user.account') }}" title="@lang('Login') ">@lang('My Account') </a>
-                      @endif    
-                    @else
-                      <a class="link-Login" href="{{ route('frontend.auth.login') }}" title="@lang('Login') ">@lang('Login') </a>
+                      @endif
+                    {{-- @else
+                      <a class="link-Login" href="{{ route('frontend.auth.login') }}" title="@lang('Login') ">@lang('Login') </a> --}}
                     @endif
                 </div>
         </div>

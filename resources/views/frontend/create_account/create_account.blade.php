@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title', __('Register'))
+@section('title', __('Join request form'))
 
 @section('content')
 
@@ -10,7 +10,7 @@
           <div class="row justify-content-center">
               <div class="col-md-12">
                   <h6 class="text-center title-login">
-                    @lang('Register')
+                    @lang('Join request form')
                      <img src="/assets/img/login.png" alt="login">
                     </h6>
 
@@ -18,77 +18,83 @@
                       @csrf
 
                     <div class="col">
-                      <input type="text" class="form-control form-control-lg" name="name" placeholder="@lang('Association name')" id="validationemail" required="">
+                      <input type="text" class="form-control form-control-lg" name="name" placeholder="@lang('Association name')" id="validationemail" required="" maxlength="100">
                       <div class="invalid-feedback">
                         Please provide a valid name.
                       </div>
                     </div>
                     <div class="col">
-                      <input type="number" placeholder="@lang('Association number')" name="number" class="form-control form-control-lg" id="validationCustom05" required="">
-                      <div class="invalid-feedback">
-                        Please provide a valid number.
-                      </div>
+                        <input type="text" placeholder="@lang('Association license')" name="license" class="form-control form-control-lg" id="validationCustom05" maxlength="100" required="">
+                        <div class="invalid-feedback">
+                          Please provide a valid Association license.
+                        </div>
                     </div>
                     <div class="col">
-                        <input type="text" placeholder="@lang('Chairman of the Board')" name="chairman" class="form-control form-control-lg" id="validationCustom05" required="">
+                        <input type="text" placeholder="@lang('Chairman of the Board')" name="chairman" class="form-control form-control-lg" id="validationCustom05" maxlength="100" required="">
                         <div class="invalid-feedback">
                           Please provide a valid Chairman of the Board.
                         </div>
                     </div>
                     <div class="col">
-                        <input type="text" placeholder="@lang('Founding of the Association')" name="founding" class="form-control form-control-lg" id="validationCustom05" required="">
+                        <input type="text" placeholder="@lang('Founding Date of the Association')" name="founding" class="form-control form-control-lg" id="validationCustom05" maxlength="8" onfocus="(this.type='date')" required="">
                         <div class="invalid-feedback">
                           Please provide a valid Founding of the Association.
                         </div>
                     </div>
+
                     <div class="col">
-                        <input type="text" placeholder="@lang('Association license')" name="license" class="form-control form-control-lg" id="validationCustom05" required="">
-                        <div class="invalid-feedback">
-                          Please provide a valid Association license.
-                        </div>
-                    </div>
-                     <div class="col">
-                        <input type="text" placeholder="@lang('Executive Director')" name="executive_director" class="form-control form-control-lg" id="validationCustom05" required="">
-                        <div class="invalid-feedback">
-                          Please provide a valid Executive Director.
-                        </div>
-                    </div>
+                       <input type="text" placeholder="@lang('Executive director')" name="executive_director" class="form-control form-control-lg" id="validationCustom05" maxlength="100" required="">
+                       <div class="invalid-feedback">
+                         Please provide a valid Executive Director.
+                       </div>
+                   </div>
+
                     <div class="col">
-                        <input type="text" placeholder="@lang('Association Location')" name="location" class="form-control form-control-lg" id="validationCustom05" required="">
+                      <input type="number" placeholder="@lang('Executive director\'s number')" name="executive_director_number" class="form-control form-control-lg" id="validationCustom05" maxlength="12"  onKeyPress="if(this.value.length===12) return false;" required="">
+                      <div class="invalid-feedback">
+                        Please provide a valid number.
+                      </div>
+                    </div>
+
+                    <div class="col">
+                        <input type="text" placeholder="@lang('Association website (https://example.com)')" name="website" class="form-control form-control-lg" maxlength="100" id="validationCustom05">
                         <div class="invalid-feedback">
                           Please provide a valid Association Location.
                         </div>
                     </div>
                     <div class="col">
-                        <input type="text" placeholder="@lang('The main objectives of the association (scope of work)')" name="objective" class="form-control form-control-lg" id="validationCustom05" required="">
+                        <input type="text" placeholder="@lang('The main activity of the association')" name="activity" class="form-control form-control-lg" id="validationCustom05" maxlength="100" required="">
                         <div class="invalid-feedback">
                           Please provide a valid Main objective.
                         </div>
                     </div>
                     <div class="col">
-                        <input type="email" placeholder="@lang('The association\'s email')" name="email" class="form-control form-control-lg" id="validationCustom05" required="">
+                        <input type="email" placeholder="@lang('The association\'s email')" name="email" class="form-control form-control-lg" id="validationCustom05" maxlength="70" required="">
                         <div class="invalid-feedback">
                           Please provide a valid association's e-mail
                         </div>
                     </div>
                     <div class="col">
-                        <input type="text" placeholder=" @lang('City')" name="city" class="form-control form-control-lg" id="validationCustom05" required="">
+                        <input type="text" placeholder=" @lang('City')" name="city" class="form-control form-control-lg" id="validationCustom05" maxlength="50" required="">
                         <div class="invalid-feedback">
                           Please provide a valid city
-                          .
                         </div>
                     </div>
                     <div class="col">
-                        <input type="text" placeholder="@lang('Administrative officer')" name="administrative_officer" class="form-control form-control-lg" id="validationCustom05" required="">
+                        <input type="text" placeholder="@lang('Administrative officer')" name="administrative_officer" class="form-control form-control-lg" id="validationCustom05" maxlength="100" required="">
                         <div class="invalid-feedback">
                           Please provide a valid Administrator.
                         </div>
                     </div>
                     <div class="col">
-                        <input type="number" placeholder=" @lang('Administrative officer\'s number')" name="administrative_officer_number" class="form-control form-control-lg" id="validationCustom05" required="">
+                        <input type="number" placeholder=" @lang('Administrative officer\'s number')" name="administrative_officer_number" class="form-control form-control-lg" id="validationCustom05" maxlength="12"  onKeyPress="if(this.value.length===12) return false;" required="">
                         <div class="invalid-feedback">
                           Please provide a valid number Administrator.
                         </div>
+                    </div>
+
+                    <div class="col-12 w-100 text-center"><!--14-9-2022-->
+                        <p> @lang('To approve the application, we hope that you attach all the requirements for submitting the application to join the institution in one attachment, which include: the association’s license, the administrative structure, the members of the board of directors, the unified national number and the commercial register') </p>
                     </div>
 
                     <div class="col">
@@ -161,7 +167,7 @@
                         title: data.app_name,
                         text: data.errors,
                         icon: 'error',
-                        timer: 3000,
+                        timer: 5000,
                         timerProgressBar: true,
                         showClass: {
                           popup: 'animate__animated animate__fadeInDown',

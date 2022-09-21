@@ -12,9 +12,9 @@ class Association extends Model implements TranslatableContract
 {
     use HasFactory, Translatable;
 
-    public $translatedAttributes = ['name', 'location', 'city', 'objective', 'executive_director', 'administrative_officer', 'chairman'];
+    public $translatedAttributes = ['name', 'city', 'activity', 'executive_director', 'administrative_officer', 'chairman'];
 
-    protected $fillable = ['user_id', 'image', 'name:en', 'name:ar', 'location:en', 'location:ar', 'city:en', 'city:ar', 'objective:en', 'objective:ar', 'executive_director:en', 'executive_director:ar', 'administrative_officer:en', 'administrative_officer:ar', 'chairman:en', 'chairman:ar', 'email', 'number', 'founding', 'license', 'file', 'administrative_officer_number'];
+    protected $fillable = ['user_id', 'image', 'name:en', 'name:ar', 'website', 'city:en', 'city:ar', 'activity:en', 'activity:ar', 'executive_director:en', 'executive_director:ar', 'administrative_officer:en', 'administrative_officer:ar', 'chairman:en', 'chairman:ar', 'email', 'founding', 'license', 'file', 'administrative_officer_number', 'executive_director_number'];
 
     public function user()
     {

@@ -20,12 +20,12 @@ class ContactUsController extends Controller
 
     public function store(Request $request)
     {
-        // 'name', 'email', 'message'
+        // 'name', 'email', 'phone', 'message'
         $validatedData = \Validator::make($request->all(),[
-            'name'      => 'required|max:255',
-            'email'     => 'required|email',
-            'phone'     =>  'required|numeric',
-            'message'   => 'required',
+            'name'      => 'required|max:60',
+            'email'     => 'required|email|max:70',
+            'phone'     =>  'required|numeric|max:9',
+            'message'   => 'required|max:500',
         ]);
 
         if ($validatedData->fails()){

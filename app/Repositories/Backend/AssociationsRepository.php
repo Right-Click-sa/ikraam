@@ -26,7 +26,7 @@ class AssociationsRepository extends BaseRepository
     {
         if($image = request('image') && request('file'))
         {
-            $association = Association::create(request(['user_id', 'name:en', 'name:ar', 'location:en', 'location:ar', 'city:en', 'city:ar', 'objective:en', 'objective:ar', 'executive_director:en', 'executive_director:ar', 'administrative_officer:en', 'administrative_officer:ar', 'chairman:en', 'chairman:ar', 'email', 'number', 'founding', 'license', 'administrative_officer_number']));
+            $association = Association::create(request(['user_id', 'name:en', 'name:ar', 'website', 'city:en', 'city:ar', 'activity:en', 'activity:ar', 'executive_director:en', 'executive_director:ar', 'administrative_officer:en', 'administrative_officer:ar', 'chairman:en', 'chairman:ar', 'email', 'executive_director_number', 'founding', 'license', 'administrative_officer_number']));
 
             // save image
             $this->saveImage(request('image'), $association);
@@ -49,7 +49,7 @@ class AssociationsRepository extends BaseRepository
      */
     public function update($association)
     {
-        $association->update(request(['user_id', 'name:en', 'name:ar', 'location:en', 'location:ar', 'city:en', 'city:ar', 'objective:en', 'objective:ar', 'executive_director:en', 'executive_director:ar', 'administrative_officer:en', 'administrative_officer:ar', 'chairman:en', 'chairman:ar', 'email', 'number', 'founding', 'license', 'administrative_officer_number']));
+        $association->update(request(['user_id', 'name:en', 'name:ar', 'website', 'city:en', 'city:ar', 'activity:en', 'activity:ar', 'executive_director:en', 'executive_director:ar', 'administrative_officer:en', 'administrative_officer:ar', 'chairman:en', 'chairman:ar', 'email', 'executive_director_number', 'founding', 'license', 'administrative_officer_number']));
 
         if (request('file')) {
             // remove old file

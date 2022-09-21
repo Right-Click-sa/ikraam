@@ -32,7 +32,7 @@
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                           <div class="accordion-body">
                               <div class="row col-md-11 m-auto">
-                                  <div class="col-md-6 col-box mx-3">
+                                  <div class="col-md-5 col-box mx-3">
                                       <div class="box-title">
                                           <h6 class="title-accordion">@lang('The initiative') </h6>
                                           <p>
@@ -41,7 +41,7 @@
                                       </div>
 
                                   </div>
-                                  <div class="col-md-4 col-box mx-3">
+                                  <div class="col-md-5 col-box mx-3">
                                       <div class="box-title">
                                           <h6 class="title-accordion">@lang('output') </h6>
                                           <ul>
@@ -70,7 +70,7 @@
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                           <div class="accordion-body">
                             <div class="row col-md-11 m-auto">
-                              <div class="col-md-6 col-box mx-3">
+                              <div class="col-md-5 col-box mx-3">
                                 <div class="box-title">
                                     <h6 class="title-accordion">@lang('The initiative') </h6>
                                     <p>
@@ -78,7 +78,7 @@
                                     </p>
                                 </div>
                               </div>
-                              <div class="col-md-4 col-box mx-3">
+                              <div class="col-md-5 col-box mx-3">
                                   <div class="box-title">
                                       <h6 class="title-accordion">@lang('output') </h6>
                                       <ul>
@@ -105,7 +105,7 @@
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                           <div class="accordion-body">
                             <div class="row col-md-11 m-auto">
-                              <div class="col-md-6 col-box mx-3">
+                              <div class="col-md-5 col-box mx-3">
                                   <div class="box-title">
                                       <h6 class="title-accordion">@lang('The initiative') </h6>
                                       <p>
@@ -114,7 +114,7 @@
                                   </div>
 
                               </div>
-                              <div class="col-md-4 col-box mx-3">
+                              <div class="col-md-5 col-box mx-3">
                                   <div class="box-title">
                                       <h6 class="title-accordion">@lang('output') </h6>
                                       <ul>
@@ -145,7 +145,7 @@
 
                             <div class="accordion-body">
                               <div class="row col-md-11 m-auto">
-                                <div class="col-md-6 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
@@ -154,7 +154,7 @@
                                     </div>
 
                                 </div>
-                                <div class="col-md-4 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
@@ -184,7 +184,7 @@
                           <div id="collapseTwo-2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                               <div class="row col-md-11 m-auto">
-                                <div class="col-md-6 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
@@ -193,7 +193,7 @@
                                     </div>
 
                                 </div>
-                                <div class="col-md-4 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
@@ -221,7 +221,7 @@
                           <div id="collapseThree-2" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                               <div class="row col-md-11 m-auto">
-                                <div class="col-md-6 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
@@ -230,7 +230,7 @@
                                     </div>
 
                                 </div>
-                                <div class="col-md-4 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
@@ -257,7 +257,7 @@
                           <div id="collapseThree-7" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                               <div class="row col-md-11 m-auto">
-                                <div class="col-md-6 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
@@ -266,7 +266,7 @@
                                     </div>
 
                                 </div>
-                                <div class="col-md-4 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
@@ -294,7 +294,7 @@
                           <div id="collapseThree-8" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                               <div class="row col-md-11 m-auto">
-                                <div class="col-md-6 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
@@ -303,7 +303,7 @@
                                     </div>
 
                                 </div>
-                                <div class="col-md-4 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
@@ -334,7 +334,7 @@
                           <div id="collapseThree-9" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                               <div class="row col-md-11 m-auto">
-                                <div class="col-md-6 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
@@ -343,7 +343,7 @@
                                     </div>
 
                                 </div>
-                                <div class="col-md-4 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
@@ -372,7 +372,7 @@
                           <div id="collapseThree-10" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                               <div class="row col-md-11 m-auto">
-                                <div class="col-md-6 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
@@ -381,7 +381,7 @@
                                     </div>
 
                                 </div>
-                                <div class="col-md-4 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
@@ -409,7 +409,7 @@
                           <div id="collapseThree-11" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                               <div class="row col-md-11 m-auto">
-                                <div class="col-md-6 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
@@ -418,7 +418,7 @@
                                     </div>
 
                                 </div>
-                                <div class="col-md-4 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
@@ -445,7 +445,7 @@
                           <div id="collapseThree-12" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                               <div class="row col-md-11 m-auto">
-                                <div class="col-md-6 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
@@ -453,7 +453,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
@@ -481,7 +481,7 @@
                           <div id="collapseThree-13" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                               <div class="row col-md-11 m-auto">
-                                <div class="col-md-6 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
@@ -489,7 +489,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>
@@ -514,7 +514,7 @@
                           <div id="collapseThree-14" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                               <div class="row col-md-11 m-auto">
-                                <div class="col-md-6 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('The initiative') </h6>
                                         <p>
@@ -523,7 +523,7 @@
                                     </div>
 
                                 </div>
-                                <div class="col-md-4 col-box mx-3">
+                                <div class="col-md-5 col-box mx-3">
                                     <div class="box-title">
                                         <h6 class="title-accordion">@lang('output') </h6>
                                         <ul>

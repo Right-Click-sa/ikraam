@@ -30,9 +30,8 @@
 
 <!-- Copyrights -->
 <div class="copyrights text-center pt-3 pb-3 text-white fs-5 text-capitalize">
-  @lang('All Rights Reserved')
+  @lang('All rights reserved to the National Honoring the Dead Foundation')
   <strong>
-      <a href="https://rightclick.sa/" target="_blank">Right Click</a>
       &copy; {{ date('Y') }}
   </strong>
 

@@ -8,12 +8,17 @@
     font-family: 'Simplified';
     src: url(../simplified-arabic-regular/Simplified\ Arabic\ Regular.ttf);
   }
+  html{
+    height: 100%;
+  }
 body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'TheSans-Plain'!important;
-
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 [dir="ltr"] body{
     font-family: 'Simplified';
@@ -170,6 +175,9 @@ padding-left: 14px;
 /*start-footer*/
 .component-footer{
     background-color: #0A3639;
+  margin-top: auto;
+    bottom: 0px;
+    width: 100%;
 }
 .logo-footer{
 
@@ -253,6 +261,7 @@ height: 100%;
     font-weight: 400;
     direction: ltr;
 }
+
 .contact-method a span{
     color: #B7B7B7;
     font-size: 14px;
@@ -270,6 +279,12 @@ height: 100%;
     line-height: 34px;
     color: #504f4f59
 
+}
+.form-content .input-group-text {
+    box-shadow:0px 3px 6px #BEBEBE ;
+    background-color: #fff;
+    border: 0px;
+    color: #504f4f59;
 }
 [dir="rtl"] form{
     font-family: 'TheSans','sans-serif' !important;
@@ -321,7 +336,16 @@ height: 100%;
     align-items: center;
 
 }
+@media (max-width:1130px) {
+    .contact-method a{
+        font-size: 14px;
 
+    }
+    .col-number-tombs p, .col-number-tombs h6 {
+        font-size: 18px !important;
+    }
+
+}
 /*end-content-us*/
 /*The number of tombs*/
 .component-number-tombs{
@@ -621,10 +645,15 @@ font-size: 30px;
 .botton-witc{
     bottom: 10px;
 }
+
 @media (max-width: 992px){
     [dir="ltr"] .floating-btns {
         bottom: 55px !important;
         left: 1px;
+    }
+    .botton-witc{
+        bottom: -119px;
+        left: 15px;
     }
 }
 
@@ -679,7 +708,7 @@ font-size: 30px;
 
 }
 .carousel-index .carousel-caption {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding-top: 20%;
     padding-bottom: 3%;
     text-align: start;
@@ -688,7 +717,7 @@ font-size: 30px;
     bottom: 0rem;
     right: 0px;
     left: 0px;
-    width: 35%;
+    width: 39%;
     margin: 0px;
 }
 @media (max-width:990px)  {
@@ -697,6 +726,14 @@ font-size: 30px;
         position: relative;
     }
 
+}
+@media (min-width:990px) and (max-width:1130px) {
+.carousel-index .carousel-caption {
+    width: 50%;
+}
+.caption-buttom{
+    margin-bottom: 0px !important;
+}
 }
 .caption-buttom .p-caption-carousel{
 color: #0A3639;
@@ -713,6 +750,7 @@ line-height: 40px;
 }
 .carousel-index .caption-buttom{
     position: relative;
+    margin-bottom: 5px !important;
 }
 .carousel-index .caption-buttom::before {
     content: '';
@@ -944,7 +982,11 @@ margin-top: 0px;
     background-color: #dddddc;
 }
 .video-datee{
-    height: 200px;
+    height: 300px; /*8-9-2022*/
+    background-image: url(../img/video-how.png);
+    background-size: cover;
+    background-position: center;
+
 }
 .div-button{
     position: absolute;
@@ -958,10 +1000,13 @@ margin-top: 0px;
     align-items: center;
     transition: transform 600ms ease-out;
     transform-origin: 50% 100%;
-    transform: scale(0);
+    /* transform: scale(0); */
     width: 100%;
     background-color: #00000050;
+    background-image: url(../img/video-how.png);
     cursor: pointer;
+    background-size: cover;
+    background-position: center;
 }
 #myBtn{
     width: 50px;
@@ -991,9 +1036,9 @@ width: 100%;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
-    opacity: 0;
+    /* opacity: 0; */
     transition: .3s ease;
     padding: 2px;
 }
@@ -1691,9 +1736,16 @@ height: 30px;
     text-decoration: underline;
     color: #1F9DAC;
 }
+
 .img-close img{
     width: 30px;
     height: 30px;
+}
+@media (max-width:990px) {
+    .img-close{
+        margin-top: 20px;
+        padding: 10px;
+    }
 }
 .title-jop{
     color:#87C560;
@@ -1743,4 +1795,18 @@ pre{
 {
     margin-left: 0px;
     margin-right: 0px;
+}
+/* remove input number arrows Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* remove input number arrows Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.form-control:focus {
+    color: #504f4f59;
 }

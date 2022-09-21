@@ -20,20 +20,20 @@ class AssociationRequestController extends Controller
 
     public function store(Request $request)
     {
-        // 'name', 'email', 'number', 'chairman', 'founding', 'license', 'executive_director', 'location', 'objective', 'city', 'administrative_officer', 'administrative_officer_number', 'file'
+        // 'name', 'email', 'executive_director_number', 'chairman', 'founding', 'license', 'executive_director', 'website', 'activity', 'city', 'administrative_officer', 'administrative_officer_number', 'file'
         $validatedData = \Validator::make($request->all(),[
-            'name'      => 'required|max:255',
-            'email'     => 'required|email',
-            'number'     =>  'required|numeric',
-            'chairman'   => 'required',
-            'founding'   => 'required',
-            'license'   => 'required',
-            'executive_director'   => 'required',
-            'location'   => 'required',
-            'objective'   => 'required',
-            'city'   => 'required',
-            'administrative_officer'   => 'required',
-            'administrative_officer_number'   => 'required',
+            'name'      => 'required|max:100',
+            'license'   => 'required|max:100',
+            'chairman'   => 'required|max:100',
+            'founding'   => 'required|date',
+            'executive_director'   => 'required|max:100',
+            'executive_director_number'   =>  'required|digits_between:8,13',
+            'website'   => 'max:100',
+            'activity'   => 'required|max:100',
+            'email'     => 'required|email|max:70',
+            'city'   => 'required|max:50',
+            'administrative_officer'   => 'required|max:100',
+            'administrative_officer_number'   => 'required|digits_between:8,13',
             'file'   => 'required|file|max:10000|mimes:pdf,docx,doc',
         ]);
 
@@ -45,8 +45,9 @@ class AssociationRequestController extends Controller
             ]);
         }
         else {
-            // store voluntee request
-            $request = AssociationRequest::create(request(['name', 'email', 'number', 'chairman', 'founding', 'license', 'executive_director', 'location', 'objective', 'city', 'administrative_officer', 'administrative_officer_number']));
+          // return $request;
+            // store Association request
+            $request = AssociationRequest::create(request(['name', 'license', 'chairman', 'founding', 'executive_director', 'executive_director_number', 'website', 'activity', 'email', 'city', 'administrative_officer', 'administrative_officer_number']));
 
             if($file = request('file'))
             {

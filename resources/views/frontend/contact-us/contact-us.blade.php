@@ -9,7 +9,6 @@
      <div class="container">
          <div class="row">
            <div class="col-md-5 justify-content-center definten-content-us">
-               {{-- <h6 class="text-center">@lang('Call Us')</h6> --}}
                <h4 class="text-center">
                    <span>@lang('Contact Us')</span>
                </h4>
@@ -34,27 +33,32 @@
                   @csrf
 
                   <div class="col-md-10">
-                    <input type="text" class="form-control form-control-lg" name="name" id="validationCustom01" placeholder="@lang('Name')" required="">
+                    <input type="text" class="form-control form-control-lg" name="name" id="validationCustom01" placeholder="@lang('Name')" maxlength="60" required="">
                     <div class="valid-feedback">
                       Looks good!
                     </div>
                   </div>
 
                   <div class="col-md-10">
-                    <input type="email" class="form-control form-control-lg" name="email" placeholder=" @lang('Email') " id="validationemail" required="">
+                    <input type="email" class="form-control form-control-lg" name="email" placeholder=" @lang('Email') " id="validationemail" maxlength="70" required="">
                     <div class="invalid-feedback">
                       Please provide a valid Email.
                     </div>
                   </div>
 
                   <div class="col-md-10">
-                    <input type="number" placeholder="@lang('Phone')" class="form-control form-control-lg" name="phone" id="validationCustom05" required="">
+                    <div class="input-group">
+                        <span class="input-group-text" id="">966</span>
+                        <input type="number" placeholder="@lang('Phone')" class="form-control form-control-lg" name="phone" id="validationCustom05" maxlength="9"  onKeyPress="if(this.value.length===9) return false;" required="">
+                    </div>
+
                     <div class="invalid-feedback">
                       Please provide a valid number.
                     </div>
                   </div>
+
                   <div class="col-md-10">
-                     <textarea rows="3" placeholder="@lang('Your message')" class="form-control form-control-lg" name="message" id="validationTextarea" required=""></textarea>
+                     <textarea rows="3" placeholder="@lang('Your message')" class="form-control form-control-lg" name="message" id="validationTextarea" maxlength="500" required=""></textarea>
                      <div class="invalid-feedback">
                       Please enter a message in the textarea.
                   </div>

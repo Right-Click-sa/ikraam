@@ -7,7 +7,7 @@
   <!--start-video-->
     <section class="component-video pt-5 pb-5">
         <div class="container">
-            <div class="row-video row  row-cols-lg-4 row-cols-md-2 row-cols-1 g-5">
+            <div class="row-video row  row-cols-lg-2 row-cols-md-2 row-cols-1 g-5">
                 <div class="col d-flex mb-1">
                     <div class="card-new-video">
                         <div class="video-datee">

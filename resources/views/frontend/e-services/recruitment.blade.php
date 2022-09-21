@@ -16,11 +16,11 @@
                 @foreach ($jobs as $key => $job)
                   <div class="component-jop pb-4 mt-4">
                     <div class="mt-2 row justify-content-between">
-                      <div class="col-md-10">
+                      <div class="col-lg-10 col-md-9">
                         <h6 class="title-jop">(@lang('Job'))</h6>
                         <h5 class="title-jop-defintion">{{ $job->job }} </h5>
                       </div>
-                      <div class="img-close col-md-2">
+                      <div class="img-close col-lg-2 col-md-3">
                         <a class="a-linke-join" href="{{ route('frontend.e-services.recruitment.apply', $job) }}">@lang('Join us')</a>
                       </div>
                     </div>

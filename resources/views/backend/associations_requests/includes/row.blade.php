@@ -11,10 +11,6 @@
 </x-livewire-tables::bs4.table.cell>
 
 <x-livewire-tables::bs4.table.cell>
-    {{ $row->number }}
-</x-livewire-tables::bs4.table.cell>
-
-<x-livewire-tables::bs4.table.cell>
     {{ $row->city }}
 </x-livewire-tables::bs4.table.cell>
 
@@ -35,11 +31,15 @@
 </x-livewire-tables::bs4.table.cell>
 
 <x-livewire-tables::bs4.table.cell>
-    {{ $row->location }}
+    {{ $row->executive_director_number }}
 </x-livewire-tables::bs4.table.cell>
 
 <x-livewire-tables::bs4.table.cell>
-    {{ $row->objective }}
+    {{ $row->website }}
+</x-livewire-tables::bs4.table.cell>
+
+<x-livewire-tables::bs4.table.cell>
+    {{ $row->activity }}
 </x-livewire-tables::bs4.table.cell>
 
 <x-livewire-tables::bs4.table.cell>

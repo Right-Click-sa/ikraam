@@ -90,20 +90,20 @@
               </div><!--col-->
             </div><!--form-group-->
 
-            {{-- objective --}}
+            {{-- activity --}}
             <div class="form-group row">
-              <label for="objective:en" class="col-md-2 col-form-label">@lang('objective:en')</label>
+              <label for="activity:en" class="col-md-2 col-form-label">@lang('activity:en')</label>
 
               <div class="col-md-10">
-                  <input type="text" name="objective:en" class="form-control" placeholder="@lang('objective:en')" dir="ltr" required value="{{ old('objective:en') ?? $association->{'objective:en'} }}">
+                  <input type="text" name="activity:en" class="form-control" placeholder="@lang('activity:en')" dir="ltr" required value="{{ old('activity:en') ?? $association->{'activity:en'} }}">
               </div><!--col-->
             </div><!--form-group-->
 
             <div class="form-group row">
-              <label for="objective:ar" class="col-md-2 col-form-label">@lang('objective:ar')</label>
+              <label for="activity:ar" class="col-md-2 col-form-label">@lang('activity:ar')</label>
 
               <div class="col-md-10">
-                  <input type="text" name="objective:ar" class="form-control" placeholder="@lang('objective:ar')" dir="rtl" required value="{{ old('objective:ar') ?? $association->{'objective:ar'} }}">
+                  <input type="text" name="activity:ar" class="form-control" placeholder="@lang('activity:ar')" dir="rtl" required value="{{ old('activity:ar') ?? $association->{'activity:ar'} }}">
               </div><!--col-->
             </div><!--form-group-->
 
@@ -124,20 +124,12 @@
               </div><!--col-->
             </div><!--form-group-->
 
-            <!-- location -->
+            <!-- Association website -->
             <div class="form-group row">
-              <label for="location:en" class="col-md-2 col-form-label">@lang('location:en')</label>
+              <label for="website" class="col-md-2 col-form-label">@lang('Association website')</label>
 
               <div class="col-md-10">
-                <input type="text" name="location:en" class="form-control" placeholder="@lang('location:en')" dir="ltr" required value="{{ old('location:en') ?? $association->{'location:en'} }}">
-              </div><!--col-->
-            </div><!--form-group-->
-
-            <div class="form-group row">
-              <label for="location:ar" class="col-md-2 col-form-label">@lang('location:ar')</label>
-
-              <div class="col-md-10">
-                <input type="text" name="location:ar" class="form-control" placeholder="@lang('location:ar')" dir="rtl" required value="{{ old('location:ar') ?? $association->{'location:ar'} }}">
+                <input type="text" name="website" class="form-control" placeholder="@lang('Association website (https://example.com)')" value="{{ old('website') ?? $association->{'website'} }}">
               </div><!--col-->
             </div><!--form-group-->
 
@@ -147,6 +139,15 @@
 
               <div class="col-md-10">
                 <input type="text" name="executive_director:en" class="form-control" placeholder="@lang('executive_director:en')" dir="ltr" required value="{{ old('executive_director:en') ?? $association->{'executive_director:en'} }}">
+              </div><!--col-->
+            </div><!--form-group-->
+
+            <!-- executive director number -->
+            <div class="form-group row">
+              <label for="executive_director_number" class="col-md-2 col-form-label">@lang('Executive director\'s number')</label>
+
+              <div class="col-md-10">
+                <input type="number" name="executive_director_number" class="form-control" placeholder="@lang('Executive director\'s number')"  required value="{{ old('executive_director_number') ?? $association->{'executive_director_number'} }}">
               </div><!--col-->
             </div><!--form-group-->
 
@@ -184,21 +185,12 @@
               </div><!--col-->
             </div><!--form-group-->
 
-            <!-- phone -->
-            <div class="form-group row">
-              <label for="number" class="col-md-2 col-form-label">@lang('Phone')</label>
-
-              <div class="col-md-10">
-                <input type="number" name="number" class="form-control" placeholder="@lang('Phone')"  required value="{{ old('number') ?? $association->{'number'} }}">
-              </div><!--col-->
-            </div><!--form-group-->
-
             <!-- founding -->
             <div class="form-group row">
-              <label for="founding" class="col-md-2 col-form-label">@lang('Founding')</label>
+              <label for="founding" class="col-md-2 col-form-label">@lang('Founding date')</label>
 
               <div class="col-md-10">
-                <input type="number" name="founding" class="form-control" placeholder="@lang('Founding')" required value="{{ old('founding') ?? $association->{'founding'} }}">
+                <input type="date" name="founding" class="form-control" placeholder="@lang('Founding date')" required value="{{ old('founding') ?? $association->{'founding'} }}">
               </div><!--col-->
             </div><!--form-group-->
 
