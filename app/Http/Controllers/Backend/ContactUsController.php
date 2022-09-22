@@ -55,6 +55,10 @@ class ContactUsController extends Controller
             ]);
         }
         else {
+          $request->merge([
+              'phone' => (int)"966" . request('phone'),
+          ]);
+
             // store contact us message
             $message = ContactUs::create(request(['name', 'email','phone', 'message']));
 
