@@ -23,5 +23,6 @@
 </x-livewire-tables::bs4.table.cell>
 
 <x-livewire-tables::bs4.table.cell>
+    <x-utils.edit-button :href="route('admin.contact_us.edit', $row)"/>
     <x-utils.delete-button :href="route('admin.contact_us.destroy', $row)"/>
 </x-livewire-tables::bs4.table.cell>

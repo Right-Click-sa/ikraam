@@ -40,7 +40,7 @@
                     <label for="link" class="col-md-2 col-form-label">@lang('Video link')</label>
 
                     <div class="col-md-10">
-                        <input type="text" name="link" class="form-control" placeholder="@lang('Video link')" dir="rtl" required  value="{{ old('link') ?? $video->{'link'} }}">
+                        <input type="text" name="link" class="form-control" placeholder="@lang('Video link')" required  value="{{ old('link') ?? $video->{'link'} }}">
                     </div><!--col-->
                   </div><!--form-group-->
 

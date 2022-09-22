@@ -4,10 +4,29 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Repositories\Backend\ContactUsRepository;
+use App\Http\Requests\Backend\ContactUS\UpdateMessageRequest;
 use App\Models\ContactUs;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactUsMessage;
 
 class ContactUsController extends Controller
 {
+    /**
+     * @var ContactUsRepository
+     */
+     protected $contactUsRepository;
+
+    /**
+     * Contact Us Controller constructor.
+     *
+     * @param ContactUsRepository $contactUsRepository
+     */
+     public function __construct(ContactUsRepository $contactUsRepository)
+     {
+        $this->contactUsRepository = $contactUsRepository;
+     }
+
     /**
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -24,7 +43,7 @@ class ContactUsController extends Controller
         $validatedData = \Validator::make($request->all(),[
             'name'      => 'required|max:60',
             'email'     => 'required|email|max:70',
-            'phone'     =>  'required|numeric|max:9',
+            'phone'     =>  'required|numeric|digits_between:8,10',
             'message'   => 'required|max:500',
         ]);
 
@@ -39,12 +58,40 @@ class ContactUsController extends Controller
             // store contact us message
             $message = ContactUs::create(request(['name', 'email','phone', 'message']));
 
+            // sending email for the support team
+            Mail::to('‫‪info@ikraam.org.sa‬‬', 'Info')
+            ->send(new ContactUsMessage($message));
+
             return response()->json([
               'success'   =>  __('Message Sent Successfully'),
               'app_name'  =>  __('Ikraam')
             ]);
         }
     }
+
+    /**
+     * @param ContactUs $message
+     *
+     * @return mixed
+     */
+     public function edit(ContactUs $message)
+     {
+         return view('backend.contact.edit')->withMessage($message);
+     }
+
+     /**
+     * @param UpdateMessageRequest $request
+     * @param ContactUs              $message
+     *
+     * @throws \App\Exceptions\GeneralException
+     * @throws \Throwable
+     * @return mixed
+     */
+     public function update(UpdateMessageRequest $request, ContactUs $message)
+     {
+         $this->contactUsRepository->update($message);
+         return redirect()->route('admin.contact_us')->withFlashSuccess(__('Contact Us Message Updated Successfully'));
+     }
 
     /**
      * @param ContactUs $about
@@ -54,7 +101,7 @@ class ContactUsController extends Controller
      */
     public function destroy(ContactUs $message)
     {
-       $message->delete();
+       $this->contactUsRepository->destroy($message);
        return back()->withFlashSuccess(__('Message Deleted Successfully'));
     }
 }
