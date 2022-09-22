@@ -8,23 +8,25 @@
     <section class="component-video pt-5 pb-5">
         <div class="container">
             <div class="row-video row  row-cols-lg-2 row-cols-md-2 row-cols-1 g-5">
+              @foreach ($videos as $key => $video)
                 <div class="col d-flex mb-1">
                     <div class="card-new-video">
-                        <div class="video-datee">
-                            <div class="div-button">
-                                <button id="myBtn" class="video-btn" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                data-src="/assets/img/video/index.mp4"></button>
-                            </div>
+                      <div class="video-datee">
+                        <div class="div-button">
+                          <button id="myBtn" class="video-btn myBtn" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                          data-src="{{ $video->link }}"></button>
                         </div>
-                        <div class="card-body-video">
-                            <div>
-                                <h6 class="text-center">@lang('About Us')</h6>
-                                <span class="d-bloke ">2022-02</span>
-                            </div>
+                      </div>
+                      <div class="card-body-video">
+                        <div>
+                          <h6 class="text-center">{{ $video->title }}</h6>
+                          <span class="d-bloke ">{{ $video->created_at->toDateString() }}</span>
                         </div>
-
+                      </div>
                     </div>
                 </div>
+              @endforeach
+
             </div>
         </div>
 

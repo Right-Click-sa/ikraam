@@ -52,18 +52,18 @@ for (let i = 0; i<menulengthe; i++){
 
 // ******************VIDEO*****************************
 
-var myVideo = document.getElementById('myVideo');
+var myVideo = document.getElementsByClassName('myVideo');
 
 $(".video-date").on('click',function () {
     // debugger;
         if (myVideo.paused){
-        $("#myBtn").hide();
+        $(".myBtn").hide();
         myVideo.play();
 
         }
         else {
         myVideo.pause();
-        $("#myBtn").show();
+        $(".myBtn").show();
         }
     });
 ////file////
@@ -126,5 +126,3 @@ $('#show').click(function() {
 
   // document ready
   });
-
-  

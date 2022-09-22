@@ -212,7 +212,7 @@
                 :text="__('Media Center')" />
 
             <ul class="c-sidebar-nav-dropdown-items">
-
+                {{-- news --}}
                 <li class="c-sidebar-nav-item">
                     <x-utils.link
                         class="c-sidebar-nav-link"
@@ -228,6 +228,15 @@
                   :href="route('admin.media.gallery.edit')"
                   :active="activeClass(Route::is('admin.media.gallery.edit'), 'c-active')"
                   :text="__('Gallery')" />
+                </li>
+
+                {{-- videos --}}
+                <li class="c-sidebar-nav-item">
+                    <x-utils.link
+                        class="c-sidebar-nav-link"
+                        :href="route('admin.media.videos')"
+                        :active="activeClass(Route::is('admin.media.videos'), 'c-active')"
+                        :text="__('Videos')" />
                 </li>
 
             </ul>

@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Setting;
 use App\Models\News;
 use App\Models\Gallery;
+use App\Models\Video;
 
 class MediaController extends Controller
 {
@@ -31,7 +32,7 @@ class MediaController extends Controller
     {
         $images = Gallery::all();
         $settings   = Setting::all()->pluck('value', 'key')->toArray();
-        
+
         return view('frontend.media.gallery')
             ->withTitle(__('Gallery'))
             ->withImages($images)
@@ -43,9 +44,11 @@ class MediaController extends Controller
      */
     public function videos()
     {
+        $videos = Video::all();
         $settings   = Setting::all()->pluck('value', 'key')->toArray();
         return view('frontend.media.videos')
             ->withTitle(__('Videos'))
+            ->withVideos($videos)
             ->withSettings($settings);
     }
 }

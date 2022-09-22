@@ -39,8 +39,15 @@
 
                 <div class="col-md-10">
                   <div class="input-group">
-                      <span class="input-group-text" id="">966</span>
+                      @if (app()->getLocale() != 'ar')
+                        <span class="input-group-text" id="">966</span>
+                      @endif
+
                       <input type="number" placeholder="@lang('Phone')" class="form-control form-control-lg" name="phone" id="validationCustom05" maxlength="9"  onKeyPress="if(this.value.length===9) return false;" required="">
+
+                      @if (app()->getLocale() == 'ar')
+                        <span class="input-group-text" id="">966</span>
+                      @endif
                   </div>
 
                   <div class="invalid-feedback">
