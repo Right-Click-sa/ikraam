@@ -641,6 +641,7 @@ font-size: 30px;
     left: 46px;
     flex-flow: column;
     z-index: 2;
+    bottom: -42px;
 }
 .botton-witc{
     bottom: 10px;
