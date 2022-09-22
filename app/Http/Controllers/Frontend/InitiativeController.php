@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Setting;
+use App\Models\Initiative;
 
 class InitiativeController extends Controller
 {
@@ -14,8 +15,10 @@ class InitiativeController extends Controller
     public function initiatives()
     {
         $settings   = Setting::all()->pluck('value', 'key')->toArray();
+        $initiatives  = Initiative::all();
         return view('frontend.initiatives.initiatives')
             ->withTitle(__('Initiatives'))
-            ->withSettings($settings);
+            ->withSettings($settings)
+            ->withInitiatives($initiatives);
     }
 }

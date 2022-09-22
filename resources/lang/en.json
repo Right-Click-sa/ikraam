@@ -51,5 +51,9 @@
     "administrative_officer:en": "Administrative officer",
     "administrative_officer:ar": "المسؤول الإدارى",
     "association_chairman:en": "Chairman of the Board",
-    "association_chairman:ar": "رئيس المجلس"
+    "association_chairman:ar": "رئيس المجلس",
+    "initiative:en": "Initiative",
+    "initiative:ar": "المبادرة",
+    "output:en": "Output",
+    "output:ar": "مخرج"
 }

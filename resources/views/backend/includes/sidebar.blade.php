@@ -242,6 +242,16 @@
             </ul>
         </li>
 
+        {{-- initiatives --}}
+        <li class="c-sidebar-nav-item">
+            <x-utils.link
+                class="c-sidebar-nav-link"
+                :href="route('admin.initiatives')"
+                :active="activeClass(Route::is('admin.initiatives'), 'c-active')"
+                icon="c-sidebar-nav-icon fas fa-address-card"
+                :text="__('Initiatives')" />
+        </li>
+
         {{-- contact us messages --}}
         <li class="c-sidebar-nav-item">
             <x-utils.link
