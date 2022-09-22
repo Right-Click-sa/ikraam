@@ -32,7 +32,7 @@
 </head>
 <body>
 
-    <div id="app">
+    {{-- <div id="app"> --}}
       <!--navbar-->
         @include('frontend.includes.navbar')
       <!--end-navbar-->
@@ -42,7 +42,7 @@
       <!--footer-->
         @include('frontend.includes.footer')
       <!--end-footer-->
-    </div><!--app-->
+    {{-- </div><!--app--> --}}
 
     @stack('before-scripts')
     <!-- Required JS Files -->
