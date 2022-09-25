@@ -52,18 +52,18 @@ for (let i = 0; i<menulengthe; i++){
 
 // ******************VIDEO*****************************
 
-var myVideo = document.getElementsByClassName('myVideo');
+var myVideo = document.getElementById('myVideo');
 
 $(".video-date").on('click',function () {
     // debugger;
         if (myVideo.paused){
-        $(".myBtn").hide();
+        $("#myBtn").hide();
         myVideo.play();
 
         }
         else {
         myVideo.pause();
-        $(".myBtn").show();
+        $("#myBtn").show();
         }
     });
 ////file////
@@ -89,40 +89,14 @@ $('.floating-btns').addClass('botton-witc')
 
   }
 });
+
 $(document).ready(function() {
 //nav-search//
 $('#show').click(function() {
   $('.form-index').toggle("slide");
 });
-  // Gets the video src from the data-src on each button
-
-  var $videoSrc;
-  $('.video-btn').click(function() {
-      $videoSrc = $(this).data( "src" );
-  });
-  console.log($videoSrc);
 
 
-
-  // when the modal is opened autoplay it
-  $('#exampleModal').on('shown.bs.modal', function (e) {
-
-  // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-  $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" );
   });
 
-
-
-  // stop playing the youtube video when I close the modal
-  $('#exampleModal').on('hidden.bs.modal', function (e) {
-      // a poor man's stop video
-      $("#video").attr('src',"");
-  })
-
-
-
-
-
-
-  // document ready
-  });
+  
