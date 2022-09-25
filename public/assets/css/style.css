@@ -637,11 +637,10 @@ font-size: 30px;
     margin: auto;
 }
 .floating-btns {
-
+    bottom: -42px;
     left: 46px;
     flex-flow: column;
     z-index: 2;
-    bottom: -42px;
 }
 .botton-witc{
     bottom: 10px;
@@ -1004,10 +1003,13 @@ margin-top: 0px;
     /* transform: scale(0); */
     width: 100%;
     background-color: #00000050;
-    background-image: url(../img/video-how.png);
+
     cursor: pointer;
     background-size: cover;
     background-position: center;
+}
+.div-video-tow{
+    background-image: url(../img/video-how.png);
 }
 #myBtn{
     width: 50px;

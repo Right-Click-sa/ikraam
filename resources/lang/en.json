@@ -55,5 +55,7 @@
     "initiative:en": "Initiative",
     "initiative:ar": "المبادرة",
     "output:en": "Output",
-    "output:ar": "مخرج"
+    "output:ar": "مخرج",
+    "activity:en": "The main activity of the association",
+    "activity:ar": " النشاط الرئيسى للجمعية"
 }

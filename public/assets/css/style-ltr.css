@@ -4,7 +4,7 @@
 [dir="ltr"] .text-start {
     text-align: right!important;
 }
-@media (max-width: 576px) { 
+@media (max-width: 576px) {
     [dir="ltr"] .linke-footer-left,
     [dir="rtl"] .linke-footer-left
     {
@@ -23,7 +23,7 @@
 [dir="rtl"] .account-link-login{
     text-align: left;
 }
-[dir="ltr"] .coarousel-new .carousel-control-next, 
+[dir="ltr"] .coarousel-new .carousel-control-next,
 [dir="ltr"] .coarousel-new .carousel-control-prev {
     transform: rotate(179deg);
 }
@@ -38,7 +38,7 @@
 }
 [dir="ltr"] .form-check .form-check-input {
     float: right;
-   
+
 }
 [dir="rtl"] .form-login .form-select{
     background-position: left 0.75rem center;
@@ -50,7 +50,7 @@
 [dir="rtl"] .component-initiatives .accordion-header h6{
     text-align: right;
 }
-@media (min-width:990px) { 
+@media (min-width:990px) {
 [dir="rtl"] .col-donation-bank{
     border-left: 1px solid #00000030;
 }

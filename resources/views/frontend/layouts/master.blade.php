@@ -22,6 +22,7 @@
 
       <!-- Bootstrap CSS -->
       <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="/assets/css/fancybox.min.css"/>
       <!--link-font-awsome-->
       <link href="/assets/css/fontawesome.css" rel="stylesheet">
       <!--stlye-css-->
@@ -48,6 +49,7 @@
     <!-- Required JS Files -->
     <script src="/assets/js/jquery.js"></script>
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/fancybox.umd.js"></script>
     <script src="/assets/js/form.js"></script>
 
     @stack('after-scripts')

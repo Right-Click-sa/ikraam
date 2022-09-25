@@ -12,9 +12,8 @@
                 <div class="col d-flex mb-1">
                     <div class="card-new-video">
                       <div class="video-datee">
-                        <div class="div-button">
-                          <button id="myBtn" class="video-btn myBtn" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                          data-src="{{ $video->link }}"></button>
+                        <div class="div-button div-video-tow">
+                            <a  href="{{ $video->link }}" id="myBtn" class="video-btn"  target="iframe1" data-fancybox="gallery"></a>
                         </div>
                       </div>
                       <div class="card-body-video">
@@ -34,7 +33,7 @@
     <!--end-pictures-->
 
     <!-- Modal -->
-    <div class="modal fade model-video" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    {{-- <div class="modal fade model-video" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
@@ -48,6 +47,6 @@
             </div>
         </div>
         </div>
-    </div>
+    </div> --}}
 
 @endsection
