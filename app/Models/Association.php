@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
 use Astrotomic\Translatable\Translatable;
 use App\Domains\Auth\Models\User;
+use App\Models\OrderRequest;
 
 class Association extends Model implements TranslatableContract
 {
@@ -19,5 +20,10 @@ class Association extends Model implements TranslatableContract
     public function user()
     {
     	 return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function requests()
+    {
+    	 return $this->hasMany(OrderRequest::class);
     }
 }

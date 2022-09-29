@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Frontend\User;
+use App\Models\OrderType;
 
 /**
  * Class AccountController.
@@ -12,6 +13,8 @@ class AccountController
      */
     public function index()
     {
-        return view('frontend.user.account');
+        $types = OrderType::all();
+        return view('frontend.user.account')
+            ->withTypes($types);
     }
 }

@@ -57,5 +57,7 @@
     "output:en": "Output",
     "output:ar": "مخرج",
     "activity:en": "The main activity of the association",
-    "activity:ar": " النشاط الرئيسى للجمعية"
+    "activity:ar": " النشاط الرئيسى للجمعية",
+    "orderType:en": "Order Type",
+    "orderType:ar": "نوع الطلب"
 }

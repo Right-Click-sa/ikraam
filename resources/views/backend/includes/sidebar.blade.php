@@ -25,7 +25,7 @@
                   class="c-sidebar-nav-link"
                   :href="route('admin.mainPage.edit')"
                   :active="activeClass(Route::is('admin.mainPage.edit'), 'c-active')"
-                  icon="c-sidebar-nav-icon fas fa-address-card"
+                  icon="c-sidebar-nav-icon fas fa-home"
                   :text="__('Main page')" />
           </li>
         @endif
@@ -99,7 +99,7 @@
           <li class="c-sidebar-nav-dropdown {{ activeClass(Route::is('admin.volunteer.*'), 'c-open c-show') }}">
               <x-utils.link
                   href="#"
-                  icon="c-sidebar-nav-icon fas fa-address-card"
+                  icon="c-sidebar-nav-icon fas fa-hands-helping"
                   class="c-sidebar-nav-dropdown-toggle"
                   :text="__('Volunteer')" />
 
@@ -130,7 +130,7 @@
           <li class="c-sidebar-nav-dropdown {{ activeClass(Route::is('admin.jobs.*'), 'c-open c-show') }}">
               <x-utils.link
                   href="#"
-                  icon="c-sidebar-nav-icon fas fa-address-card"
+                  icon="c-sidebar-nav-icon fas fa-briefcase"
                   class="c-sidebar-nav-dropdown-toggle"
                   :text="__('Jobs')" />
 
@@ -163,7 +163,7 @@
           <li class="c-sidebar-nav-dropdown {{ activeClass(Route::is('admin.memberships.*'), 'c-open c-show') }}">
               <x-utils.link
                   href="#"
-                  icon="c-sidebar-nav-icon fas fa-address-card"
+                  icon="c-sidebar-nav-icon fas fa-users"
                   class="c-sidebar-nav-dropdown-toggle"
                   :text="__('Memberships')" />
 
@@ -194,7 +194,7 @@
           <li class="c-sidebar-nav-dropdown {{ activeClass(Route::is('admin.associations.*'), 'c-open c-show') }}">
               <x-utils.link
                   href="#"
-                  icon="c-sidebar-nav-icon fas fa-address-card"
+                  icon="c-sidebar-nav-icon fas fa-sitemap"
                   class="c-sidebar-nav-dropdown-toggle"
                   :text="__('Associations')" />
 
@@ -226,7 +226,7 @@
           <li class="c-sidebar-nav-dropdown {{ activeClass(Route::is('admin.media.*'), 'c-open c-show') }}">
               <x-utils.link
                   href="#"
-                  icon="c-sidebar-nav-icon fas fa-address-card"
+                  icon="c-sidebar-nav-icon fas fa-photo-video"
                   class="c-sidebar-nav-dropdown-toggle"
                   :text="__('Media Center')" />
 
@@ -262,6 +262,38 @@
           </li>
         @endif
 
+        @if($logged_in_user->can('admin.orders.*'))
+          {{-- Orders --}}
+          <li class="c-sidebar-nav-dropdown {{ activeClass(Route::is('admin.orders.*'), 'c-open c-show') }}">
+              <x-utils.link
+                  href="#"
+                  icon="c-sidebar-nav-icon fas fa-sort-amount-up"
+                  class="c-sidebar-nav-dropdown-toggle"
+                  :text="__('Orders')" />
+
+              <ul class="c-sidebar-nav-dropdown-items">
+                  {{-- orders types --}}
+                    <li class="c-sidebar-nav-item">
+                        <x-utils.link
+                            class="c-sidebar-nav-link"
+                            :href="route('admin.order.types')"
+                            :active="activeClass(Route::is('admin.order.types'), 'c-active')"
+                            :text="__('Orders Types')" />
+                    </li>
+
+                  {{-- Orders --}}
+                    <li class="c-sidebar-nav-item">
+                      <x-utils.link
+                      class="c-sidebar-nav-link"
+                      :href="route('admin.order.requests')"
+                      :active="activeClass(Route::is('admin.order.requests'), 'c-active')"
+                      :text="__('Orders')" />
+                    </li>
+
+              </ul>
+          </li>
+        @endif
+
         {{-- initiatives --}}
         @if($logged_in_user->can('admin.initiatives'))
           <li class="c-sidebar-nav-item">
@@ -269,7 +301,7 @@
                   class="c-sidebar-nav-link"
                   :href="route('admin.initiatives')"
                   :active="activeClass(Route::is('admin.initiatives'), 'c-active')"
-                  icon="c-sidebar-nav-icon fas fa-address-card"
+                  icon="c-sidebar-nav-icon fas fa-copy"
                   :text="__('Initiatives')" />
           </li>
         @endif

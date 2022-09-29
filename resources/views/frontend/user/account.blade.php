@@ -24,6 +24,26 @@
                                       role="tab"
                                       aria-controls="my-profile"
                                       aria-selected="true" />
+
+                                  <x-utils.link
+                                      :text="__('Upload Order')"
+                                      class="nav-link"
+                                      id="upload-order-tab"
+                                      data-toggle="pill"
+                                      href="#upload-order"
+                                      role="tab"
+                                      aria-controls="upload-order"
+                                      aria-selected="false" />
+
+                                  <x-utils.link
+                                      :text="__('Previous Orders')"
+                                      class="nav-link"
+                                      id="previous-orders-tab"
+                                      data-toggle="pill"
+                                      href="#previous-orders"
+                                      role="tab"
+                                      aria-controls="previous-orders"
+                                      aria-selected="false" />
                               @endif
 
                                 <x-utils.link
@@ -64,6 +84,14 @@
                             @if ($logged_in_user->association)
                               <div class="tab-pane fade pt-3 show active" id="my-profile" role="tabpanel" aria-labelledby="my-profile-tab">
                                   @include('frontend.user.account.tabs.profile')
+                              </div><!--tab-profile-->
+
+                              <div class="tab-pane fade pt-3" id="upload-order" role="tabpanel" aria-labelledby="upload-order-tab">
+                                  @include('frontend.user.account.tabs.upload-order')
+                              </div><!--tab-profile-->
+
+                              <div class="tab-pane fade pt-3" id="previous-orders" role="tabpanel" aria-labelledby="previous-orders-tab">
+                                  @include('frontend.user.account.tabs.previous-orders')
                               </div><!--tab-profile-->
                             @endif
 

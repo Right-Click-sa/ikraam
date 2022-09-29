@@ -44,7 +44,9 @@
                           <select name="user_id" class="form-control" required >
                               <option value="">@lang('Association User')</option>
                             @foreach ($users as $key => $user)
-                              <option value="{{ $user->id }}">{{ $user->name }}</option>
+                              @if ($user->association == null)
+                                <option value="{{ $user->id }}">{{ $user->name }}</option>
+                              @endif
                             @endforeach
                           </select>
                       </div>

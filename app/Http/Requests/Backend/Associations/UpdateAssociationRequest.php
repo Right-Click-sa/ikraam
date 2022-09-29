@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Backend\Associations;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 /**
  * Class UpdateAssociationRequest.
@@ -34,8 +35,8 @@ class UpdateAssociationRequest extends FormRequest
         return [
             'image'       => 'image|mimes:jpeg,png,jpg,gif,svg|max:3048',
             'file'        => 'file|max:10000|mimes:pdf,docx,doc',
-            'email'       => 'required|email',
-            'founding'    => 'required',
+            'email'       => ['required', 'max:255', 'email', Rule::unique('associations')->ignore($this->association->id)],
+            'founding'    => 'required|date',
             'license'     => 'required',
             'name:en'       => 'required|max:255',
             'name:ar'       => 'required|max:255',
@@ -51,6 +52,7 @@ class UpdateAssociationRequest extends FormRequest
             'administrative_officer:en'   => 'required',
             'administrative_officer:ar'   => 'required',
             'administrative_officer_number'   => 'required|digits_between:8,13',
+            'user_id'   => 'required',
         ];
     }
 }

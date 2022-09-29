@@ -6,9 +6,9 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
 /**
- * Class StoreAssociationRequest.
+ * Class UpdateAssociationProfileRequest.
  */
-class StoreAssociationRequest extends FormRequest
+class UpdateAssociationProfileRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -17,7 +17,12 @@ class StoreAssociationRequest extends FormRequest
      */
     public function authorize()
     {
-        return $this->user()->isAdmin();
+        if ($this->user()->isAdmin()) {
+          return $this->user()->isAdmin();
+        }
+        elseif ($this->user()->isAssociation()) {
+          return $this->user()->isAssociation();
+        }
     }
 
     /**
@@ -28,9 +33,9 @@ class StoreAssociationRequest extends FormRequest
     public function rules()
     {
         return [
-            'image'       => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:3048',
-            'file'        => 'required|file|max:10000|mimes:pdf,docx,doc',
-            'email'       => ['required', 'max:255', 'email', Rule::unique('associations')],
+            'image'       => 'image|mimes:jpeg,png,jpg,gif,svg|max:3048',
+            'file'        => 'file|max:10000|mimes:pdf,docx,doc',
+            'email'       => ['required', 'max:255', 'email', Rule::unique('associations')->ignore($this->association->id)],
             'founding'    => 'required|date',
             'license'     => 'required',
             'name:en'       => 'required|max:255',
@@ -47,7 +52,6 @@ class StoreAssociationRequest extends FormRequest
             'administrative_officer:en'   => 'required',
             'administrative_officer:ar'   => 'required',
             'administrative_officer_number'   => 'required|digits_between:8,13',
-            'user_id'   => 'required',
         ];
     }
 }

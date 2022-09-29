@@ -41,7 +41,6 @@
                     </div>
                   </div>
 
-
             <!-- Association user -->
             <div class="form-group row">
                 <label for="user_id" class="col-md-2 col-form-label">@lang('Association User')</label>
@@ -49,9 +48,13 @@
                 <div class="col-md-10">
                     <select name="user_id" class="form-control" required >
                         <option value="">@lang('Association User')</option>
-                      @foreach ($users as $key => $user)
-                        <option value="{{ $user->id }}" {{ $user->type === $association->user->type ? 'selected' : '' }}>{{ $user->name }}</option>
-                      @endforeach
+                        <option value="{{ $association->user->id }}" selected>{{ $association->user->name }}</option>
+
+                        @foreach ($users as $key => $user)
+                          @if ($user->association == null)
+                            <option value="{{ $user->id }}">{{ $user->name }}</option>
+                          @endif
+                        @endforeach
                     </select>
                 </div>
             </div><!--form-group-->

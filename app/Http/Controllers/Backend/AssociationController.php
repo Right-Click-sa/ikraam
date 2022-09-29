@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Repositories\Backend\AssociationsRepository;
 use App\Http\Requests\Backend\Associations\StoreAssociationRequest;
 use App\Http\Requests\Backend\Associations\UpdateAssociationRequest;
+use App\Http\Requests\Backend\Associations\UpdateAssociationProfileRequest;
 use App\Models\Association;
 use App\Domains\Auth\Models\User;
 
@@ -18,7 +19,7 @@ class AssociationController extends Controller
     protected $associationsRepository;
 
    /**
-    * AssociationController constructor.
+    * AssociationController constructor.assoc
     *
     * @param AssociationsRepository $associationsRepository
     */
@@ -108,7 +109,7 @@ class AssociationController extends Controller
     * @throws \Throwable
     * @return mixed
     */
-    public function updateProfile(UpdateAssociationRequest $request, Association $association)
+    public function updateProfile(UpdateAssociationProfileRequest $request, Association $association)
     {
         $this->associationsRepository->update($association);
         return back()->withFlashSuccess(__('Association Updated Successfully'));
