@@ -24,7 +24,7 @@
                       </div>
                     </div>
                     <div class="col">
-                        <input type="text" placeholder="@lang('Association license')" name="license" class="form-control form-control-lg" id="validationCustom05" maxlength="100" required="">
+                        <input type="number" placeholder="@lang('Association license')" name="license" class="form-control form-control-lg" id="validationCustom05" maxlength="5" required="">
                         <div class="invalid-feedback">
                           Please provide a valid Association license.
                         </div>
@@ -93,7 +93,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12 w-100 text-center"><!--14-9-2022-->
+                    <div class="col-12 w-100 text-center">
                         <p> @lang('To approve the application, we hope that you attach all the requirements for submitting the application to join the institution in one attachment, which include: the association’s license, the administrative structure, the members of the board of directors, the unified national number and the commercial register') </p>
                     </div>
 

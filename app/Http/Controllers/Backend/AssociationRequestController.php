@@ -23,7 +23,7 @@ class AssociationRequestController extends Controller
         // 'name', 'email', 'executive_director_number', 'chairman', 'founding', 'license', 'executive_director', 'website', 'activity', 'city', 'administrative_officer', 'administrative_officer_number', 'file'
         $validatedData = \Validator::make($request->all(),[
             'name'      => 'required|max:100',
-            'license'   => 'required|max:100',
+            'license'   => 'required|numeric|max:5',
             'chairman'   => 'required|max:100',
             'founding'   => 'required|date',
             'executive_director'   => 'required|max:100',
@@ -45,13 +45,12 @@ class AssociationRequestController extends Controller
             ]);
         }
         else {
-          // return $request;
             // store Association request
             $request = AssociationRequest::create(request(['name', 'license', 'chairman', 'founding', 'executive_director', 'executive_director_number', 'website', 'activity', 'email', 'city', 'administrative_officer', 'administrative_officer_number']));
 
             if($file = request('file'))
             {
-                $request->file  = time().'.'.$file->getClientOriginalExtension();
+                $request->file  = time().'.'.$file->getClientOriginalName();
                 $file->move(public_path('/img/backend/associations/requests/'),$request->file );
 
                 $request->save();

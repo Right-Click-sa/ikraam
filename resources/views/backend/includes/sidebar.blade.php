@@ -208,13 +208,13 @@
                           :text="__('Associations')" />
                   </li>
 
-                  {{-- associations requests --}}
+                  {{-- Associations Join Requests --}}
                   <li class="c-sidebar-nav-item">
                     <x-utils.link
                     class="c-sidebar-nav-link"
                     :href="route('admin.associations.requests')"
                     :active="activeClass(Route::is('admin.associations.requests'), 'c-active')"
-                    :text="__('Associations Requests')" />
+                    :text="__('Associations Join Requests')" />
                   </li>
 
               </ul>

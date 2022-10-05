@@ -24,16 +24,20 @@ class AssociationsRepository extends BaseRepository
      */
     public function store()
     {
-        if($image = request('image') && request('file'))
+        if($image = request('image'))
         {
             $association = Association::create(request(['user_id', 'name:en', 'name:ar', 'website', 'city:en', 'city:ar', 'activity:en', 'activity:ar', 'executive_director:en', 'executive_director:ar', 'administrative_officer:en', 'administrative_officer:ar', 'chairman:en', 'chairman:ar', 'email', 'executive_director_number', 'founding', 'license', 'administrative_officer_number']));
 
             // save image
             $this->saveImage(request('image'), $association);
 
-            // save file
-            $association->file  = time().request('file')->getClientOriginalName();
-            request('file')->move(public_path('/img/backend/associations/files/'),$association->file );
+            if(request('file'))
+            {
+              // save file
+              $association->file  = time().request('file')->getClientOriginalName();
+              request('file')->move(public_path('/img/backend/associations/files/'),$association->file );
+              $association->save();
+            }
 
             $association->save();
         }
