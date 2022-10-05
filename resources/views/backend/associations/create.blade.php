@@ -172,6 +172,15 @@
                     </div><!--col-->
                   </div><!--form-group-->
 
+                  <!-- administrative_officer_number -->
+                  <div class="form-group row">
+                    <label for="administrative_officer_number" class="col-md-2 col-form-label">@lang("Administrative officer's number")</label>
+
+                    <div class="col-md-10">
+                      <input type="number" name="administrative_officer_number" class="form-control" placeholder="@lang("Administrative officer's number")" required >
+                    </div><!--col-->
+                  </div><!--form-group-->
+
                   <!-- email -->
                   <div class="form-group row">
                     <label for="email" class="col-md-2 col-form-label">@lang('Email')</label>
@@ -195,25 +204,17 @@
                     <label for="license" class="col-md-2 col-form-label">@lang('License')</label>
 
                     <div class="col-md-10">
-                      <input type="text" name="license" class="form-control" placeholder="@lang('License')"  required >
+                      <input type="number" name="license" class="form-control" placeholder="@lang('License')"  required >
                     </div><!--col-->
                   </div><!--form-group-->
 
-                  <!-- administrative_officer_number -->
-                  <div class="form-group row">
-                    <label for="administrative_officer_number" class="col-md-2 col-form-label">@lang("Administrative officer's number")</label>
-
-                    <div class="col-md-10">
-                      <input type="number" name="administrative_officer_number" class="form-control" placeholder="@lang("Administrative officer's number")" required >
-                    </div><!--col-->
-                  </div><!--form-group-->
 
                   <!-- file -->
                   <div class="form-group row mb-3">
                     <label for="file" class="col-md-2 col-form-label">@lang('Upload the association certificate')</label>
 
                     <div class="col-md-10">
-                        <input class="form-control " id="file" type="file" name="file" accept=".pdf,docx,doc">
+                        <input class="form-control " id="file" type="file" name="file" accept=".pdf,docx,doc,image/*">
                     </div>
                   </div>
 

@@ -34,10 +34,10 @@ class UpdateAssociationProfileRequest extends FormRequest
     {
         return [
             'image'       => 'image|mimes:jpeg,png,jpg,gif,svg|max:3048',
-            'file'        => 'file|max:10000|mimes:pdf,docx,doc',
+            'file'        => 'file|max:10000|mimes:pdf,docx,doc,jpeg,png,jpg,gif,svg',
             'email'       => ['required', 'max:255', 'email', Rule::unique('associations')->ignore($this->association->id)],
             'founding'    => 'required|date',
-            'license'     => 'required',
+            'license'     => 'required|numeric',
             'name:en'       => 'required|max:255',
             'name:ar'       => 'required|max:255',
             'chairman:en'   => 'required',

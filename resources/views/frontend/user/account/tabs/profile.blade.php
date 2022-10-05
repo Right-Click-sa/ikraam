@@ -145,6 +145,15 @@
       </div><!--col-->
     </div><!--form-group-->
 
+    <!-- administrative_officer_number -->
+    <div class="form-group row">
+      <label for="administrative_officer_number" class="col-md-3 col-form-label text-md-right">@lang("Administrative officer's number")</label>
+
+      <div class="col-md-9">
+        <input type="number" name="administrative_officer_number" class="form-control" placeholder="@lang("Administrative officer's number")" required value="{{ old('administrative_officer_number') ?? $logged_in_user->association->{'administrative_officer_number'} }}">
+      </div><!--col-->
+    </div><!--form-group-->
+    
     <!-- email -->
     <div class="form-group row">
       <label for="email" class="col-md-3 col-form-label text-md-right">@lang('Email')</label>
@@ -168,18 +177,10 @@
       <label for="license" class="col-md-3 col-form-label text-md-right">@lang('License')</label>
 
       <div class="col-md-9">
-        <input type="text" name="license" class="form-control" placeholder="@lang('License')"  required value="{{ old('license') ?? $logged_in_user->association->{'license'} }}">
+        <input type="number" name="license" class="form-control" placeholder="@lang('License')"  required value="{{ old('license') ?? $logged_in_user->association->{'license'} }}">
       </div><!--col-->
     </div><!--form-group-->
 
-    <!-- administrative_officer_number -->
-    <div class="form-group row">
-      <label for="administrative_officer_number" class="col-md-3 col-form-label text-md-right">@lang("Administrative officer's number")</label>
-
-      <div class="col-md-9">
-        <input type="number" name="administrative_officer_number" class="form-control" placeholder="@lang("Administrative officer's number")" required value="{{ old('administrative_officer_number') ?? $logged_in_user->association->{'administrative_officer_number'} }}">
-      </div><!--col-->
-    </div><!--form-group-->
 
     <!-- file -->
     <div class="form-group row mb-3">
