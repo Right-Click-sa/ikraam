@@ -28,6 +28,19 @@
       <!--stlye-css-->
       <link href="/assets/css/style.css" rel="stylesheet">
       <link href="/assets/css/style-ltr.css" rel="stylesheet"/>
+
+      <style>
+
+         .title-page-left{
+         background-color: #fffffff6;
+         justify-content: center;
+         padding: 10px;
+         border-bottom-right-radius: 10px;
+         border-bottom-left-radius: 10px;
+         color: #1F9DAC;
+         height: max-content;
+         }
+      </style>
     @stack('after-styles')
 
 </head>

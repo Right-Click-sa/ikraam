@@ -1,7 +1,7 @@
 <!--stärt-nav-top-->
 <div class="nav-top">
-   <div class="container pt-2 pb-2">
-       <div class="row-nav-top row justify-content-between align-items-center">
+   <div class="container">
+       <div class="row-nav-top row justify-content-between">
            <div class="col-lg  d-flex align-items-center link-nav-top">
 
                @if(config('boilerplate.locale.status') && count(config('boilerplate.locale.languages')) > 0)
@@ -27,6 +27,9 @@
                    </div>
                </form>
            </div>
+
+           <h6 class="col-lg-2 col-10 d-flex title-page-left">@lang('Trial launch')</h6>
+
            <div class="col-lg col-Social-Media d-flex justify-content-end align-items-center">
              <a href="https://instagram.com/i.kraam.sa?r=nametag" class="text-white fs-6  fab fa-instagram" target="_blank" ></a>
              <a href="https://twitter.com/ikraam_sa?s=11&t=FfNzV9TBuF7H-BQTs8OX8Q" class="text-white fs-6 fab fa-twitter" target="_blank"></a>
@@ -118,9 +121,7 @@
         <div class="row row-login-title justify-content-between align-items-center">
             <h6 class="col-md-6 title-page-top"> {{ $title }}</h6>
 
-            <h6 class="col-md-2 title-page-top" style="color:black;">@lang('Trial launch')</h6>
-
-            <div class="col-md-4 account-link-login">
+            <div class="col-md-6 account-link-login">
                   @if (Auth::user())
                     @if( $logged_in_user->isAdmin())
                       <a class="link-Login" href="{{ route('admin.dashboard') }}" title="@lang('Login') ">@lang('Dashboard') </a>
