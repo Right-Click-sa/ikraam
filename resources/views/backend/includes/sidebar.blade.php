@@ -262,6 +262,7 @@
           </li>
         @endif
 
+        {{-- orders --}}
         @if($logged_in_user->can('admin.orders.*'))
           {{-- Orders --}}
           <li class="c-sidebar-nav-dropdown {{ activeClass(Route::is('admin.orders.*'), 'c-open c-show') }}">

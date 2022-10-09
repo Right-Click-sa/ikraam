@@ -7,4 +7,4 @@ use App\Http\Controllers\Backend\SettingController;
 
 /*==== Setting Routes ====*/
 	Route::get('settings', [SettingController::class, 'settings'])->name('settings');
-	Route::patch('update', [SettingController::class, 'update'])->name('settings.update');
+	Route::patch('settings/update', [SettingController::class, 'update'])->name('settings.update');
