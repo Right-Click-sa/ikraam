@@ -8,6 +8,7 @@ use App\Models\MembershipType;
 use App\Models\Gender;
 use App\Models\Job;
 use App\Models\Setting;
+use App\Models\Association;
 
 class E_ServiceController extends Controller
 {
@@ -27,10 +28,12 @@ class E_ServiceController extends Controller
      */
     public function associations()
     {
+        $associations = Association::select('image','website')->get();
         $settings   = Setting::all()->pluck('value', 'key')->toArray();
         return view('frontend.e-services.associations')
             ->withTitle(__('Associations'))
-            ->withSettings($settings);
+            ->withSettings($settings)
+            ->withAssociations($associations);
     }
 
     /**
