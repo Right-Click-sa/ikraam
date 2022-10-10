@@ -31,8 +31,8 @@
            <h6 class="col-lg-2 col-10 d-flex title-page-left">@lang('Trial launch')</h6>
 
            <div class="col-lg col-Social-Media d-flex justify-content-end align-items-center">
-             <a href="https://instagram.com/i.kraam.sa?r=nametag" class="text-white fs-6  fab fa-instagram" target="_blank" ></a>
-             <a href="https://twitter.com/ikraam_sa?s=11&t=FfNzV9TBuF7H-BQTs8OX8Q" class="text-white fs-6 fab fa-twitter" target="_blank"></a>
+             <a href="{{ $settings['instagram'] }}" class="text-white fs-6  fab fa-instagram" target="_blank" ></a>
+             <a href="{{ $settings['twitter'] }}" class="text-white fs-6 fab fa-twitter" target="_blank"></a>
              <a href="https://www.vision2030.gov.sa/ar/" target="_blank">
                  <img class="vision-img" src="/assets/img/vision.png" alt="vision">
              </a>
