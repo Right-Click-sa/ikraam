@@ -19,7 +19,7 @@
                 <!--social-->
             </div>
             <div class="col text-start linke-footer-left">
-                <a class="mx-sm-3 mx-2 text-white" href="{{ route('frontend.contribute') }}" target="_blank" >@lang('Contribute with us')</a>
+                <a class="mx-sm-3 mx-2 text-white" href="{{ route('frontend.contribute.volunteer') }}" >@lang('Contribute with us')</a>
                 <a class="mx-sm-3 mx-2 text-white" href="{{ route('frontend.questions') }}" >@lang('Common Questions')</a>
                 <a class="mx-sm-3 mx-2 text-white" href="{{ route('frontend.e-services.recruitment') }}" >@lang('Recruitment')</a>
             </div>
