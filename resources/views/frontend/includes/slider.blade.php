@@ -7,7 +7,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="/assets/img/upload-index.png" class="d-block w-100" alt="...">
+                    <img src="/assets/img/{{ app()->getLocale() == 'ar' ? 'upload-index.png' : 'upload-index-ltr.png' }}" class="d-block w-100" alt="...">
                     <div class="carousel-caption row">
                         <div class="caption-buttom mb-5">
                             <strong class="title-new-view">@lang('New Vision')</strong>
@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="/assets/img/contribute.png" class="d-block w-100" alt="...">
+                    <img src="/assets/img/{{ app()->getLocale() == 'ar' ? 'contribute.png' : 'contribute-ltr.png' }}" class="d-block w-100" alt="...">
                     <div class="carousel-caption row">
                         <div class="caption-buttom">
                             <strong class="title-new-view">@lang('New Vision')</strong>
@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="/assets/img/support.png" class="d-block w-100" alt="...">
+                    <img src="/assets/img/{{ app()->getLocale() == 'ar' ? 'support.png' : 'support-ltr.png' }}" class="d-block w-100" alt="...">
                     <div class="carousel-caption row">
                         <div class="caption-buttom">
                             <strong class="title-new-view">@lang('New Vision')</strong>

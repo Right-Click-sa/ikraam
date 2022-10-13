@@ -694,9 +694,6 @@ font-size: 30px;
 .carousel-index .carousel-item img{
     height: 100%;
 }
-[dir="ltr"] .carousel-index .carousel-item img{
-    transform: rotatey(183deg);
-}
 .floating-btns .btn{
     background-color: #87C55F;
     color: #fff;
