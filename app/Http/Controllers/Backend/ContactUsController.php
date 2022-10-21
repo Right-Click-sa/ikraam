@@ -60,7 +60,7 @@ class ContactUsController extends Controller
             $message = ContactUs::create(request(['name', 'email','phone', 'message']));
 
             // sending email for the support team
-            Mail::to('‫‪info@ikraam.org.sa‬‬', 'Info')
+            Mail::to('info@ikraam.org.sa', 'Info')
             ->send(new ContactUsMessage($message));
 
             return response()->json([
