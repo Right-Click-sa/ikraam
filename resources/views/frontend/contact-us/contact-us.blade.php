@@ -2,6 +2,23 @@
 
 @section('title', __('Contact Us'))
 
+@push('after-styles')
+  <link  href="/assets/css/intlTelInput.css" rel="stylesheet">
+  <style>
+      .iti {
+        width: 100%;
+      }
+      [dir="rtl"] .iti__country-list{
+        text-align: right;
+        left:0px
+      }
+      .alert-info {
+        margin-top: 9px;
+      }
+  </style>
+  <script src="/assets/js/intlTelInput.js"></script>
+@endpush
+
 @section('content')
 
   <!--start-contact-us-->
@@ -29,7 +46,7 @@
 
               </div>
 
-              <form class="form-content row g-3 needs-validation justify-content-center" novalidate="" id="contact-us-form" action="{{ route('frontend.contact-us.store') }}" method="POST">
+              <form class="form-content row g-3 needs-validation justify-content-center" novalidate="" id="contact-us-form" action="{{ route('frontend.contact-us.store') }}" method="POST" >
                   @csrf
 
                   <div class="col-md-10">
@@ -47,17 +64,9 @@
                   </div>
 
                   <div class="col-md-10">
-                    <div class="input-group">
-                        @if (app()->getLocale() != 'ar')
-                          <span class="input-group-text" id="">966</span>
-                        @endif
 
-                        <input type="number" placeholder="@lang('Phone')" class="form-control form-control-lg" name="phone" id="validationCustom05" maxlength="9"  onKeyPress="if(this.value.length===9) return false;" required="">
-
-                        @if (app()->getLocale() == 'ar')
-                          <span class="input-group-text" id="">966</span>
-                        @endif
-                    </div>
+                    <input type="number"  id="phone"  name="phone"  maxlength="12"  onKeyPress="if(this.value.length===12) return false;"  class="form-control form-control-lg" required="true" title="you can give score -10 to +10 only" onkeyup="process(event)">
+                    <div class="alert alert-info" style="display: none;"></div>
 
                     <div class="invalid-feedback">
                       Please provide a valid number.
@@ -104,6 +113,40 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.8.1/sweetalert2.all.min.js"></script>
+
+  <script>
+      var input = document.querySelector("#phone");
+      const info = document.querySelector(".alert-info");
+      
+      /*loction*/
+      const phoneInput = window.intlTelInput(input, {
+          initialCountry: "auto",
+           separateDialCode: true,
+           preferredCountries:["in"],
+           hiddenInput: "full",
+           utilsScript: "/assets/js/utils.js",
+         geoIpLookup: function(success, failure) {
+            $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+              var countryCode = (resp && resp.country) ? resp.country : "us";
+              success(countryCode);
+            });
+          },
+
+        });
+
+      function process(event) {
+        event.preventDefault();
+
+        const phoneNumber = phoneInput.getNumber();
+
+        info.style.display = "none";
+           info.style.display = "";
+           info.innerHTML = "@lang('Phone number should start with: ')" + `<strong>` + $('.iti__selected-dial-code').text() + `</strong>`;
+
+      }
+      /**/
+
+  </script>
 
   <script type="text/javascript">
 

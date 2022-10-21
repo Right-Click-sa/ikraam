@@ -1,0 +1,31 @@
+.title-search{
+     color: #FFFFFF;
+     font-weight: bold;
+     font-size:25px;
+     line-height: 41px;
+     background-color: #87C55F;
+     text-transform: capitalize;
+
+}
+.component-defintion-search{
+     background-color: #DAE1E119;
+}
+.component-defintion-search p{
+     color: #969494;
+     font-size: 20px;
+     font-weight: 400;
+     line-height: 40px;
+}
+.component-search-one{
+     border-bottom:  1px solid #828689;
+}
+.linke-more{
+     text-decoration: none;
+     color: #87C55F;
+     font-size: 20px;
+     font-weight: 400;
+     line-height: 3px;
+}
+.title-defintion{
+     color: #969494;
+}

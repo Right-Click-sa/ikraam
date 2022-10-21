@@ -7,7 +7,7 @@
                @if(config('boilerplate.locale.status') && count(config('boilerplate.locale.languages')) > 0)
                   @foreach(collect(config('boilerplate.locale.languages'))->sortBy('name') as $code => $details)
                       @if($code !== app()->getLocale())
-                        <a class="text-white text-capitalize" href="{{ route('locale.change', $code) }}" role="button" title="اللغه">
+                        <a class="text-white text-capitalize" href="{{ route('locale.change', $code) }}" role="button" title="lang">
                           {{__(getLocaleName($code))}}
                           <i class="fa-solid fa-globe"></i>
                         </a>
@@ -15,13 +15,13 @@
                   @endforeach
                @endif
 
-               <a href="#" class="button-search text-white"  id="show" type="button"  title="البحث">
+               <a href="#" class="button-search text-white"  id="show" type="button" title="search">
                    <i class="fa-solid fa-magnifying-glass"></i>
                </a>
-               <form class="form-index"style="display: none;">
+               <form class="form-index"style="display: none;" action="{{ route('frontend.search') }}" method="GET">
                    <div class="input-group">
-                       <input type="search" class="form-control">
-                       <button class="btn button-serch-form" type="button">
+                       <input type="search" name="search" class="form-control" placeholder="@lang('Search')">
+                       <button class="btn button-serch-form" type="submit">
                            <i class="fa-solid fa-magnifying-glass"></i>
                        </button>
                    </div>

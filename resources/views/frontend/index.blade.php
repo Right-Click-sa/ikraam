@@ -2,8 +2,25 @@
 
 @section('title', __('Home'))
 
+@push('after-styles')
+  <link  href="/assets/css/intlTelInput.css" rel="stylesheet">
+  <style>
+      .iti {
+        width: 100%;
+      }
+      [dir="rtl"] .iti__country-list{
+        text-align: right;
+        left:0px
+      }
+      .alert-info {
+        margin-top: 9px;
+      }
+  </style>
+  <script src="/assets/js/intlTelInput.js"></script>
+@endpush
+
 @section('content')
-  
+
   <!--slider-->
     @include('frontend.includes.slider')
   <!--end-slider-->

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Frontend;
+
 use App\Models\MainPage;
 use App\Models\Setting;
 

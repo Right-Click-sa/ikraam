@@ -43,7 +43,7 @@ class ContactUsController extends Controller
         $validatedData = \Validator::make($request->all(),[
             'name'      => 'required|max:60',
             'email'     => 'required|email|max:70',
-            'phone'     =>  'required|numeric|digits_between:8,10',
+            'phone'     =>  'required|numeric|digits_between:10,13',
             'message'   => 'required|max:500',
         ]);
 
@@ -55,9 +55,6 @@ class ContactUsController extends Controller
             ]);
         }
         else {
-          $request->merge([
-              'phone' => (int)"966" . request('phone'),
-          ]);
 
             // store contact us message
             $message = ContactUs::create(request(['name', 'email','phone', 'message']));
