@@ -186,8 +186,14 @@ padding-left: 14px;
 @media (min-width: 780px) {
     .logo-footer{
         width: 100%;
-height: 80px;
+        height: 80px;
     }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .logo-footer {
+      width: 45%;
+      height: 144px;
+  }
 }
 @media (max-width: 779px) {
   .logo-footer{
