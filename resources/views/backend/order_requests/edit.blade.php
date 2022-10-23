@@ -64,13 +64,15 @@
                     </div>
                   </div><!--form-group-->
 
-                  <div class="form-group row" id="rejection_reason">
-                    <label for="rejection_reason" class="col-md-2 col-form-label">@lang('Rejection reason')</label>
+                  @if ($order->status->id == 3)
+                    <div class="form-group row" id="rejection_reason">
+                      <label for="rejection_reason" class="col-md-2 col-form-label">@lang('Rejection reason')</label>
 
-                    <div class="col-md-10">
-                        <textarea name="rejection_reason" class="form-control" rows="8" cols="80" placeholder="{{ __('Rejection reason') }}">{{ old('description') }}</textarea>
-                    </div><!--col-->
-                  </div><!--form-group-->
+                      <div class="col-md-10">
+                        <textarea name="rejection_reason" class="form-control" rows="8" cols="80" placeholder="{{ __('Rejection reason') }}">{{ $order->rejection_reason }}</textarea>
+                      </div><!--col-->
+                    </div><!--form-group-->
+                  @endif
 
                 </div>
             </x-slot>
@@ -88,7 +90,7 @@
   <script type="text/javascript">
 
     // hide rejection reason div on page load
-    $("#rejection_reason").hide();
+    // $("#rejection_reason").hide();
 
     // check if status is reject to show rejection reason div or not
     function status_changed(status)

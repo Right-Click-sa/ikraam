@@ -26,11 +26,13 @@
           </div>
         </div>
         <!-- Copyrights -->
-          <div class="copyrights text-center pt-3 pb-3 text-white fs-5 text-capitalize">
+          <div class="copyrights">
+            <p class="text-center pt-3 pb-3 text-white fs-5 text-capitalize mb-0">
               @lang('All rights reserved to the National Honoring the Dead Foundation')
               <strong>
                   &copy; {{ date('Y') }}
               </strong>
+            </p>
           </div>
         <!--end-Copyrights-->
 </footer>
