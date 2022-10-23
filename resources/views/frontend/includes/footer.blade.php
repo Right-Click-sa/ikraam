@@ -1,7 +1,7 @@
 <!--footer-->
-<footer class="component-footer pt-3 pb-3">
+<footer class="component-footer pt-3">
     <div class="container">
-        <div class="row  justify-content-between align-items-center">
+        <div class="row  justify-content-between align-items-center mx-0">
             <div class="col-lg-6 d-lg-flex align-items-center">
                 <!--logo-footer-->
                 <div class="text-center">
@@ -18,22 +18,20 @@
                 </div>
                 <!--social-->
             </div>
-            <div class="col text-start linke-footer-left">
-                <a class="mx-sm-3 mx-2 text-white" href="{{ route('frontend.contribute.volunteer') }}" >@lang('Contribute with us')</a>
-                <a class="mx-sm-3 mx-2 text-white" href="{{ route('frontend.questions') }}" >@lang('Common Questions')</a>
-                <a class="mx-sm-3 mx-2 text-white" href="{{ route('frontend.e-services.recruitment') }}" >@lang('Recruitment')</a>
-            </div>
+              <div class="col text-start linke-footer-left">
+                  <a class="mx-sm-3 mx-2 text-white" href="{{ route('frontend.contribute.volunteer') }}" >@lang('Contribute with us')</a>
+                  <a class="mx-sm-3 mx-2 text-white" href="{{ route('frontend.questions') }}" >@lang('Common Questions')</a>
+                  <a class="mx-sm-3 mx-2 text-white" href="{{ route('frontend.e-services.recruitment') }}" >@lang('Recruitment')</a>
+              </div>
+          </div>
         </div>
-    </div>
+        <!-- Copyrights -->
+          <div class="copyrights text-center pt-3 pb-3 text-white fs-5 text-capitalize">
+              @lang('All rights reserved to the National Honoring the Dead Foundation')
+              <strong>
+                  &copy; {{ date('Y') }}
+              </strong>
+          </div>
+        <!--end-Copyrights-->
 </footer>
 <!--end-footer-->
-
-<!-- Copyrights -->
-<div class="copyrights text-center pt-3 pb-3 text-white fs-5 text-capitalize">
-  @lang('All rights reserved to the National Honoring the Dead Foundation')
-  <strong>
-      &copy; {{ date('Y') }}
-  </strong>
-
-</div>
-<!--end-Copyrights-->
