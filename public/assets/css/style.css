@@ -198,7 +198,7 @@ padding-left: 14px;
 @media (max-width: 779px) {
   .logo-footer{
     width: 160px;
-    height: 125;
+    height: 109 !important;
   }
 
 }
@@ -662,7 +662,7 @@ font-size: 30px;
         left: 1px;
     }
     .botton-witc{
-        bottom: -119px;
+        /* bottom: -119px; */
         left: 15px;
     }
 }
@@ -1821,4 +1821,21 @@ input[type=number] {
 }
 .form-control:focus {
     color: #504f4f59;
+}
+
+@media (max-width: 990px){
+    .row-nav-top{
+        justify-content: center !important;
+    }
+    .link-nav-top{
+        order: 2;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    .title-page-left{
+        order: 1;
+    }
+    .col-Social-Media{
+        order: 3;
+    }
 }

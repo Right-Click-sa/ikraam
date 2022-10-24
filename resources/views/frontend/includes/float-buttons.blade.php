@@ -1,5 +1,5 @@
 <!-- Floating Buttons -->
-<div class="floating-btns position-absolute d-flex">
+<div class="floating-btns position-fixed d-flex">
     <a href="https://wa.me/00966534399110" target="_blank" class="btn  fab fa-whatsapp  mb-2" title="whatsapp"></a>
 </div>
 <!-- Floating Buttons -->
